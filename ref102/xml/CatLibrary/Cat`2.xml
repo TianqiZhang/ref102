@@ -77,7 +77,7 @@
                 {
                     a.GetFeetLength(catNumber);
                 }
-                Cat&lt;T&gt; cat = new Cat&lt;T&gt;(&quot;abcd name&quot;);
+                Cat&lt;T&gt; cat = new Cat&lt;T&gt;("abcd name&quot;);
             </code>
       <para>As you see, here we bring in <b>pointer</b> so we need to add <languageKeyword>unsafe</languageKeyword> keyword.</para>
     </example>
