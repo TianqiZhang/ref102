@@ -11,3 +11,6 @@
 
 
 <xref href="System.Collections.Generic.HashSet`1?alt=System.Collections.Generic.HashSet`1&text=HashSet" data-throw-if-not-resolved="True"/>&lt;T&gt;.<xref href="System.Collections.Generic.HashSet`1.Enumerator?alt=System.Collections.Generic.HashSet`1.Enumerator&text=Enumerator" data-throw-if-not-resolved="True"/>[]
+
+
+<xref href="System.Collections.Immutable.IImmutableDictionary`2.AddRange(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})?alt=System.Collections.Immutable.IImmutableDictionary`2.AddRange(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})&text=AddRange(IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;)" data-throw-if-not-resolved="True"/>
