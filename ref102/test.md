@@ -46,4 +46,4 @@
 ```
 <xref href="System.NonExistingException123?alt=System.NonExistingException123" data-throw-if-not-resolved="True"/>
 ```
-<xref href="System.NonExistingException123" data-throw-if-not-resolved="True"/>
+<xref href="System.NonExistingException123?alt=System.NonExistingException123" data-throw-if-not-resolved="True"/>
