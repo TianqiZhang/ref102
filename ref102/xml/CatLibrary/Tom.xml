@@ -50,7 +50,7 @@
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>CatLibrary.Complex&lt;System.String,CatLibrary.TomFromBaseClass&gt;</ReturnType>
+        <ReturnType>CatLibrary.Complex+NestedComplex&lt;System.String,CatLibrary.TomFromBaseClass&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="a" Type="CatLibrary.Complex&lt;CatLibrary.TomFromBaseClass,CatLibrary.TomFromBaseClass&gt;" />
