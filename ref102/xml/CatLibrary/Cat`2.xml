@@ -1,4 +1,15 @@
 ﻿<Type Name="Cat&lt;T,K&gt;" FullName="CatLibrary.Cat&lt;T,K&gt;">
+     <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="77d1b2a652c118438281090f72ac4caa93feec1a" />
+    <Meta Name="ms.sourcegitcommit" Value="055a4a82a0b08bfbdc21bd1347fb71f7fe2c099e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="zh-CN" />
+    <Meta Name="ms.lasthandoff" Value="08/15/2019" />
+    <Meta Name="ms.locfileid" Value="69262388" />
+    <Meta Name="apiContracts" Value="Win10" />
+    <Meta Name="apiContracts" Value="Win10 build 1" />
+    <Meta Name="apiContracts" Value="Win10 build 2" />
+  </Metadata>
   <TypeSignature Language="C#" Value="public class Cat&lt;T,K&gt; : CatLibrary.ICat where T : class, new() where K : struct" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Cat`2&lt;class .ctor T, struct .ctor (class System.ValueType) K&gt; extends System.Object implements class CatLibrary.IAnimal, class CatLibrary.ICat" />
   <TypeSignature Language="DocId" Value="T:CatLibrary.Cat`2" />
