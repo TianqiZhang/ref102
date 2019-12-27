@@ -37,7 +37,8 @@
         "SourceMetadataFolder": "add/metadata",
         "Flatten": true,
         "id": "ref102",
-        "SDPMode": true
+        "SDPMode": true,
+        "Versioning": true
       },
       "SplitTOC": [
         "ref102/api/ref102/toc.yml"
