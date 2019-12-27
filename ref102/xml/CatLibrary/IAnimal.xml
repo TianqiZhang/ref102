@@ -1,4 +1,4 @@
-﻿<Type Name="IAnimal" FullName="CatLibrary.IAnimal">
+<Type Name="IAnimal" FullName="CatLibrary.IAnimal">
   <TypeSignature Language="C#" Value="public interface IAnimal" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAnimal" />
   <TypeSignature Language="DocId" Value="T:CatLibrary.IAnimal" />

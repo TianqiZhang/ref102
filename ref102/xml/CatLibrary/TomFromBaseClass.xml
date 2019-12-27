@@ -1,4 +1,4 @@
-﻿<Type Name="TomFromBaseClass" FullName="CatLibrary.TomFromBaseClass">
+<Type Name="TomFromBaseClass" FullName="CatLibrary.TomFromBaseClass">
   <TypeSignature Language="C#" Value="public class TomFromBaseClass : CatLibrary.Tom" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TomFromBaseClass extends CatLibrary.Tom" />
   <TypeSignature Language="DocId" Value="T:CatLibrary.TomFromBaseClass" />
@@ -15,7 +15,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            *TomFromBaseClass* inherits from @
+            *TomFromBaseClass* inherits from @CatLibrary.Tom
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -36,7 +36,8 @@
         <Parameter Name="k" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="k"></param>
+        <param name="k">
+        </param>
         <summary>
             This is a #ctor with parameter
             </summary>

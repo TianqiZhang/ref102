@@ -1,4 +1,4 @@
-﻿<Type Name="Tom" FullName="CatLibrary.Tom">
+<Type Name="Tom" FullName="CatLibrary.Tom">
   <TypeSignature Language="C#" Value="public class Tom" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Tom extends System.Object" />
   <TypeSignature Language="DocId" Value="T:CatLibrary.Tom" />
@@ -50,7 +50,7 @@
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>CatLibrary.Complex+NestedComplex&lt;System.String,CatLibrary.TomFromBaseClass&gt;</ReturnType>
+        <ReturnType>CatLibrary.Complex&lt;System.String,CatLibrary.TomFromBaseClass&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="a" Type="CatLibrary.Complex&lt;CatLibrary.TomFromBaseClass,CatLibrary.TomFromBaseClass&gt;" />

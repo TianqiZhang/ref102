@@ -1,4 +1,4 @@
-﻿<Type Name="Complex&lt;T,J&gt;" FullName="CatLibrary.Complex&lt;T,J&gt;">
+<Type Name="Complex&lt;T,J&gt;" FullName="CatLibrary.Complex&lt;T,J&gt;">
   <TypeSignature Language="C#" Value="public class Complex&lt;T,J&gt;" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Complex`2&lt;T, J&gt; extends System.Object" />
   <TypeSignature Language="DocId" Value="T:CatLibrary.Complex`2" />
@@ -18,9 +18,11 @@
   </Base>
   <Interfaces />
   <Docs>
-    <typeparam name="T">To be added.</typeparam>
-    <typeparam name="J">To be added.</typeparam>
-    <summary>To be added.</summary>
+    <typeparam name="T">
+    </typeparam>
+    <typeparam name="J">
+    </typeparam>
+    <summary />
     <remarks>To be added.</remarks>
   </Docs>
   <Members>

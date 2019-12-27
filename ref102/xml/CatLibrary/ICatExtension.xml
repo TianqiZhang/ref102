@@ -1,4 +1,4 @@
-﻿<Type Name="ICatExtension" FullName="CatLibrary.ICatExtension">
+<Type Name="ICatExtension" FullName="CatLibrary.ICatExtension">
   <TypeSignature Language="C#" Value="public static class ICatExtension" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ICatExtension extends System.Object" />
   <TypeSignature Language="DocId" Value="T:CatLibrary.ICatExtension" />
