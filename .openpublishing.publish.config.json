@@ -37,8 +37,7 @@
         "SourceMetadataFolder": "add/metadata",
         "Flatten": true,
         "id": "ref102",
-        "SDPMode": true,
-        "Versioning": true
+        "SDPMode": true
       },
       "SplitTOC": [
         "ref102/api/ref102/toc.yml"
@@ -57,7 +56,7 @@
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
+      "branch": "develop",
       "branch_mapping": {}
     }
   ],
