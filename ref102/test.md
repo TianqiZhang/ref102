@@ -47,3 +47,13 @@
 <xref href="System.NonExistingException123?alt=System.NonExistingException123" data-throw-if-not-resolved="True"/>
 ```
 <xref href="System.NonExistingException123?alt=System.NonExistingException123" data-throw-if-not-resolved="True"/>
+
+```
+@System.Reflection.MethodImplAttributes.AggressiveOptimization?view=netcore-3.1
+```
+@System.Reflection.MethodImplAttributes.AggressiveOptimization?view=netcore-3.1
+
+```
+<xref:System.Reflection.MethodImplAttributes.AggressiveOptimization?view=netcore-3.1>
+```
+<xref:System.Reflection.MethodImplAttributes.AggressiveOptimization?view=netcore-3.1>
