@@ -47,3 +47,20 @@
 <xref href="System.NonExistingException123?alt=System.NonExistingException123" data-throw-if-not-resolved="True"/>
 ```
 <xref href="System.NonExistingException123?alt=System.NonExistingException123" data-throw-if-not-resolved="True"/>
+
+
+##sunny testing start
+```
+<xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>
+```
+<xref href="System.Object?alt=System.Object&text=Object" data-throw-if-not-resolved="True"/>
+
+```
+<xref href="CatLibrary.Complex`2?alt=CatLibrary.Complex&text=Complex" data-throw-if-not-resolved="True"/>&lt;<xref href="CatLibrary.Cat`2?alt=CatLibrary.Cat&text=Cat" data-throw-if-not-resolved="True"/>&lt;<xref href="CatLibrary.Tom?alt=CatLibrary.Tom&text=Tom" data-throw-if-not-resolved="True"/>,<xref href="System.Guid?alt=System.Guid&text=Guid" data-throw-if-not-resolved="True"/>&gt;,<xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;&gt;
+```
+<xref href="CatLibrary.Complex`2?alt=CatLibrary.Complex&text=Complex" data-throw-if-not-resolved="True"/>&lt;<xref href="CatLibrary.Cat`2?alt=CatLibrary.Cat&text=Cat" data-throw-if-not-resolved="True"/>&lt;<xref href="CatLibrary.Tom?alt=CatLibrary.Tom&text=Tom" data-throw-if-not-resolved="True"/>,<xref href="System.Guid?alt=System.Guid&text=Guid" data-throw-if-not-resolved="True"/>&gt;,<xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;&gt;
+
+##sunny testing end
+
+
+
