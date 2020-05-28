@@ -71,7 +71,7 @@
       "nuget_feed": "https://www.myget.org/F/op-dev/api/v2",
       "path_to_root": "_dependentPackages/CommonPlugins",
       "target_framework": "net45",
-      "version": "0.0.111-alpha"
+      "version": "0.0.112-alpha"
     },
     {
       "id": "Microsoft.DocAsCode.ECMA2Yaml",
