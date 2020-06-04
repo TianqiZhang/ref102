@@ -65,7 +65,15 @@
 ```
 <xref href="System.Collections.Generic.Dictionary`2?alt=System.Collections.Generic.Dictionary&text=Dictionary" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>,<xref href="System.ServiceModel.Dispatcher.MessageQuery?alt=System.ServiceModel.Dispatcher.MessageQuery&text=MessageQuery" data-throw-if-not-resolved="True"/>&gt;
 
+```
 @System.String?text=This is System String baby.
+```
+@System.String?text=This is System String baby.
+
+```
+@System.String?text="This is System String baby."
+```
+@System.String?text="This is System String baby."
 
 ---------sunny testing end------------
 
