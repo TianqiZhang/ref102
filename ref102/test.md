@@ -94,7 +94,8 @@
 @"Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])?text=GetCurrentReading"
 ```
 @"Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])?text=GetCurrentReading"
----------sunny testing end------------
 
-
-
+```
+<xref:"Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])?text=GetCurrentReading">
+```
+<xref:"Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])?text=GetCurrentReading">
