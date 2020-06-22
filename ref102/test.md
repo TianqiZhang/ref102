@@ -96,6 +96,6 @@
 @"Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])?text=GetCurrentReading"
 
 ```
-<xref:"Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])?text=GetCurrentReading">
+<xref href="Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])"/>
 ```
-<xref:"Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])?text=GetCurrentReading">
+<xref href="Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])"/>
