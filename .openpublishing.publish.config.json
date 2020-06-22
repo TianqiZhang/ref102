@@ -4,7 +4,7 @@
       "docset_name": "ref102",
       "build_source_folder": "ref102",
       "build_output_subfolder": "ref102",
-      "xref_query_tags": ["/dotnet"],
+      "xref_query_tags": ["/dotnet", "/uwp/api"],
       "locale": "en-us",
       "monikers": [],
       "xref_query_tags": ["/dotnet"],
