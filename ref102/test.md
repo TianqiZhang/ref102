@@ -85,7 +85,15 @@
 ```
 <xref:"System.String?text=This is System String baby.">
 
+```
+@Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])?text=GetCurrentReading
+```
+@Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])?text=GetCurrentReading
 
+```
+@"Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])?text=GetCurrentReading"
+```
+@"Windows.Gaming.Input.RawGameController.GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])?text=GetCurrentReading"
 ---------sunny testing end------------
 
 
