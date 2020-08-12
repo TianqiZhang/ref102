@@ -40,6 +40,9 @@
       <Member Id="F:CatLibrary.Complex`2.ComplexFlags.SkipInitialPreparation" />
       <Member Id="F:CatLibrary.Complex`2.ComplexFlags.StickyWrite" />
     </Type>
+    <Type Name="CatLibrary.DocAttribute" Id="T:CatLibrary.DocAttribute">
+      <Member Id="M:CatLibrary.DocAttribute.#ctor(System.String)" />
+    </Type>
     <Type Name="CatLibrary.FakeDelegate`1" Id="T:CatLibrary.FakeDelegate`1" />
     <Type Name="CatLibrary.IAnimal" Id="T:CatLibrary.IAnimal">
       <Member Id="M:CatLibrary.IAnimal.Eat" />
@@ -91,6 +94,7 @@
     </Type>
     <Type Name="VersioningTest.C" Id="T:VersioningTest.C">
       <Member Id="M:VersioningTest.C.#ctor" />
+      <Member Id="M:VersioningTest.C.MethodForI" />
     </Type>
     <Type Name="VersioningTest.D" Id="T:VersioningTest.D">
       <Member Id="M:VersioningTest.D.#ctor" />
@@ -107,10 +111,12 @@
     <Type Name="VersioningTest.H" Id="T:VersioningTest.H">
       <Member Id="M:VersioningTest.H.#ctor" />
     </Type>
-    <Type Name="VersioningTest.I" Id="T:VersioningTest.I" />
+    <Type Name="VersioningTest.I2" Id="T:VersioningTest.I2">
+      <Member Id="M:VersioningTest.I2.MethodForI" />
+    </Type>
     <Type Name="VersioningTest.VersioningExtensions" Id="T:VersioningTest.VersioningExtensions">
       <Member Id="M:VersioningTest.VersioningExtensions.ExtMethodForD(VersioningTest.D)" />
-      <Member Id="M:VersioningTest.VersioningExtensions.ExtMethodForI(VersioningTest.I)" />
+      <Member Id="M:VersioningTest.VersioningExtensions.ExtMethodForI(VersioningTest.I2)" />
     </Type>
   </Namespace>
 </Framework>
