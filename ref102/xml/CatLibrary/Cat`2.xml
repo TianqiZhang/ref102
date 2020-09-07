@@ -113,6 +113,7 @@
     <example>
       <para>Here's example of how to create an instance of this class. As T is limited with <c>class</c> and K is limited with <c>struct</c>.</para>
       <code language="c#">
+        
                 var a = new Cat(object, int)();
                 int catNumber = new int();
                 unsafe
