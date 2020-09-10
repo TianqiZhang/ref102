@@ -111,8 +111,8 @@
     </remarks>
     <altmember cref="T:CatLibrary.ICat" />
     <example>
-      <para>Here's example of how to create an instance of this class. As T is limited with <c>class</c> and K is limited with <c>struct</c>.</para>
-      <code language="c#">
+        Here's example of how to create an instance of this class. As T is limited with <c>class</c> and K is limited with <c>struct</c>.
+        <code language="c#">
                 var a = new Cat(object, int)();
                 int catNumber = new int();
         
@@ -120,8 +120,8 @@
                 {
                     a.GetFeetLength(catNumber);
                 }
-            </code>
-      <para>As you see, here we bring in <b>pointer</b> so we need to add <languageKeyword>unsafe</languageKeyword> keyword.</para>
+             </code>
+        <para>As you see, here we bring in <b>pointer</b> so we need to add <languageKeyword>unsafe</languageKeyword> keyword.</para>
     </example>
   </Docs>
   <Members>
