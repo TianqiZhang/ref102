@@ -123,6 +123,12 @@
              </code>
         <para>As you see, here we bring in <b>pointer</b> so we need to add <languageKeyword>unsafe</languageKeyword> keyword.</para>
     </example>
+    <example>
+      <para>In the following statement, <b>AdminWebSvc</b> is an arbitrary namespace for the ASMX-based <b>Admin</b> web service.</para>
+      <code>private static AdminWebSvc.Admin admin = new AdminWebSvc.Admin();</code>
+      <para>In the following statement, <b>SvcAdmin</b> is an arbitrary namespace for the WCF-based <b>Admin</b> service. The <paramref name="endpt" /> parameter is a <b>String</b> value that specifies the name of the client endpoint address in the app.config file (or in the web.config file for web applications).</para>
+      <code>private static SvcAdmin.AdminClient adminClient = new SvcAdmin.AdminClient(endpt);</code>
+    </example>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
