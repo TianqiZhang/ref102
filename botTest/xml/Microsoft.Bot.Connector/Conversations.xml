@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -36,6 +37,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="client" Type="Microsoft.Bot.Connector.ConnectorClient" />
@@ -63,6 +65,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.ConnectorClient</ReturnType>
@@ -88,6 +91,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ConversationResourceResponse&gt;&gt;</ReturnType>
@@ -165,6 +169,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&gt;</ReturnType>
@@ -225,6 +230,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&gt;</ReturnType>
@@ -287,6 +293,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.ChannelAccount&gt;&gt;&gt;</ReturnType>
@@ -351,6 +358,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.ChannelAccount&gt;&gt;&gt;</ReturnType>
@@ -407,6 +415,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ChannelAccount&gt;&gt;</ReturnType>
@@ -470,6 +479,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.PagedMembersResult&gt;&gt;</ReturnType>
@@ -550,6 +560,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ConversationsResult&gt;&gt;</ReturnType>
@@ -610,6 +621,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ResourceResponse&gt;&gt;</ReturnType>
@@ -686,6 +698,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ResourceResponse&gt;&gt;</ReturnType>
@@ -752,6 +765,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ResourceResponse&gt;&gt;</ReturnType>
@@ -824,6 +838,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ResourceResponse&gt;&gt;</ReturnType>
@@ -894,6 +909,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ResourceResponse&gt;&gt;</ReturnType>

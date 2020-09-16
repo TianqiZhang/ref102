@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,12 +30,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The name of the event when a message is deleted by the bot.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -48,12 +52,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The name of the event when a new message is received from the user.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -67,12 +74,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The name of the event when logged when a message is sent from the bot to the user.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -86,12 +96,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The name of the event when a message is updated by the bot.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

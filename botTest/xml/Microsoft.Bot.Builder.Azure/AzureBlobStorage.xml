@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -40,6 +41,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="storageAccount" Type="Microsoft.WindowsAzure.Storage.CloudStorageAccount" />
@@ -64,6 +66,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="dataConnectionstring" Type="System.String" />
@@ -88,6 +91,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="storageAccount" Type="Microsoft.WindowsAzure.Storage.CloudStorageAccount" />
@@ -118,6 +122,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -150,6 +155,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;&gt;</ReturnType>
@@ -182,6 +188,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>

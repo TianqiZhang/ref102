@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,12 +30,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for attachments.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -48,12 +52,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for channel id.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -67,12 +74,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for conversation id.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -86,12 +96,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for conversation name.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -105,12 +118,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for dialog id.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -124,12 +140,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for from id.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,12 +162,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for from name.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -162,12 +184,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for locale.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -181,12 +206,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for recipient id.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -200,12 +228,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for recipient name.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -219,12 +250,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for reply activity id.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -238,12 +272,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for speak.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -257,12 +294,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for text.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -276,12 +316,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The telemetry property value for user id.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

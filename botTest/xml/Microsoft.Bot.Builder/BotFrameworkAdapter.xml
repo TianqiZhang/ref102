@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Bot.Builder.BotAdapter</BaseTypeName>
@@ -39,10 +40,10 @@
             and then back out again. As each activity flows in and out of the bot, each piece
             of middleware can inspect or act upon the activity, both before and after the bot
             logic runs.</para></remarks>
-    <altmember cref="T:Microsoft.Bot.Builder.ITurnContext" />
     <altmember cref="T:Microsoft.Bot.Schema.IActivity" />
     <altmember cref="T:Microsoft.Bot.Builder.IBot" />
     <altmember cref="T:Microsoft.Bot.Builder.IMiddleware" />
+    <altmember cref="T:Microsoft.Bot.Builder.ITurnContext" />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -55,6 +56,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentialProvider" Type="Microsoft.Bot.Connector.Authentication.ICredentialProvider" />
@@ -93,6 +95,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentials" Type="Microsoft.Bot.Connector.Authentication.AppCredentials" />
@@ -132,6 +135,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentialProvider" Type="Microsoft.Bot.Connector.Authentication.ICredentialProvider" />
@@ -172,6 +176,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Concurrent.ConcurrentDictionary&lt;System.String,Microsoft.Bot.Connector.Authentication.AppCredentials&gt;</ReturnType>
@@ -196,6 +201,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.Authentication.AppCredentials&gt;</ReturnType>
@@ -225,6 +231,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -254,6 +261,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.Authentication.IChannelProvider</ReturnType>
@@ -278,6 +286,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -320,6 +329,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -350,11 +360,11 @@
             passed in. The .Net code allows multiple bots to be hosted in a single adapter which
             isn't something supported by Node.
             </para></remarks>
+        <altmember cref="M:Microsoft.Bot.Builder.BotFrameworkAdapter.ProcessActivityAsync(System.String,Microsoft.Bot.Schema.Activity,Microsoft.Bot.Builder.BotCallbackHandler,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Bot.Builder.BotAdapter.RunPipelineAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Bot.Builder.BotCallbackHandler,System.Threading.CancellationToken)" />
         <exception cref="T:System.ArgumentNullException">
           <paramref name="botAppId" />, <paramref name="reference" />, or
             <paramref name="callback" /> is <c>null</c>.</exception>
-        <altmember cref="M:Microsoft.Bot.Builder.BotFrameworkAdapter.ProcessActivityAsync(System.String,Microsoft.Bot.Schema.Activity,Microsoft.Bot.Builder.BotCallbackHandler,System.Threading.CancellationToken)" />
-        <altmember cref="M:Microsoft.Bot.Builder.BotAdapter.RunPipelineAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Bot.Builder.BotCallbackHandler,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="ContinueConversationAsync">
@@ -367,6 +377,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -379,14 +390,61 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="claimsIdentity">To be added.</param>
-        <param name="reference">To be added.</param>
-        <param name="audience">To be added.</param>
-        <param name="callback">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="claimsIdentity">A <see cref="T:System.Security.Claims.ClaimsIdentity" /> for the conversation.</param>
+        <param name="reference">A reference to the conversation to continue.</param>
+        <param name="audience">The target audience for the connector.</param>
+        <param name="callback">The method to call for the resulting bot turn.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Sends a proactive message from the bot to a conversation.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateConversationAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task CreateConversationAsync (string channelId, string serviceUrl, Microsoft.Bot.Connector.Authentication.AppCredentials credentials, Microsoft.Bot.Schema.ConversationParameters conversationParameters, Microsoft.Bot.Builder.BotCallbackHandler callback, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task CreateConversationAsync(string channelId, string serviceUrl, class Microsoft.Bot.Connector.Authentication.AppCredentials credentials, class Microsoft.Bot.Schema.ConversationParameters conversationParameters, class Microsoft.Bot.Builder.BotCallbackHandler callback, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.BotFrameworkAdapter.CreateConversationAsync(System.String,System.String,Microsoft.Bot.Connector.Authentication.AppCredentials,Microsoft.Bot.Schema.ConversationParameters,Microsoft.Bot.Builder.BotCallbackHandler,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateConversationAsync (channelId As String, serviceUrl As String, credentials As AppCredentials, conversationParameters As ConversationParameters, callback As BotCallbackHandler, cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member CreateConversationAsync : string * string * Microsoft.Bot.Connector.Authentication.AppCredentials * Microsoft.Bot.Schema.ConversationParameters * Microsoft.Bot.Builder.BotCallbackHandler * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.CreateConversationAsync : string * string * Microsoft.Bot.Connector.Authentication.AppCredentials * Microsoft.Bot.Schema.ConversationParameters * Microsoft.Bot.Builder.BotCallbackHandler * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="botFrameworkAdapter.CreateConversationAsync (channelId, serviceUrl, credentials, conversationParameters, callback, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelId" Type="System.String" />
+        <Parameter Name="serviceUrl" Type="System.String" />
+        <Parameter Name="credentials" Type="Microsoft.Bot.Connector.Authentication.AppCredentials" />
+        <Parameter Name="conversationParameters" Type="Microsoft.Bot.Schema.ConversationParameters" />
+        <Parameter Name="callback" Type="Microsoft.Bot.Builder.BotCallbackHandler" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="channelId">The ID for the channel.</param>
+        <param name="serviceUrl">The channel's service URL endpoint.</param>
+        <param name="credentials">The application credentials for the bot.</param>
+        <param name="conversationParameters">The conversation information to use to
+            create the conversation.</param>
+        <param name="callback">The method to call for the resulting bot turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Creates a conversation on the specified channel.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>To start a conversation, your bot must know its account information
+            and the user's account information on that channel.
+            Most _channels only support initiating a direct message (non-group) conversation.
+            <para>The adapter attempts to create a new conversation on the channel, and
+            then sends a <c>conversationUpdate</c> activity through its middleware pipeline
+            to the <paramref name="callback" /> method.</para><para>If the conversation is established with the
+            specified users, the ID of the activity's <see cref="P:Microsoft.Bot.Schema.IActivity.Conversation" />
+            will contain the ID of the new conversation.</para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CreateConversationAsync">
@@ -399,6 +457,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -435,6 +494,53 @@
       </Docs>
     </Member>
     <Member MemberName="CreateConversationAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task CreateConversationAsync (string channelId, string serviceUrl, Microsoft.Bot.Connector.Authentication.AppCredentials credentials, Microsoft.Bot.Schema.ConversationParameters conversationParameters, Microsoft.Bot.Builder.BotCallbackHandler callback, Microsoft.Bot.Schema.ConversationReference reference, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task CreateConversationAsync(string channelId, string serviceUrl, class Microsoft.Bot.Connector.Authentication.AppCredentials credentials, class Microsoft.Bot.Schema.ConversationParameters conversationParameters, class Microsoft.Bot.Builder.BotCallbackHandler callback, class Microsoft.Bot.Schema.ConversationReference reference, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.BotFrameworkAdapter.CreateConversationAsync(System.String,System.String,Microsoft.Bot.Connector.Authentication.AppCredentials,Microsoft.Bot.Schema.ConversationParameters,Microsoft.Bot.Builder.BotCallbackHandler,Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateConversationAsync (channelId As String, serviceUrl As String, credentials As AppCredentials, conversationParameters As ConversationParameters, callback As BotCallbackHandler, reference As ConversationReference, cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member CreateConversationAsync : string * string * Microsoft.Bot.Connector.Authentication.AppCredentials * Microsoft.Bot.Schema.ConversationParameters * Microsoft.Bot.Builder.BotCallbackHandler * Microsoft.Bot.Schema.ConversationReference * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.CreateConversationAsync : string * string * Microsoft.Bot.Connector.Authentication.AppCredentials * Microsoft.Bot.Schema.ConversationParameters * Microsoft.Bot.Builder.BotCallbackHandler * Microsoft.Bot.Schema.ConversationReference * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="botFrameworkAdapter.CreateConversationAsync (channelId, serviceUrl, credentials, conversationParameters, callback, reference, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelId" Type="System.String" />
+        <Parameter Name="serviceUrl" Type="System.String" />
+        <Parameter Name="credentials" Type="Microsoft.Bot.Connector.Authentication.AppCredentials" />
+        <Parameter Name="conversationParameters" Type="Microsoft.Bot.Schema.ConversationParameters" />
+        <Parameter Name="callback" Type="Microsoft.Bot.Builder.BotCallbackHandler" />
+        <Parameter Name="reference" Type="Microsoft.Bot.Schema.ConversationReference" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="channelId">The ID for the channel.</param>
+        <param name="serviceUrl">The channel's service URL endpoint.</param>
+        <param name="credentials">The application credentials for the bot.</param>
+        <param name="conversationParameters">The conversation information to use to
+            create the conversation.</param>
+        <param name="callback">The method to call for the resulting bot turn.</param>
+        <param name="reference">A conversation reference that contains the tenant.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Creates a conversation on the specified channel. Overload receives a ConversationReference including the tenant.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>To start a conversation, your bot must know its account information
+            and the user's account information on that channel.
+            Most _channels only support initiating a direct message (non-group) conversation.
+            <para>The adapter attempts to create a new conversation on the channel, and
+            then sends a <c>conversationUpdate</c> activity through its middleware pipeline
+            to the <paramref name="callback" /> method.</para><para>If the conversation is established with the
+            specified users, the ID of the activity's <see cref="P:Microsoft.Bot.Schema.IActivity.Conversation" />
+            will contain the ID of the new conversation.</para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateConversationAsync">
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task CreateConversationAsync (string channelId, string serviceUrl, Microsoft.Bot.Connector.Authentication.MicrosoftAppCredentials credentials, Microsoft.Bot.Schema.ConversationParameters conversationParameters, Microsoft.Bot.Builder.BotCallbackHandler callback, Microsoft.Bot.Schema.ConversationReference reference, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task CreateConversationAsync(string channelId, string serviceUrl, class Microsoft.Bot.Connector.Authentication.MicrosoftAppCredentials credentials, class Microsoft.Bot.Schema.ConversationParameters conversationParameters, class Microsoft.Bot.Builder.BotCallbackHandler callback, class Microsoft.Bot.Schema.ConversationReference reference, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.BotFrameworkAdapter.CreateConversationAsync(System.String,System.String,Microsoft.Bot.Connector.Authentication.MicrosoftAppCredentials,Microsoft.Bot.Schema.ConversationParameters,Microsoft.Bot.Builder.BotCallbackHandler,Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
@@ -444,6 +550,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -491,6 +598,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.OAuthClient&gt;</ReturnType>
@@ -517,6 +625,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.OAuthClient&gt;</ReturnType>
@@ -545,6 +654,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.Authentication.ICredentialProvider</ReturnType>
@@ -569,6 +679,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -601,6 +712,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -635,6 +747,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenResponse&gt;</ReturnType>
@@ -673,6 +786,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenResponse&gt;</ReturnType>
@@ -713,6 +827,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.Dictionary&lt;System.String,Microsoft.Bot.Schema.TokenResponse&gt;&gt;</ReturnType>
@@ -750,6 +865,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.Dictionary&lt;System.String,Microsoft.Bot.Schema.TokenResponse&gt;&gt;</ReturnType>
@@ -786,6 +902,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.ChannelAccount&gt;&gt;</ReturnType>
@@ -816,6 +933,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.ChannelAccount&gt;&gt;</ReturnType>
@@ -844,6 +962,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ConversationsResult&gt;</ReturnType>
@@ -881,6 +1000,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ConversationsResult&gt;</ReturnType>
@@ -923,6 +1043,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -957,6 +1078,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -993,6 +1115,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -1031,6 +1154,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -1071,6 +1195,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.SignInResource&gt;</ReturnType>
@@ -1105,6 +1230,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.SignInResource&gt;</ReturnType>
@@ -1143,6 +1269,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.SignInResource&gt;</ReturnType>
@@ -1183,6 +1310,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenStatus[]&gt;</ReturnType>
@@ -1218,6 +1346,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenStatus[]&gt;</ReturnType>
@@ -1255,6 +1384,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenResponse&gt;</ReturnType>
@@ -1290,6 +1420,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenResponse&gt;</ReturnType>
@@ -1324,6 +1455,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Net.Http.HttpClient</ReturnType>
@@ -1348,6 +1480,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILogger</ReturnType>
@@ -1375,6 +1508,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.IConnectorClient&gt;</ReturnType>
@@ -1405,6 +1539,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -1441,6 +1576,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -1469,11 +1605,11 @@
             (<see cref="P:Microsoft.Bot.Schema.Activity.ChannelId" /> + <see cref="P:Microsoft.Bot.Schema.Activity.Id" />) is found
             then an <see cref="T:Microsoft.Bot.Builder.InvokeResponse" /> is returned, otherwise null is returned.
             <para>This method registers the following services for the turn.<list type="bullet"><item><see cref="T:System.Security.Principal.IIdentity" /> (key = "BotIdentity"), a claims claimsIdentity for the bot.</item><item><see cref="T:Microsoft.Bot.Connector.IConnectorClient" />, the channel connector client to use this turn.</item></list></para></remarks>
+        <altmember cref="M:Microsoft.Bot.Builder.BotFrameworkAdapter.ContinueConversationAsync(System.String,Microsoft.Bot.Schema.ConversationReference,Microsoft.Bot.Builder.BotCallbackHandler,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Bot.Builder.BotAdapter.RunPipelineAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Bot.Builder.BotCallbackHandler,System.Threading.CancellationToken)" />
         <exception cref="T:System.ArgumentNullException">
           <paramref name="activity" /> is <c>null</c>.</exception>
         <exception cref="T:System.UnauthorizedAccessException">authentication failed.</exception>
-        <altmember cref="M:Microsoft.Bot.Builder.BotFrameworkAdapter.ContinueConversationAsync(System.String,Microsoft.Bot.Schema.ConversationReference,Microsoft.Bot.Builder.BotCallbackHandler,System.Threading.CancellationToken)" />
-        <altmember cref="M:Microsoft.Bot.Builder.BotAdapter.RunPipelineAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Bot.Builder.BotCallbackHandler,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="ProcessOutgoingActivityAsync">
@@ -1486,6 +1622,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -1517,6 +1654,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse[]&gt;</ReturnType>
@@ -1553,6 +1691,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1589,6 +1728,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1624,6 +1764,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -1659,6 +1800,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.BotFrameworkAdapter</ReturnType>

@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Bot.Builder.ChannelServiceHandler</BaseTypeName>
@@ -29,6 +30,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="adapter" Type="Microsoft.Bot.Builder.BotAdapter" />
@@ -68,6 +70,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -116,6 +119,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -162,12 +166,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The skill conversation reference.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -7,11 +7,12 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
     <summary>
-            Processes streaming activities.
+            Interface for classes that process streaming activities.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -26,6 +27,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -36,11 +38,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="activity">To be added.</param>
-        <param name="botCallbackHandler">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="activity">The <see cref="T:Microsoft.Bot.Schema.Activity" /> to process.</param>
+        <param name="botCallbackHandler">The <see cref="T:Microsoft.Bot.Builder.BotCallbackHandler" /> that will handle the activity.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Defines the contract for processing streaming activities.
+            </summary>
+        <returns>A task returning an <see cref="T:Microsoft.Bot.Builder.InvokeResponse" /> object.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

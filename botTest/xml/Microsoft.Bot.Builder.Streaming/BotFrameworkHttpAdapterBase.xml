@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Bot.Builder.BotFrameworkAdapter</BaseTypeName>
@@ -17,7 +18,9 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            An HTTP adapter base class.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -31,6 +34,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentialProvider" Type="Microsoft.Bot.Connector.Authentication.ICredentialProvider" />
@@ -38,10 +42,12 @@
         <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.Bot.Builder.Streaming.BotFrameworkHttpAdapterBase&gt;" />
       </Parameters>
       <Docs>
-        <param name="credentialProvider">To be added.</param>
-        <param name="channelProvider">To be added.</param>
-        <param name="logger">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="credentialProvider">The credential provider.</param>
+        <param name="channelProvider">The channel provider.</param>
+        <param name="logger">The ILogger implementation this adapter should use.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Builder.Streaming.BotFrameworkHttpAdapterBase" /> class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -55,6 +61,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentialProvider" Type="Microsoft.Bot.Connector.Authentication.ICredentialProvider" />
@@ -63,11 +70,13 @@
         <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.Bot.Builder.Streaming.BotFrameworkHttpAdapterBase&gt;" />
       </Parameters>
       <Docs>
-        <param name="credentialProvider">To be added.</param>
-        <param name="channelProvider">To be added.</param>
-        <param name="httpClient">To be added.</param>
-        <param name="logger">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="credentialProvider">The credential provider.</param>
+        <param name="channelProvider">The channel provider.</param>
+        <param name="httpClient">The HTTP client.</param>
+        <param name="logger">The ILogger implementation this adapter should use.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Builder.Streaming.BotFrameworkHttpAdapterBase" /> class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -81,6 +90,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentialProvider" Type="Microsoft.Bot.Connector.Authentication.ICredentialProvider" />
@@ -92,14 +102,16 @@
         <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger" />
       </Parameters>
       <Docs>
-        <param name="credentialProvider">To be added.</param>
-        <param name="authConfig">To be added.</param>
-        <param name="channelProvider">To be added.</param>
-        <param name="connectorClientRetryPolicy">To be added.</param>
-        <param name="customHttpClient">To be added.</param>
-        <param name="middleware">To be added.</param>
-        <param name="logger">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="credentialProvider">The credential provider.</param>
+        <param name="authConfig">The authentication configuration.</param>
+        <param name="channelProvider">The channel provider.</param>
+        <param name="connectorClientRetryPolicy">Retry policy for retyring HTTP operations.</param>
+        <param name="customHttpClient">The HTTP client.</param>
+        <param name="middleware">The middleware to initially add to the adapter.</param>
+        <param name="logger">The ILogger implementation this adapter should use.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Builder.Streaming.BotFrameworkHttpAdapterBase" /> class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -113,6 +125,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -121,10 +134,13 @@
         <Parameter Name="activity" Type="Microsoft.Bot.Schema.Activity" />
       </Parameters>
       <Docs>
-        <param name="activity">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="activity">The outgoing activity.</param>
+        <summary>
+            Evaluates if processing an outgoing activity is possible.
+            </summary>
+        <returns>Whether should call ProcessOutgoingActivityAsync to send the outgoing activity.</returns>
+        <remarks>If returns true, <see cref="M:Microsoft.Bot.Builder.Streaming.BotFrameworkHttpAdapterBase.ProcessOutgoingActivityAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Bot.Schema.Activity,System.Threading.CancellationToken)" /> will be responsible for sending 
+            the outgoing activity.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ClaimsIdentity">
@@ -137,6 +153,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Claims.ClaimsIdentity</ReturnType>
@@ -161,6 +178,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.IBot</ReturnType>
@@ -185,6 +203,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -215,6 +234,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -225,11 +245,13 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="activity">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">The context object for the turn.</param>
+        <param name="activity">The activity to be processed.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>
+            Sends an outgoing activity.
+            </summary>
+        <returns>The result of processing the activity.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -246,6 +268,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -286,6 +309,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Bot.Builder.Streaming.StreamingRequestHandler&gt;</ReturnType>
@@ -310,6 +334,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -319,11 +344,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="activity">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="activity">&gt;The <see cref="T:Microsoft.Bot.Schema.Activity" /> to send.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Sends an activity.
+            </summary>
+        <returns>A task representing the asynchronous operation.</returns>
+        <remarks>If the task completes successfully, the result contains a the resource response object.</remarks>
       </Docs>
     </Member>
   </Members>

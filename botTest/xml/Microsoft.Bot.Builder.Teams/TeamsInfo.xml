@@ -7,13 +7,17 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            The TeamsInfo
+            provides utility methods for the events and interactions that occur within Microsoft Teams.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -27,6 +31,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TeamsChannelAccount&gt;</ReturnType>
@@ -37,11 +42,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="userId">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext"> Turn context. </param>
+        <param name="userId"> ID of the user in question. </param>
+        <param name="cancellationToken"> cancellation token. </param>
+        <summary>
+            Gets the account of a single conversation member. 
+            This works in one-on-one, group, and teams scoped conversations.
+            </summary>
+        <returns>Team Details.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -55,6 +63,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Bot.Schema.Teams.TeamsChannelAccount&gt;&gt;</ReturnType>
@@ -64,10 +73,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext"> Turn context. </param>
+        <param name="cancellationToken"> Cancellation token. </param>
+        <summary>
+            Gets the conversation members of a one-on-one or group chat.
+            </summary>
+        <returns>TeamsChannelAccount.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -81,6 +92,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TeamsPagedMembersResult&gt;</ReturnType>
@@ -92,12 +104,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="pageSize">To be added.</param>
-        <param name="continuationToken">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext"> Turn context. </param>
+        <param name="pageSize"> Suggested number of entries on a page. </param>
+        <param name="continuationToken"> ContinuationToken token. </param>
+        <param name="cancellationToken"> Cancellation token. </param>
+        <summary>
+            Gets a pagined list of members of one-on-one, group, or team conversation.
+            </summary>
+        <returns>TeamsPagedMembersResult.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -111,6 +125,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TeamsPagedMembersResult&gt;</ReturnType>
@@ -123,13 +138,16 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="teamId">To be added.</param>
-        <param name="continuationToken">To be added.</param>
-        <param name="pageSize">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext"> Turn context. </param>
+        <param name="teamId"> ID of the Teams team. </param>
+        <param name="continuationToken"> continuationToken token. </param>
+        <param name="pageSize"> number of entries on the page. </param>
+        <param name="cancellationToken"> cancellation token. </param>
+        <summary>
+            Gets a paginated list of members of a team. 
+            This only works in teams scoped conversations.
+            </summary>
+        <returns>TeamsPagedMembersResult.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,6 +161,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.Teams.ChannelInfo&gt;&gt;</ReturnType>
@@ -153,11 +172,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="teamId">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext"> Turn context. </param>
+        <param name="teamId"> ID of the Teams team. </param>
+        <param name="cancellationToken"> cancellation token. </param>
+        <summary>
+            Returns a list of channels in a Team. 
+            This only works in teams scoped conversations.
+            </summary>
+        <returns>Team Details.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -171,6 +193,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TeamDetails&gt;</ReturnType>
@@ -181,11 +204,13 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="teamId">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext"> Turn context. </param>
+        <param name="teamId"> The id of the Teams team. </param>
+        <param name="cancellationToken"> Cancellation token. </param>
+        <summary>
+            Gets the details for the given team id. This only works in teams scoped conversations. 
+            </summary>
+        <returns>Team Details.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -199,6 +224,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TeamsChannelAccount&gt;</ReturnType>
@@ -210,12 +236,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="userId">To be added.</param>
-        <param name="teamId">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext"> Turn context. </param>
+        <param name="userId"> user id. </param>
+        <param name="teamId"> ID of the Teams team. </param>
+        <param name="cancellationToken"> cancellation token. </param>
+        <summary>
+            Gets the list of members in a teams scoped conversation.
+            </summary>
+        <returns>Team Details.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -229,6 +257,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.Bot.Schema.Teams.TeamsChannelAccount&gt;&gt;</ReturnType>
@@ -239,11 +268,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="teamId">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext"> Turn context. </param>
+        <param name="teamId"> ID of the Teams team. </param>
+        <param name="cancellationToken"> cancellation token. </param>
+        <summary>
+            Gets the list of TeamsChannelAccounts within a team. 
+            This only works in teams scoped conversations.
+            </summary>
+        <returns>TeamsChannelAccount.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -257,6 +289,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;Microsoft.Bot.Schema.ConversationReference,System.String&gt;&gt;</ReturnType>
@@ -269,13 +302,15 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="activity">To be added.</param>
-        <param name="teamsChannelId">To be added.</param>
-        <param name="credentials">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext"> Turn context. </param>
+        <param name="activity"> ID of the Teams team. </param>
+        <param name="teamsChannelId"> cancellation token. </param>
+        <param name="credentials"> Microsoft app credentials. </param>
+        <param name="cancellationToken"> The cancellation token. </param>
+        <summary>
+            Creates a new thread in a team chat and sends an activity to that new thread.
+            </summary>
+        <returns>Team Details.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

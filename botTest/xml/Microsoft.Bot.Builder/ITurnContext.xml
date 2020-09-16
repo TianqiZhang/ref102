@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -16,9 +17,9 @@
     <remarks>Context provides information needed to process an incoming activity.
             The context object is created by a <see cref="T:Microsoft.Bot.Builder.BotAdapter" /> and persists for the
             length of the turn.</remarks>
-    <altmember cref="T:Microsoft.Bot.Builder.IBot" />
     <altmember cref="T:Microsoft.Bot.Builder.IMiddleware" />
     <altmember cref="T:Microsoft.Bot.Builder.ITurnContext`1" />
+    <altmember cref="T:Microsoft.Bot.Builder.IBot" />
   </Docs>
   <Members>
     <Member MemberName="Activity">
@@ -31,6 +32,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.Activity</ReturnType>
@@ -53,6 +55,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.BotAdapter</ReturnType>
@@ -75,6 +78,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -110,6 +114,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -127,11 +132,11 @@
             </summary>
         <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
-        <para>Not all channels support this operation. For channels that don\'t, this call may throw an exception.</para>
         <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.OnDeleteActivity(Microsoft.Bot.Builder.DeleteActivityHandler)" />
         <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.DeleteActivityAsync(Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.SendActivitiesAsync(Microsoft.Bot.Schema.IActivity[],System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.UpdateActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
+        <para>Not all channels support this operation. For channels that don\'t, this call may throw an exception.</para>
       </Docs>
     </Member>
     <Member MemberName="OnDeleteActivity">
@@ -144,6 +149,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.ITurnContext</ReturnType>
@@ -161,13 +167,13 @@
             the adapter calls the registered handlers in the order in which they were
             added to the context object.
             </remarks>
-        <exception cref="T:System.ArgumentNullException">
-          <paramref name="handler" /> is <c>null</c>.</exception>
         <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.DeleteActivityAsync(Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.DeleteActivityAsync(System.String,System.Threading.CancellationToken)" />
         <altmember cref="T:Microsoft.Bot.Builder.DeleteActivityHandler" />
         <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.OnSendActivities(Microsoft.Bot.Builder.SendActivitiesHandler)" />
         <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.OnUpdateActivity(Microsoft.Bot.Builder.UpdateActivityHandler)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="handler" /> is <c>null</c>.</exception>
       </Docs>
     </Member>
     <Member MemberName="OnSendActivities">
@@ -180,6 +186,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.ITurnContext</ReturnType>
@@ -216,6 +223,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.ITurnContext</ReturnType>
@@ -249,6 +257,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -273,6 +282,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse[]&gt;</ReturnType>
@@ -309,6 +319,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -345,6 +356,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -393,6 +405,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.TurnContextStateCollection</ReturnType>
@@ -415,6 +428,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>

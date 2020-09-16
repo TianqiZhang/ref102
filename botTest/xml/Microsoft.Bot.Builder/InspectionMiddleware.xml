@@ -7,13 +7,16 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Bot.Builder.InterceptionMiddleware</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            Middleware to enable debugging the state of a bot.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -27,6 +30,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="inspectionState" Type="Microsoft.Bot.Builder.InspectionState" />
@@ -36,12 +40,14 @@
         <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger&lt;Microsoft.Bot.Builder.InspectionMiddleware&gt;" />
       </Parameters>
       <Docs>
-        <param name="inspectionState">To be added.</param>
-        <param name="userState">To be added.</param>
-        <param name="conversationState">To be added.</param>
-        <param name="credentials">To be added.</param>
-        <param name="logger">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="inspectionState">A state management object for inspection state.</param>
+        <param name="userState">A state management object for user state.</param>
+        <param name="conversationState">A state management object for conversation state.</param>
+        <param name="credentials">The authentication credentials.</param>
+        <param name="logger">A logger.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Builder.InspectionMiddleware" /> class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -55,14 +61,17 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Net.Http.HttpClient</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Gets the HTTP client for the current object.
+            </summary>
+        <returns>The HTTP client for the current object.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -76,6 +85,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.ValueTuple&lt;System.Boolean,System.Boolean&gt;&gt;</ReturnType>
@@ -92,11 +102,13 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="traceActivity">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">The turn context.</param>
+        <param name="traceActivity">The trace activity.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        <summary>
+            Processes inbound activities.
+            </summary>
+        <returns>A <see cref="T:System.Threading.Tasks.Task" /> representing the asynchronous operation.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -110,6 +122,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -120,11 +133,13 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="traceActivities">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">The turn context.</param>
+        <param name="traceActivities">A collection of trace activities.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        <summary>
+            Processes outbound activities.
+            </summary>
+        <returns>A <see cref="T:System.Threading.Tasks.Task" /> representing the asynchronous operation.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -138,6 +153,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
@@ -147,10 +163,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">The turn context.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        <summary>
+            Indentifies open and attach commands and calls the appropriate method.
+            </summary>
+        <returns>true if the command is open or attach, otherwise false.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -164,6 +182,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -173,10 +192,12 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">The turn context.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        <summary>
+            Processes the state management object.
+            </summary>
+        <returns>A <see cref="T:System.Threading.Tasks.Task" /> representing the asynchronous operation.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

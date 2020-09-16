@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -31,6 +32,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,6 +50,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.Authentication.ClaimsValidator</ReturnType>
@@ -72,13 +75,18 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>
+            Gets or sets an array of JWT endorsements.
+            </summary>
+        <value>
+            An array of JWT endorsements.
+            </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

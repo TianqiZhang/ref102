@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,6 +29,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -45,7 +47,14 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty("appId")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty("appId")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -69,7 +78,14 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty("id")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty("id")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -93,7 +109,14 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[Newtonsoft.Json.JsonProperty("skillEndpoint")]</AttributeName>
+          <AttributeName Language="F#">[&lt;Newtonsoft.Json.JsonProperty("skillEndpoint")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>

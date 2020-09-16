@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -17,7 +18,9 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            An authentication class that implements <see cref="T:Microsoft.Bot.Connector.Authentication.IAuthenticator" />, used to authenticate requests against Azure.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -31,6 +34,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="clientCredential" Type="Microsoft.IdentityModel.Clients.ActiveDirectory.ClientCredential" />
@@ -38,10 +42,12 @@
         <Parameter Name="customHttpClient" Type="System.Net.Http.HttpClient" />
       </Parameters>
       <Docs>
-        <param name="clientCredential">To be added.</param>
-        <param name="configurationOAuth">To be added.</param>
-        <param name="customHttpClient">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="clientCredential">The client credential to use for token acquisition.</param>
+        <param name="configurationOAuth">A configuration object for OAuth client credential authentication.</param>
+        <param name="customHttpClient">A customized instance of the HttpClient class.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Authentication.AdalAuthenticator" /> class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -55,6 +61,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="clientCertificate" Type="Microsoft.IdentityModel.Clients.ActiveDirectory.ClientAssertionCertificate" />
@@ -63,11 +70,13 @@
         <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger" />
       </Parameters>
       <Docs>
-        <param name="clientCertificate">To be added.</param>
-        <param name="configurationOAuth">To be added.</param>
-        <param name="customHttpClient">To be added.</param>
-        <param name="logger">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="clientCertificate">A client credential that includes a X509Certificate.</param>
+        <param name="configurationOAuth">A configuration object for OAuth client credential authentication.</param>
+        <param name="customHttpClient">A customized instance of the HttpClient class.</param>
+        <param name="logger">The type used to perform logging.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Authentication.AdalAuthenticator" /> class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -81,6 +90,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="clientCredential" Type="Microsoft.IdentityModel.Clients.ActiveDirectory.ClientCredential" />
@@ -89,11 +99,13 @@
         <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger" />
       </Parameters>
       <Docs>
-        <param name="clientCredential">To be added.</param>
-        <param name="configurationOAuth">To be added.</param>
-        <param name="customHttpClient">To be added.</param>
-        <param name="logger">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="clientCredential">The client credential to use for token acquisition.</param>
+        <param name="configurationOAuth">A configuration object for OAuth client credential authentication.</param>
+        <param name="customHttpClient">A customized instance of the HttpClient class.</param>
+        <param name="logger">The type used to perform logging.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Authentication.AdalAuthenticator" /> class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -107,6 +119,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="clientCertificate" Type="Microsoft.IdentityModel.Clients.ActiveDirectory.ClientAssertionCertificate" />
@@ -116,12 +129,14 @@
         <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger" />
       </Parameters>
       <Docs>
-        <param name="clientCertificate">To be added.</param>
-        <param name="sendX5c">To be added.</param>
-        <param name="configurationOAuth">To be added.</param>
-        <param name="customHttpClient">To be added.</param>
-        <param name="logger">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="clientCertificate">A client credential that includes a X509Certificate.</param>
+        <param name="sendX5c">Enables easy certificates roll-over in Azure AD. Setting it to true sends the public certficate to Azure AD along with token requests.</param>
+        <param name="configurationOAuth">A configuration object for OAuth client credential authentication.</param>
+        <param name="customHttpClient">A customized instance of the HttpClient class.</param>
+        <param name="logger">The type used to perform logging.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Authentication.AdalAuthenticator" /> class.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -135,6 +150,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationResult&gt;</ReturnType>
@@ -143,9 +159,11 @@
         <Parameter Name="forceRefresh" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="forceRefresh">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="forceRefresh">Forces a token refresh by clearing the token cache and acquiring it again.</param>
+        <summary>
+            Performs the call to acquire a security token.
+            </summary>
+        <returns>A <see cref="T:System.Threading.Tasks.Task`1" /> object.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -162,6 +180,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.Authentication.AuthenticatorResult&gt;</ReturnType>

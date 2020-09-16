@@ -7,13 +7,16 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            A Bot Framework client.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -26,6 +29,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,6 +47,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -62,7 +67,7 @@
         <param name="toUrl">The URL of the bot receiving the activity.</param>
         <param name="serviceUrl">The callback Url for the skill host.</param>
         <param name="conversationId">A conversation ID to use for the conversation with the skill.</param>
-        <param name="activity">activity to forward.</param>
+        <param name="activity">The <see cref="T:Microsoft.Bot.Schema.Activity" /> to send to forward.</param>
         <param name="cancellationToken">cancellation Token.</param>
         <summary>
             Forwards an activity to a skill (bot).
@@ -81,6 +86,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&lt;T&gt;&gt;</ReturnType>
@@ -104,7 +110,7 @@
         <param name="toUrl">The URL of the bot receiving the activity.</param>
         <param name="serviceUrl">The callback Url for the skill host.</param>
         <param name="conversationId">A conversation ID to use for the conversation with the skill.</param>
-        <param name="activity">activity to forward.</param>
+        <param name="activity">The <see cref="T:Microsoft.Bot.Schema.Activity" /> to send to forward.</param>
         <param name="cancellationToken">cancellation Token.</param>
         <summary>
             Forwards an activity to a skill (bot).

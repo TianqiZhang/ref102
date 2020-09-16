@@ -7,13 +7,16 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            A class containing serializer settings for Microsoft.Bot.Connector.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -27,14 +30,17 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>
+            Creates a new ConnectorClient deserialization settings object.
+            </summary>
+        <returns>A <see cref="T:Newtonsoft.Json.JsonSerializerSettings" /> object.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

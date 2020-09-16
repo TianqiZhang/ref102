@@ -7,13 +7,17 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
+    <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Bot.Builder.ActivityHandler</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            The TeamsActivityHandler is derived from ActivityHandler. It adds support for 
+            the Microsoft Teams specific events and interactions.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -26,6 +30,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -43,6 +48,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -52,11 +58,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a conversation update activity is received from the channel.
+            Conversation update activities are useful when it comes to responding to users being added to or removed from the channel.
+            For example, a bot could respond to a user being added by greeting the user.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>
+            In a derived class, override this method to add logic that applies to all conversation update activities.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="OnInvokeActivityAsync">
@@ -69,6 +82,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -78,11 +92,19 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when an invoke activity is received from the connector.
+            Invoke activities can be used to communicate many different things.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>
+            Invoke activities communicate programmatic commands from a client or channel to a bot.
+            The meaning of an invoke activity is defined by the <see cref="P:Microsoft.Bot.Schema.IInvokeActivity.Name" /> property,
+            which is meaningful within the scope of a channel.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="OnSignInInvokeAsync">
@@ -95,6 +117,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -104,10 +127,13 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a signIn invoke activity is received from the connector.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -121,6 +147,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionResponse&gt;</ReturnType>
@@ -131,11 +158,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="query">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="query">The invoke request body type for app-based link query.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when an app based link query activity is received from the connector.
+            </summary>
+        <returns>The Messaging Extension Response for the query.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -149,6 +179,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -158,10 +189,13 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when an card action invoke activity is received from the connector.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -175,6 +209,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -186,12 +221,16 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="channelInfo">To be added.</param>
-        <param name="teamInfo">To be added.</param>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="channelInfo">The channel info object which describes the channel.</param>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Channel Created event activity is received from the connector.
+            Channel Created correspond to the user creating a new channel.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -205,6 +244,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -216,12 +256,16 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="channelInfo">To be added.</param>
-        <param name="teamInfo">To be added.</param>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="channelInfo">The channel info object which describes the channel.</param>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Channel Deleted event activity is received from the connector.
+            Channel Deleted correspond to the user deleting an existing channel.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -235,6 +279,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -246,12 +291,50 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="channelInfo">To be added.</param>
-        <param name="teamInfo">To be added.</param>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="channelInfo">The channel info object which describes the channel.</param>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Channel Renamed event activity is received from the connector.
+            Channel Renamed correspond to the user renaming an existing channel.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTeamsChannelRestoredAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnTeamsChannelRestoredAsync (Microsoft.Bot.Schema.Teams.ChannelInfo channelInfo, Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnTeamsChannelRestoredAsync(class Microsoft.Bot.Schema.Teams.ChannelInfo channelInfo, class Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsActivityHandler.OnTeamsChannelRestoredAsync(Microsoft.Bot.Schema.Teams.ChannelInfo,Microsoft.Bot.Schema.Teams.TeamInfo,Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IConversationUpdateActivity},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnTeamsChannelRestoredAsync (channelInfo As ChannelInfo, teamInfo As TeamInfo, turnContext As ITurnContext(Of IConversationUpdateActivity), cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnTeamsChannelRestoredAsync : Microsoft.Bot.Schema.Teams.ChannelInfo * Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.OnTeamsChannelRestoredAsync : Microsoft.Bot.Schema.Teams.ChannelInfo * Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsActivityHandler.OnTeamsChannelRestoredAsync (channelInfo, teamInfo, turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelInfo" Type="Microsoft.Bot.Schema.Teams.ChannelInfo" />
+        <Parameter Name="teamInfo" Type="Microsoft.Bot.Schema.Teams.TeamInfo" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="channelInfo">The channel info object which describes the channel.</param>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Channel Restored event activity is received from the connector.
+            Channel Restored correspond to the user restoring a previously deleted channel.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -265,6 +348,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -275,11 +359,15 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="fileConsentCardResponse">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="fileConsentCardResponse">The response representing the value of the invoke activity sent when the user accepts
+            a file consent card.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a file consent card is accepted by the user.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -293,6 +381,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -303,11 +392,15 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="fileConsentCardResponse">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="fileConsentCardResponse">The response representing the value of the invoke activity sent when the user acts on
+            a file consent card.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a file consent card activity is received from the connector.
+            </summary>
+        <returns>An InvokeResponse depending on the action of the file consent card.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -321,6 +414,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -331,11 +425,15 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="fileConsentCardResponse">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="fileConsentCardResponse">The response representing the value of the invoke activity sent when the user declines
+            a file consent card.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a file consent card is declined by the user.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -349,6 +447,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -360,12 +459,17 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="teamsMembersAdded">To be added.</param>
-        <param name="teamInfo">To be added.</param>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="teamsMembersAdded">A list of all the members added to the channel, as
+            described by the conversation update activity.</param>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Override this in a derived class to provide logic for when members other than the bot
+            join the channel, such as your bot's welcome logic.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -379,6 +483,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -390,12 +495,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="membersAdded">To be added.</param>
-        <param name="teamInfo">To be added.</param>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="membersAdded">A list of all the accounts added to the channel, as
+            described by the conversation update activity.</param>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Override this in a derived class to provide logic for when members other than the bot
+            join the channel, such as your bot's welcome logic.
+            UseIt will get the associated members with the provided accounts.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -409,6 +520,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -420,12 +532,17 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="teamsMembersRemoved">To be added.</param>
-        <param name="teamInfo">To be added.</param>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="teamsMembersRemoved">A list of all the members removed from the channel, as
+            described by the conversation update activity.</param>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Override this in a derived class to provide logic for when members other than the bot
+            leave the channel, such as your bot's good-bye logic.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -439,6 +556,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -450,12 +568,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="membersRemoved">To be added.</param>
-        <param name="teamInfo">To be added.</param>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="membersRemoved">A list of all the accounts removed from the channel, as
+            described by the conversation update activity.</param>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Override this in a derived class to provide logic for when members other than the bot
+            leave the channel, such as your bot's good-bye logic.
+            It will get the associated members with the provided accounts.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -469,6 +593,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionActionResponse&gt;</ReturnType>
@@ -479,11 +604,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="action">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="action">The messaging extension action.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a messaging extension bot message preview edit activity is received from the connector.
+            </summary>
+        <returns>The Messaging Extension Action Response for the action.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -497,6 +625,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionActionResponse&gt;</ReturnType>
@@ -507,11 +636,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="action">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="action">The messaging extension action.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a messaging extension bot message preview send activity is received from the connector.
+            </summary>
+        <returns>The Messaging Extension Action Response for the action.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -525,6 +657,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -535,11 +668,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="cardData">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cardData">Object representing the card data.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Override this in a derived class to provide logic for when a card button is clicked in a messaging extension.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -553,6 +689,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionResponse&gt;</ReturnType>
@@ -563,11 +700,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="query">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="query">The Messaging extension query.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a messaging extension configuration query setting url activity is received from the connector.
+            </summary>
+        <returns>The Messaging Extension Response for the query.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -581,6 +721,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -591,11 +732,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="settings">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="settings">Object representing the configuration settings.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Override this in a derived class to provide logic for when a configuration is set for a messaging extension.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -609,6 +753,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionActionResponse&gt;</ReturnType>
@@ -619,11 +764,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="action">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="action">The messaging extension action.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Messaging Extension Fetch activity is received from the connector.
+            </summary>
+        <returns>The Messaging Extension Action Response for the action.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -637,6 +785,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionResponse&gt;</ReturnType>
@@ -647,11 +796,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="query">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="query">The query for the search command.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Messaging Extension Query activity is received from the connector.
+            </summary>
+        <returns>The Messaging Extension Response for the query.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -665,6 +817,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionResponse&gt;</ReturnType>
@@ -675,11 +828,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="query">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="query">The object representing the query.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a messaging extension select item activity is received from the connector.
+            </summary>
+        <returns>The Messaging Extension Response for the query.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -693,6 +849,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionActionResponse&gt;</ReturnType>
@@ -703,11 +860,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="action">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="action">The messaging extension action.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a messaging extension submit action activity is received from the connector.
+            </summary>
+        <returns>The Messaging Extension Action Response for the action.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -721,6 +881,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionActionResponse&gt;</ReturnType>
@@ -731,11 +892,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="action">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="action">The messaging extension action.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a messaging extension submit action dispatch activity is received from the connector.
+            </summary>
+        <returns>The Messaging Extension Action Response for the action.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -749,6 +913,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -759,11 +924,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="query">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="query">The O365 connector card HttpPOST invoke query.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a O365 Connector Card Action activity is received from the connector.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -777,6 +945,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -786,10 +955,13 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a signIn verify state activity is received from the connector.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -803,6 +975,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TaskModuleResponse&gt;</ReturnType>
@@ -813,11 +986,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="taskModuleRequest">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="taskModuleRequest">The task module invoke request value payload.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Override this in a derived class to provide logic for when a task module is fetched.
+            </summary>
+        <returns>A Task Module Response for the request.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -831,6 +1007,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TaskModuleResponse&gt;</ReturnType>
@@ -841,11 +1018,110 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="turnContext">To be added.</param>
-        <param name="taskModuleRequest">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="taskModuleRequest">The task module invoke request value payload.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Override this in a derived class to provide logic for when a task module is submited.
+            </summary>
+        <returns>A Task Module Response for the request.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTeamsTeamArchivedAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnTeamsTeamArchivedAsync (Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnTeamsTeamArchivedAsync(class Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsActivityHandler.OnTeamsTeamArchivedAsync(Microsoft.Bot.Schema.Teams.TeamInfo,Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IConversationUpdateActivity},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnTeamsTeamArchivedAsync (teamInfo As TeamInfo, turnContext As ITurnContext(Of IConversationUpdateActivity), cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnTeamsTeamArchivedAsync : Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.OnTeamsTeamArchivedAsync : Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsActivityHandler.OnTeamsTeamArchivedAsync (teamInfo, turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="teamInfo" Type="Microsoft.Bot.Schema.Teams.TeamInfo" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Team Archived event activity is received from the connector.
+            Team Archived correspond to the user archiving a team.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTeamsTeamDeletedAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnTeamsTeamDeletedAsync (Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnTeamsTeamDeletedAsync(class Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsActivityHandler.OnTeamsTeamDeletedAsync(Microsoft.Bot.Schema.Teams.TeamInfo,Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IConversationUpdateActivity},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnTeamsTeamDeletedAsync (teamInfo As TeamInfo, turnContext As ITurnContext(Of IConversationUpdateActivity), cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnTeamsTeamDeletedAsync : Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.OnTeamsTeamDeletedAsync : Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsActivityHandler.OnTeamsTeamDeletedAsync (teamInfo, turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="teamInfo" Type="Microsoft.Bot.Schema.Teams.TeamInfo" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Team Deleted event activity is received from the connector.
+            Team Deleted corresponds to the user deleting a team.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTeamsTeamHardDeletedAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnTeamsTeamHardDeletedAsync (Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnTeamsTeamHardDeletedAsync(class Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsActivityHandler.OnTeamsTeamHardDeletedAsync(Microsoft.Bot.Schema.Teams.TeamInfo,Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IConversationUpdateActivity},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnTeamsTeamHardDeletedAsync (teamInfo As TeamInfo, turnContext As ITurnContext(Of IConversationUpdateActivity), cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnTeamsTeamHardDeletedAsync : Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.OnTeamsTeamHardDeletedAsync : Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsActivityHandler.OnTeamsTeamHardDeletedAsync (teamInfo, turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="teamInfo" Type="Microsoft.Bot.Schema.Teams.TeamInfo" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Team Hard Deleted event activity is received from the connector.
+            Team Hard Deleted corresponds to the user hard deleting a team.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -859,6 +1135,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -869,11 +1146,79 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="teamInfo">To be added.</param>
-        <param name="turnContext">To be added.</param>
-        <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Team Renamed event activity is received from the connector.
+            Team Renamed correspond to the user renaming an existing team.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTeamsTeamRestoredAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnTeamsTeamRestoredAsync (Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnTeamsTeamRestoredAsync(class Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsActivityHandler.OnTeamsTeamRestoredAsync(Microsoft.Bot.Schema.Teams.TeamInfo,Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IConversationUpdateActivity},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnTeamsTeamRestoredAsync (teamInfo As TeamInfo, turnContext As ITurnContext(Of IConversationUpdateActivity), cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnTeamsTeamRestoredAsync : Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.OnTeamsTeamRestoredAsync : Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsActivityHandler.OnTeamsTeamRestoredAsync (teamInfo, turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="teamInfo" Type="Microsoft.Bot.Schema.Teams.TeamInfo" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Team Restored event activity is received from the connector.
+            Team Restored corresponds to the user restoring a team.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTeamsTeamUnarchivedAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnTeamsTeamUnarchivedAsync (Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnTeamsTeamUnarchivedAsync(class Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsActivityHandler.OnTeamsTeamUnarchivedAsync(Microsoft.Bot.Schema.Teams.TeamInfo,Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IConversationUpdateActivity},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnTeamsTeamUnarchivedAsync (teamInfo As TeamInfo, turnContext As ITurnContext(Of IConversationUpdateActivity), cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnTeamsTeamUnarchivedAsync : Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.OnTeamsTeamUnarchivedAsync : Microsoft.Bot.Schema.Teams.TeamInfo * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsActivityHandler.OnTeamsTeamUnarchivedAsync (teamInfo, turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.10.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="teamInfo" Type="Microsoft.Bot.Schema.Teams.TeamInfo" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="teamInfo">The team info object representing the team.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Team Unarchived event activity is received from the connector.
+            Team Unarchived correspond to the user unarchiving a team.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
