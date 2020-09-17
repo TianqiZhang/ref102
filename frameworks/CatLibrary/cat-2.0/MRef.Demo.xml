@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MRef.Demo</name>
+    </assembly>
+    <members>
+        <member name="T:MRef.Demo.Enumeration.ColorType">
+            <summary>
+            Enumeration ColorType
+            </summary>
+            <remarks>
+            <para>
+            Red/Blue/Yellow/Purple can become all color you want.
+            </para>
+            <list type="bullet">
+            <listItem>
+            Orange = Red + Yellow
+            </listItem>
+            <listItem>
+            Purple = Red + Blue
+            </listItem>
+            <listItem>
+            Green = Blue + Yellow
+            </listItem>
+            </list>
+            </remarks>
+            <seealso cref="T:System.Object"/>
+        </member>
+        <member name="F:MRef.Demo.Enumeration.ColorType.Red">
+            <summary>
+            this color is red
+            </summary>
+        </member>
+        <member name="F:MRef.Demo.Enumeration.ColorType.Blue">
+            <summary>
+            blue like river
+            </summary>
+        </member>
+        <member name="F:MRef.Demo.Enumeration.ColorType.Yellow">
+            <summary>
+            yellow comes from desert
+            </summary>
+        </member>
+        <member name="F:MRef.Demo.Enumeration.ColorType.Purple">
+            <summary>
+            purple rain, purple rain
+            </summary>
+        </member>
+    </members>
+</doc>
