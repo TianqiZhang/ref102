@@ -292,9 +292,7 @@
       </Parameters>
       <Docs>
         <param name="date">Date time to now.</param>
-        <summary>
-            It's a method with complex return type.
-            </summary>
+        <summary></summary>
         <returns>It's a relationship map of different kind food.</returns>
         <remarks>To be added.</remarks>
         <forInternalUseOnly />
