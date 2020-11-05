@@ -363,7 +363,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netcore-1.1">
+        <Attribute FrameworkAlternate="netcore-1.0">
           <AttributeName Language="C#">[System.Obsolete("hi,mark CatchJerry(bool force) as obsolete for testing", true)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("hi,mark CatchJerry(bool force) as obsolete for testing", true)&gt;]</AttributeName>
         </Attribute>
