@@ -84,7 +84,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="i" Type="VersioningTest.I2" Index="0" FrameworkAlternate="cat-2.0" RefType="this" />
+        <Parameter Name="i" Type="VersioningTest.I2" RefType="this" Index="0" FrameworkAlternate="cat-2.0" />
       </Parameters>
       <Docs>
         <param name="i">To be added.</param>
