@@ -1,0 +1,392 @@
+<Type Name="CoreWebView2MouseEventKind" FullName="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind">
+  <TypeSignature Language="C#" Value="public enum CoreWebView2MouseEventKind" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CoreWebView2MouseEventKind extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CoreWebView2MouseEventKind" />
+  <TypeSignature Language="F#" Value="type CoreWebView2MouseEventKind = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Mouse event kind used by <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendMouseInput(Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind,Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys,System.UInt32,System.Drawing.Point)" /> to convey the kind of mouse event being sent to WebView.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HorizontalWheel">
+      <MemberSignature Language="C#" Value="HorizontalWheel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind HorizontalWheel = int32(526)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.HorizontalWheel" />
+      <MemberSignature Language="VB.NET" Value="HorizontalWheel" />
+      <MemberSignature Language="F#" Value="HorizontalWheel = 526" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.HorizontalWheel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>526</MemberValue>
+      <Docs>
+        <summary>
+            Mouse horizontal wheel scroll event, <c>WM_MOUSEHWHEEL</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Leave">
+      <MemberSignature Language="C#" Value="Leave" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind Leave = int32(675)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.Leave" />
+      <MemberSignature Language="VB.NET" Value="Leave" />
+      <MemberSignature Language="F#" Value="Leave = 675" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.Leave" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>675</MemberValue>
+      <Docs>
+        <summary>
+            Mouse leave event, <c>WM_MOUSELEAVE</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftButtonDoubleClick">
+      <MemberSignature Language="C#" Value="LeftButtonDoubleClick" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind LeftButtonDoubleClick = int32(515)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.LeftButtonDoubleClick" />
+      <MemberSignature Language="VB.NET" Value="LeftButtonDoubleClick" />
+      <MemberSignature Language="F#" Value="LeftButtonDoubleClick = 515" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.LeftButtonDoubleClick" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>515</MemberValue>
+      <Docs>
+        <summary>
+            Left button double click mouse event, <c>WM_LBUTTONDBLCLK</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftButtonDown">
+      <MemberSignature Language="C#" Value="LeftButtonDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind LeftButtonDown = int32(513)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.LeftButtonDown" />
+      <MemberSignature Language="VB.NET" Value="LeftButtonDown" />
+      <MemberSignature Language="F#" Value="LeftButtonDown = 513" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.LeftButtonDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>513</MemberValue>
+      <Docs>
+        <summary>
+            Left button down mouse event, <c>WM_LBUTTONDOWN</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftButtonUp">
+      <MemberSignature Language="C#" Value="LeftButtonUp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind LeftButtonUp = int32(514)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.LeftButtonUp" />
+      <MemberSignature Language="VB.NET" Value="LeftButtonUp" />
+      <MemberSignature Language="F#" Value="LeftButtonUp = 514" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.LeftButtonUp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>514</MemberValue>
+      <Docs>
+        <summary>
+            Left button up mouse event, <c>WM_LBUTTONUP</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleButtonDoubleClick">
+      <MemberSignature Language="C#" Value="MiddleButtonDoubleClick" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind MiddleButtonDoubleClick = int32(521)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.MiddleButtonDoubleClick" />
+      <MemberSignature Language="VB.NET" Value="MiddleButtonDoubleClick" />
+      <MemberSignature Language="F#" Value="MiddleButtonDoubleClick = 521" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.MiddleButtonDoubleClick" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>521</MemberValue>
+      <Docs>
+        <summary>
+            Middle button double click mouse event, <c>WM_MBUTTONDBLCLK</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleButtonDown">
+      <MemberSignature Language="C#" Value="MiddleButtonDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind MiddleButtonDown = int32(519)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.MiddleButtonDown" />
+      <MemberSignature Language="VB.NET" Value="MiddleButtonDown" />
+      <MemberSignature Language="F#" Value="MiddleButtonDown = 519" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.MiddleButtonDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>519</MemberValue>
+      <Docs>
+        <summary>
+            Middle button down mouse event, <c>WM_MBUTTONDOWN</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleButtonUp">
+      <MemberSignature Language="C#" Value="MiddleButtonUp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind MiddleButtonUp = int32(520)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.MiddleButtonUp" />
+      <MemberSignature Language="VB.NET" Value="MiddleButtonUp" />
+      <MemberSignature Language="F#" Value="MiddleButtonUp = 520" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.MiddleButtonUp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>520</MemberValue>
+      <Docs>
+        <summary>
+            Middle button up mouse event, <c>WM_MBUTTONUP</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="Move" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind Move = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.Move" />
+      <MemberSignature Language="VB.NET" Value="Move" />
+      <MemberSignature Language="F#" Value="Move = 512" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.Move" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>512</MemberValue>
+      <Docs>
+        <summary>
+            Mouse move event, <c>WM_MOUSEMOVE</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightButtonDoubleClick">
+      <MemberSignature Language="C#" Value="RightButtonDoubleClick" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind RightButtonDoubleClick = int32(518)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.RightButtonDoubleClick" />
+      <MemberSignature Language="VB.NET" Value="RightButtonDoubleClick" />
+      <MemberSignature Language="F#" Value="RightButtonDoubleClick = 518" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.RightButtonDoubleClick" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>518</MemberValue>
+      <Docs>
+        <summary>
+            Right button double click mouse event, <c>WM_RBUTTONDBLCLK</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightButtonDown">
+      <MemberSignature Language="C#" Value="RightButtonDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind RightButtonDown = int32(516)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.RightButtonDown" />
+      <MemberSignature Language="VB.NET" Value="RightButtonDown" />
+      <MemberSignature Language="F#" Value="RightButtonDown = 516" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.RightButtonDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>516</MemberValue>
+      <Docs>
+        <summary>
+            Right button down mouse event, <c>WM_RBUTTONDOWN</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightButtonUp">
+      <MemberSignature Language="C#" Value="RightButtonUp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind RightButtonUp = int32(517)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.RightButtonUp" />
+      <MemberSignature Language="VB.NET" Value="RightButtonUp" />
+      <MemberSignature Language="F#" Value="RightButtonUp = 517" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.RightButtonUp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>517</MemberValue>
+      <Docs>
+        <summary>
+            Right button up mouse event, <c>WM_RBUTTONUP</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Wheel">
+      <MemberSignature Language="C#" Value="Wheel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind Wheel = int32(522)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.Wheel" />
+      <MemberSignature Language="VB.NET" Value="Wheel" />
+      <MemberSignature Language="F#" Value="Wheel = 522" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.Wheel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>522</MemberValue>
+      <Docs>
+        <summary>
+            Mouse wheel scroll event, <c>WM_MOUSEWHEEL</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XButtonDoubleClick">
+      <MemberSignature Language="C#" Value="XButtonDoubleClick" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind XButtonDoubleClick = int32(525)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.XButtonDoubleClick" />
+      <MemberSignature Language="VB.NET" Value="XButtonDoubleClick" />
+      <MemberSignature Language="F#" Value="XButtonDoubleClick = 525" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.XButtonDoubleClick" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>525</MemberValue>
+      <Docs>
+        <summary>
+            First or second X button double click mouse event, <c>WM_XBUTTONDBLCLK</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XButtonDown">
+      <MemberSignature Language="C#" Value="XButtonDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind XButtonDown = int32(523)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.XButtonDown" />
+      <MemberSignature Language="VB.NET" Value="XButtonDown" />
+      <MemberSignature Language="F#" Value="XButtonDown = 523" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.XButtonDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>523</MemberValue>
+      <Docs>
+        <summary>
+            First or second X button down mouse event, <c>WM_XBUTTONDOWN</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XButtonUp">
+      <MemberSignature Language="C#" Value="XButtonUp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind XButtonUp = int32(524)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.XButtonUp" />
+      <MemberSignature Language="VB.NET" Value="XButtonUp" />
+      <MemberSignature Language="F#" Value="XButtonUp = 524" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.XButtonUp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>524</MemberValue>
+      <Docs>
+        <summary>
+            First or second X button up mouse event, <c>WM_XBUTTONUP</c>.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

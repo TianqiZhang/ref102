@@ -1,0 +1,451 @@
+<Type Name="CoreWebView2WebResourceContext" FullName="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext">
+  <TypeSignature Language="C#" Value="public enum CoreWebView2WebResourceContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CoreWebView2WebResourceContext extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CoreWebView2WebResourceContext" />
+  <TypeSignature Language="F#" Value="type CoreWebView2WebResourceContext = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Specifies the web resource request contexts.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext All = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.All" />
+      <MemberSignature Language="VB.NET" Value="All" />
+      <MemberSignature Language="F#" Value="All = 0" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Specifies all resources.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CspViolationReport">
+      <MemberSignature Language="C#" Value="CspViolationReport" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext CspViolationReport = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.CspViolationReport" />
+      <MemberSignature Language="VB.NET" Value="CspViolationReport" />
+      <MemberSignature Language="F#" Value="CspViolationReport = 15" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.CspViolationReport" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>15</MemberValue>
+      <Docs>
+        <summary>
+            Specifies a CSP Violation Report.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="Document" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext Document = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Document" />
+      <MemberSignature Language="VB.NET" Value="Document" />
+      <MemberSignature Language="F#" Value="Document = 1" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Document" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Specifies a document resources.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSource">
+      <MemberSignature Language="C#" Value="EventSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext EventSource = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.EventSource" />
+      <MemberSignature Language="VB.NET" Value="EventSource" />
+      <MemberSignature Language="F#" Value="EventSource = 10" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.EventSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>10</MemberValue>
+      <Docs>
+        <summary>
+            Specifies an EventSource API communication.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fetch">
+      <MemberSignature Language="C#" Value="Fetch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext Fetch = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Fetch" />
+      <MemberSignature Language="VB.NET" Value="Fetch" />
+      <MemberSignature Language="F#" Value="Fetch = 8" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Fetch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            Specifies a Fetch API communication.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="Font" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext Font = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Font" />
+      <MemberSignature Language="VB.NET" Value="Font" />
+      <MemberSignature Language="F#" Value="Font = 5" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Font" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            Specifies a font resource.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="Image" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext Image = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Image" />
+      <MemberSignature Language="VB.NET" Value="Image" />
+      <MemberSignature Language="F#" Value="Image = 3" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Image" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Specifies an image resources.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Manifest">
+      <MemberSignature Language="C#" Value="Manifest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext Manifest = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Manifest" />
+      <MemberSignature Language="VB.NET" Value="Manifest" />
+      <MemberSignature Language="F#" Value="Manifest = 12" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Manifest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>12</MemberValue>
+      <Docs>
+        <summary>
+            Specifies a Web App Manifest.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Media">
+      <MemberSignature Language="C#" Value="Media" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext Media = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Media" />
+      <MemberSignature Language="VB.NET" Value="Media" />
+      <MemberSignature Language="F#" Value="Media = 4" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Media" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Specifies another media resource such as a video.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Other">
+      <MemberSignature Language="C#" Value="Other" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext Other = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Other" />
+      <MemberSignature Language="VB.NET" Value="Other" />
+      <MemberSignature Language="F#" Value="Other = 16" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Other" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>
+            Specifies an other resource.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ping">
+      <MemberSignature Language="C#" Value="Ping" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext Ping = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Ping" />
+      <MemberSignature Language="VB.NET" Value="Ping" />
+      <MemberSignature Language="F#" Value="Ping = 14" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Ping" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>14</MemberValue>
+      <Docs>
+        <summary>
+            Specifies a Ping request.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Script">
+      <MemberSignature Language="C#" Value="Script" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext Script = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Script" />
+      <MemberSignature Language="VB.NET" Value="Script" />
+      <MemberSignature Language="F#" Value="Script = 6" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Script" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            Specifies a script resource.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedExchange">
+      <MemberSignature Language="C#" Value="SignedExchange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext SignedExchange = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.SignedExchange" />
+      <MemberSignature Language="VB.NET" Value="SignedExchange" />
+      <MemberSignature Language="F#" Value="SignedExchange = 13" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.SignedExchange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>13</MemberValue>
+      <Docs>
+        <summary>
+            Specifies a Signed HTTP Exchange.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stylesheet">
+      <MemberSignature Language="C#" Value="Stylesheet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext Stylesheet = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Stylesheet" />
+      <MemberSignature Language="VB.NET" Value="Stylesheet" />
+      <MemberSignature Language="F#" Value="Stylesheet = 2" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Stylesheet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Specifies a CSS resources.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TextTrack">
+      <MemberSignature Language="C#" Value="TextTrack" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext TextTrack = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.TextTrack" />
+      <MemberSignature Language="VB.NET" Value="TextTrack" />
+      <MemberSignature Language="F#" Value="TextTrack = 9" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.TextTrack" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary>
+            Specifies a TextTrack resource.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Websocket">
+      <MemberSignature Language="C#" Value="Websocket" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext Websocket = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Websocket" />
+      <MemberSignature Language="VB.NET" Value="Websocket" />
+      <MemberSignature Language="F#" Value="Websocket = 11" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Websocket" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>11</MemberValue>
+      <Docs>
+        <summary>
+            Specifies a WebSocket API communication.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlHttpRequest">
+      <MemberSignature Language="C#" Value="XmlHttpRequest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext XmlHttpRequest = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.XmlHttpRequest" />
+      <MemberSignature Language="VB.NET" Value="XmlHttpRequest" />
+      <MemberSignature Language="F#" Value="XmlHttpRequest = 7" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.XmlHttpRequest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>
+            Specifies an XML HTTP request.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

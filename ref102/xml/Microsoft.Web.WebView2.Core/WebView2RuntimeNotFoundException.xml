@@ -1,0 +1,128 @@
+<Type Name="WebView2RuntimeNotFoundException" FullName="Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException">
+  <TypeSignature Language="C#" Value="public class WebView2RuntimeNotFoundException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WebView2RuntimeNotFoundException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException" />
+  <TypeSignature Language="VB.NET" Value="Public Class WebView2RuntimeNotFoundException&#xA;Inherits Exception" />
+  <TypeSignature Language="F#" Value="type WebView2RuntimeNotFoundException = class&#xA;    inherit Exception" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            The exception that is thrown when an WebView2 Runtime installation is missing.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebView2RuntimeNotFoundException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the WebView2RuntimeNotFoundException class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebView2RuntimeNotFoundException (Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException.#ctor(System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (inner As Exception)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException : Exception -&gt; Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException" Usage="new Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException inner" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="inner">
+            The exception that is the cause of the current exception.
+            </param>
+        <summary>
+            Initializes a new instance of the WebView2RuntimeNotFoundException class with a reference to the inner exception that is the cause of this exception.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebView2RuntimeNotFoundException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException : string -&gt; Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException" Usage="new Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException message" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+            The error message that explains the reason for the exception.
+            </param>
+        <summary>
+            Initializes a new instance of the WebView2RuntimeNotFoundException class with a specified error message.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebView2RuntimeNotFoundException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException.#ctor(System.String,System.Exception)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, inner As Exception)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException : string * Exception -&gt; Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException" Usage="new Microsoft.Web.WebView2.Core.WebView2RuntimeNotFoundException (message, inner)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+            The error message that explains the reason for the exception.
+            </param>
+        <param name="inner">
+            The exception that is the cause of the current exception.
+            </param>
+        <summary>
+            Initializes a new instance of the WebView2RuntimeNotFoundException class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

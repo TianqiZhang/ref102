@@ -1,0 +1,276 @@
+<Type Name="CoreWebView2Cookie" FullName="Microsoft.Web.WebView2.Core.CoreWebView2Cookie">
+  <TypeSignature Language="C#" Value="public class CoreWebView2Cookie" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2Cookie extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2Cookie" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2Cookie" />
+  <TypeSignature Language="F#" Value="type CoreWebView2Cookie = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides a set of properties that are used to manage a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Cookie" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public string Domain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Domain" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Domain" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Domain As String" />
+      <MemberSignature Language="F#" Value="member this.Domain : string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the domain for which the cookie is valid.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default value is the host that this cookie has been received from. Note that, for instance, <c>.bing.com</c>, <c>bing.com</c>, and <c>www.bing.com</c> are considered different domains.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expires">
+      <MemberSignature Language="C#" Value="public double Expires { get; set; }" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Expires" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Expires" />
+      <MemberSignature Language="VB.NET" Value="Public Property Expires As Double" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease" />
+      <MemberSignature Language="F#" Value="member this.Expires : double with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Expires" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease" />
+      <MemberSignature Language="C#" Value="public DateTime Expires { get; set; }" FrameworkAlternate="WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Expires" FrameworkAlternate="WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="VB.NET" Value="Public Property Expires As DateTime" FrameworkAlternate="WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="F#" Value="member this.Expires : DateTime with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Expires" FrameworkAlternate="WebView2-dotnet-1.0.721-prerelease" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease">System.Double</ReturnType>
+        <ReturnType FrameworkAlternate="WebView2-dotnet-1.0.721-prerelease">System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The expiration date and time for the cookie since the UNIX epoch.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Setting the Expires property to <see cref="F:System.DateTime.MinValue" />
+            makes this a session cookie, which is its default value.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHttpOnly">
+      <MemberSignature Language="C#" Value="public bool IsHttpOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHttpOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.IsHttpOnly" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsHttpOnly As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsHttpOnly : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Cookie.IsHttpOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether this cookie is http-only.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecure">
+      <MemberSignature Language="C#" Value="public bool IsSecure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecure" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.IsSecure" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsSecure As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSecure : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Cookie.IsSecure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the security level of this cookie.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSession">
+      <MemberSignature Language="C#" Value="public bool IsSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.IsSession" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSession As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSession : bool" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Cookie.IsSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether this is a session cookie. The default value is<c>false</c>.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or sets the cookie name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Path" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Path As String" />
+      <MemberSignature Language="F#" Value="member this.Path : string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the path for which the cookie is valid.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default value is "/", which means this cookie will be sent to all pages on the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Domain" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SameSite">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind SameSite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind SameSite" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.SameSite" />
+      <MemberSignature Language="VB.NET" Value="Public Property SameSite As CoreWebView2CookieSameSiteKind" />
+      <MemberSignature Language="F#" Value="member this.SameSite : Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Cookie.SameSite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines the SameSite status of the cookie which represents the enforcement mode of the cookie.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default value is <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind.Lax" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSystemNetCookie">
+      <MemberSignature Language="C#" Value="public System.Net.Cookie ToSystemNetCookie ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.Cookie ToSystemNetCookie() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.ToSystemNetCookie" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToSystemNetCookie () As Cookie" />
+      <MemberSignature Language="F#" Value="member this.ToSystemNetCookie : unit -&gt; System.Net.Cookie" Usage="coreWebView2Cookie.ToSystemNetCookie " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cookie</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts this to a System.Net.Cookie.
+            </summary>
+        <returns>
+            An object whose <see cref="P:System.Net.Cookie.Name" />, <see cref="P:System.Net.Cookie.Value" />, <see cref="P:System.Net.Cookie.Path" />, <see cref="P:System.Net.Cookie.Domain" />, <see cref="P:System.Net.Cookie.HttpOnly" />, <see cref="P:System.Net.Cookie.Secure" />, and <see cref="P:System.Net.Cookie.Expires" />, matches
+            those <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Name" />, <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Value" />, <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Path" />,
+            <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Domain" />, <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.IsHttpOnly" />, <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.IsSecure" />, and <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Expires" /> of this <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Cookie" /> object.
+            </returns>
+        <remarks>
+            The values of the <see cref="T:System.Net.Cookie" /> properties other than those
+            specified above remain their default values.
+            </remarks>
+        <altmember cref="T:System.Net.Cookie" />
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As String" />
+      <MemberSignature Language="F#" Value="member this.Value : string with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Cookie.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the cookie value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

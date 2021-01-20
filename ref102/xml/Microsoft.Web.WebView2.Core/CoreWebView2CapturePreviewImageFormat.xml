@@ -1,0 +1,76 @@
+<Type Name="CoreWebView2CapturePreviewImageFormat" FullName="Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat">
+  <TypeSignature Language="C#" Value="public enum CoreWebView2CapturePreviewImageFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CoreWebView2CapturePreviewImageFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CoreWebView2CapturePreviewImageFormat" />
+  <TypeSignature Language="F#" Value="type CoreWebView2CapturePreviewImageFormat = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Specifies the image format for the <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.CapturePreviewAsync(Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat,System.IO.Stream)" /> method.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Jpeg">
+      <MemberSignature Language="C#" Value="Jpeg" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat Jpeg = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat.Jpeg" />
+      <MemberSignature Language="VB.NET" Value="Jpeg" />
+      <MemberSignature Language="F#" Value="Jpeg = 1" Usage="Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat.Jpeg" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the JPEG image format is used.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Png">
+      <MemberSignature Language="C#" Value="Png" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat Png = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat.Png" />
+      <MemberSignature Language="VB.NET" Value="Png" />
+      <MemberSignature Language="F#" Value="Png = 0" Usage="Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat.Png" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the PNG image format is used.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

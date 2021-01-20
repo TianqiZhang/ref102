@@ -1,0 +1,1627 @@
+<Type Name="CoreWebView2" FullName="Microsoft.Web.WebView2.Core.CoreWebView2">
+  <TypeSignature Language="C#" Value="public class CoreWebView2" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2 extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2" />
+  <TypeSignature Language="F#" Value="type CoreWebView2 = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            WebView2 enables you to host web content using the latest Microsoft Edge browser and web technology.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddHostObjectToScript">
+      <MemberSignature Language="C#" Value="public void AddHostObjectToScript (string name, object rawObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddHostObjectToScript(string name, object rawObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddHostObjectToScript(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddHostObjectToScript (name As String, rawObject As Object)" />
+      <MemberSignature Language="F#" Value="member this.AddHostObjectToScript : string * obj -&gt; unit" Usage="coreWebView2.AddHostObjectToScript (name, rawObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="rawObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the host object.</param>
+        <param name="rawObject">The host object to be added to script.</param>
+        <summary>
+            Adds the provided host object to script running in the WebView with the specified name.
+            </summary>
+        <remarks>
+            Host objects are exposed as host object proxies via <c>window.chrome.webview.hostObjects.{name}</c>. Host object proxies are promises and will resolve to an object representing the host object. Only the COM visible objects/properties/methods can be accessed from script. The app can control which part of .NET objects are exposed using <see cref="T:System.Runtime.InteropServices.ComVisibleAttribute" />.
+            
+            JavaScript code in the WebView will be able to access appObject as following and then access attributes and methods of appObject.
+            
+            To create a [IDispatch](https://docs.microsoft.com/windows/win32/api/oaidl/nn-oaidl-idispatch) implementing class in C# use the following attributes on each class you intend to expose.
+            <code>
+            // Bridge and BridgeAnotherClass are C# classes that implement IDispatch and works with AddHostObjectToScript.
+            [ClassInterface(ClassInterfaceType.AutoDual)]
+            [ComVisible(true)]
+            public class BridgeAnotherClass
+            {
+                // Sample property.
+                public string Prop { get; set; } = "Example";
+            }
+            
+            [ClassInterface(ClassInterfaceType.AutoDual)]
+            [ComVisible(true)]
+            public class Bridge
+            {
+                public string Func(string param)
+                {
+                    return "Example: " + param;
+                }
+            
+                public BridgeAnotherClass AnotherObject { get; set; } = new BridgeAnotherClass();
+            
+                // Sample indexed property.
+                [System.Runtime.CompilerServices.IndexerName("Items")]
+                public string this[int index]
+                {
+                    get { return m_dictionary[index]; }
+                    set { m_dictionary[index] = value; }
+                }
+                private Dictionary&lt;int, string&gt; m_dictionary = new Dictionary&lt;int, string&gt;();
+            }
+            </code>
+            Then add instances of those classes via <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddHostObjectToScript(System.String,System.Object)" />:
+            <code>
+            webView.CoreWebView2.AddHostObjectToScript("bridge", new Bridge());
+            </code>
+            And then in script you can call the methods, and access those properties of the objects added via <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddHostObjectToScript(System.String,System.Object)" />:
+            <code>
+            // Find added objects on the hostObjects property
+            const bridge = chrome.webview.hostObjects.bridge;
+            
+            // Call a method and pass in a parameter.
+            // The result is another proxy promise so you must await to get the result.
+            console.log(await bridge.Func("testing..."));
+            
+            // A property may be another object as long as its class also implements
+            // IDispatch.
+            // Getting a property also gets a proxy promise you must await.
+            const propValue = await bridge.AnotherObject.Prop;
+            console.log(propValue);
+            
+            // Indexed properties
+            let index = 123;
+            bridge[index] = "test";
+            let result = await bridge[index];
+            console.log(result);
+            </code>
+            
+            Note that while simple types, <c>IDispatch</c> and array are supported, generic <c>IUnknown</c>, <c>VT_DECIMAL</c>, or <c>VT_RECORD</c> variant is not supported. Remote JavaScript objects like callback functions are represented as an <c>VT_DISPATCH</c> VARIANT with the object implementing <c>IDispatch</c>. The JavaScript callback method may be invoked using DISPID_VALUE for the DISPID. Nested arrays are supported up to a depth of 3. Arrays of by reference types are not supported. <c>VT_EMPTY</c> and <c>VT_NULL</c> are mapped into JavaScript as <c>null</c>. In JavaScript <c>null</c> and <c>undefined</c> are mapped to <c>VT_EMPTY</c>.
+            
+            Additionally, all host objects are exposed as <c>window.chrome.webview.hostObjects.sync.{name}</c>. Here the host objects are exposed as synchronous host object proxies. These are not promises and calls to functions or property access synchronously block running script waiting to communicate cross process for the host code to run. Accordingly this can result in reliability issues and it is recommended that you use the promise based asynchronous <c>window.chrome.webview.hostObjects.{name}</c> API described above.
+            
+            Synchronous host object proxies and asynchronous host object proxies can both proxy the same host object. Remote changes made by one proxy will be reflected in any other proxy of that same host object whether the other proxies and synchronous or asynchronous.
+            
+            While JavaScript is blocked on a synchronous call to native code, that native code is unable to call back to JavaScript. Attempts to do so will fail with <c>HRESULT_FROM_WIN32(ERROR_POSSIBLE_DEADLOCK)</c>.
+            
+            Host object proxies are JavaScript Proxy objects that intercept all property get, property set, and method invocations. Properties or methods that are a part of the Function or Object prototype are run locally. Additionally any property or method in the array <c>chrome.webview.hostObjects.options.forceLocalProperties</c> will also be run locally. This defaults to including optional methods that have meaning in JavaScript like <c>toJSON</c> and <c>Symbol.toPrimitive</c>. You can add more to this array as required.
+            
+            There's a method <c>chrome.webview.hostObjects.cleanupSome</c> that will best effort garbage collect host object proxies.
+            
+            Host object proxies additionally have the following methods which run locally:
+            
+            <list type="bullet"><item><description /></item><item><term><c>applyHostFunction</c>, <c>getHostProperty</c>, <c>setHostProperty</c></term><description>
+            Perform a method invocation, property get, or property set on the host object. You can use these to explicitly force a method or property to run remotely if there is a conflicting local method or property. For instance, <c>proxy.toString()</c> will run the local <c>toString</c> method on the proxy object. But <c>proxy.applyHostFunction('toString')</c> runs <c>toString</c> on the host proxied object instead.
+            </description></item><item><term><c>getLocalProperty</c>, <c>setLocalProperty</c></term><description>
+            Perform property get, or property set locally. You can use these methods to force getting or setting a property on the host object proxy itself rather than on the host object it represents. For instance, <c>proxy.unknownProperty</c> will get the property named <c>unknownProperty</c> from the host proxied object. But <c>proxy.getLocalProperty('unknownProperty')</c> will get the value of the property <c>unknownProperty</c> on the proxy object itself.
+            </description></item><item><term><c>sync</c></term><description>
+            Asynchronous host object proxies expose a sync method which returns a promise for a synchronous host object proxy for the same host object. For example, <c>chrome.webview.hostObjects.sample.methodCall()</c> returns an asynchronous host object proxy. You can use the <c>sync</c> method to obtain a synchronous host object proxy instead:
+            <code>const syncProxy = await chrome.webview.hostObjects.sample.methodCall().sync()</code></description></item><item><term><c>async</c></term><description>
+            Synchronous host object proxies expose an async method which blocks and returns an asynchronous host object proxy for the same host object. For example, <c>chrome.webview.hostObjects.sync.sample.methodCall()</c> returns a synchronous host object proxy. Calling the <c>async</c> method on this blocks and then returns an asynchronous host object proxy for the same host object: <code>const asyncProxy = chrome.webview.hostObjects.sync.sample.methodCall().async()</code></description></item><item><term><c>then</c></term><description>
+            Asynchronous host object proxies have a then method. This allows them to be awaitable. <c>then</c> will return a promise that resolves with a representation of the host object. If the proxy represents a JavaScript literal then a copy of that is returned locally. If the proxy represents a function then a non-awaitable proxy is returned. If the proxy represents a JavaScript object with a mix of literal properties and function properties, then the a copy of the object is returned with some properties as host object proxies.
+            </description></item></list>
+            
+            All other property and method invocations (other than the above Remote object proxy methods, <c>forceLocalProperties</c> list, and properties on Function and Object prototypes) are run remotely. Asynchronous host object proxies return a promise representing asynchronous completion of remotely invoking the method, or getting the property. The promise resolves after the remote operations complete and the promises resolve to the resulting value of the operation. Synchronous host object proxies work similarly but block JavaScript execution and wait for the remote operation to complete.
+            
+            Setting a property on an asynchronous host object proxy works slightly differently. The set returns immediately and the return value is the value that will be set. This is a requirement of the JavaScript Proxy object. If you need to asynchronously wait for the property set to complete, use the <c>setHostProperty</c> method which returns a promise as described above. Synchronous object property set property synchronously blocks until the property is set.
+            
+            Exposing host objects to script has security risk. Please follow [best practices](https://docs.microsoft.com/microsoft-edge/webview2/concepts/security).
+            </remarks>
+        <altmember cref="T:System.Runtime.InteropServices.ComVisibleAttribute" />
+      </Docs>
+    </Member>
+    <Member MemberName="AddScriptToExecuteOnDocumentCreatedAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; AddScriptToExecuteOnDocumentCreatedAsync (string javaScript);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; AddScriptToExecuteOnDocumentCreatedAsync(string javaScript) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddScriptToExecuteOnDocumentCreatedAsync (javaScript As String) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.AddScriptToExecuteOnDocumentCreatedAsync : string -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="coreWebView2.AddScriptToExecuteOnDocumentCreatedAsync javaScript" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="javaScript" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="javaScript">The JavaScript code to be run.</param>
+        <summary>
+            Adds the provided JavaScript to a list of scripts that should be run after the global object has been created, but before the HTML document has been parsed and before any other script included by the HTML document is run.
+            </summary>
+        <returns>
+            A script ID that may be passed when calling <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.RemoveScriptToExecuteOnDocumentCreated(System.String)" />.
+            </returns>
+        <remarks>
+            The injected script will apply to all future top level document and child frame navigations until removed with <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.RemoveScriptToExecuteOnDocumentCreated(System.String)" />.
+            This is applied asynchronously and you must wait for the returned <see cref="T:System.Threading.Tasks.Task`1" /> to complete before you can be sure that the script is ready to execute on future navigations.
+            
+            Note that if an HTML document has sandboxing of some kind via [sandbox](https://developer.mozilla.org/docs/Web/HTML/Element/iframe#attr-sandbox) properties or the [Content-Security-Policy HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy) this will affect the script run here. So, for example, if the <c>allow-modals</c> keyword is not set then calls to the <c>alert</c> function will be ignored.
+            </remarks>
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.RemoveScriptToExecuteOnDocumentCreated(System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="AddWebResourceRequestedFilter">
+      <MemberSignature Language="C#" Value="public void AddWebResourceRequestedFilter (string uri, Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext ResourceContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddWebResourceRequestedFilter(string uri, valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext ResourceContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddWebResourceRequestedFilter(System.String,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddWebResourceRequestedFilter (uri As String, ResourceContext As CoreWebView2WebResourceContext)" />
+      <MemberSignature Language="F#" Value="member this.AddWebResourceRequestedFilter : string * Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext -&gt; unit" Usage="coreWebView2.AddWebResourceRequestedFilter (uri, ResourceContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="ResourceContext" Type="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext" />
+      </Parameters>
+      <Docs>
+        <param name="uri">An URI to be added to the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebResourceRequested" /> event.</param>
+        <param name="ResourceContext">A resource context filter to be added to the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebResourceRequested" /> event.</param>
+        <summary>
+            Adds a URI and resource context filter to the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebResourceRequested" /> event.
+            </summary>
+        <remarks>
+            The <c>uri</c> parameter may be set to a wildcard string (<c>'*'</c>: zero or more, <c>'?'</c>: exactly one). <c>null</c> is equivalent to an empty string.
+            </remarks>
+        <altmember cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext" />
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebResourceRequested" />
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.RemoveWebResourceRequestedFilter(System.String,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext)" />
+      </Docs>
+    </Member>
+    <Member MemberName="BrowserProcessId">
+      <MemberSignature Language="C#" Value="public uint BrowserProcessId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 BrowserProcessId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2.BrowserProcessId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BrowserProcessId As UInteger" />
+      <MemberSignature Language="F#" Value="member this.BrowserProcessId : uint32" Usage="Microsoft.Web.WebView2.Core.CoreWebView2.BrowserProcessId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the process ID of the browser process that hosts the WebView.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallDevToolsProtocolMethodAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; CallDevToolsProtocolMethodAsync (string methodName, string parametersAsJson);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; CallDevToolsProtocolMethodAsync(string methodName, string parametersAsJson) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.CallDevToolsProtocolMethodAsync(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CallDevToolsProtocolMethodAsync (methodName As String, parametersAsJson As String) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.CallDevToolsProtocolMethodAsync : string * string -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="coreWebView2.CallDevToolsProtocolMethodAsync (methodName, parametersAsJson)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="parametersAsJson" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">
+            The full name of the method in the format <c>{domain}.{method}</c></param>
+        <param name="parametersAsJson">
+            A JSON formatted string containing the parameters for the corresponding method.
+            </param>
+        <summary>
+            Runs an asynchronous DevToolsProtocol method.
+            </summary>
+        <returns>
+            A JSON string that represents the method's return object.
+            </returns>
+        <remarks>
+            For more information about available methods, navigate to [DevTools Protocol Viewer](https://aka.ms/DevToolsProtocolDocs). The handler's Invoke method will be called when the method asynchronously completes. Invoke will be called with the method's return object as a JSON string.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoBack">
+      <MemberSignature Language="C#" Value="public bool CanGoBack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGoBack" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoBack" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CanGoBack As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CanGoBack : bool" Usage="Microsoft.Web.WebView2.Core.CoreWebView2.CanGoBack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <c>true</c> if the WebView is able to navigate to a previous page in the navigation history.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If CanGoBack changes value, the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.HistoryChanged" /> event is raised.
+            </remarks>
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.HistoryChanged" />
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoForward">
+      <MemberSignature Language="C#" Value="public bool CanGoForward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGoForward" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoForward" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CanGoForward As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CanGoForward : bool" Usage="Microsoft.Web.WebView2.Core.CoreWebView2.CanGoForward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <c>true</c> if the WebView is able to navigate to a next page in the navigation history.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If CanGoForward changes value, the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.HistoryChanged" /> event is raised.
+            </remarks>
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.HistoryChanged" />
+      </Docs>
+    </Member>
+    <Member MemberName="CapturePreviewAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task CapturePreviewAsync (Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat imageFormat, System.IO.Stream imageStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task CapturePreviewAsync(valuetype Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat imageFormat, class System.IO.Stream imageStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.CapturePreviewAsync(Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat,System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CapturePreviewAsync (imageFormat As CoreWebView2CapturePreviewImageFormat, imageStream As Stream) As Task" />
+      <MemberSignature Language="F#" Value="member this.CapturePreviewAsync : Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat * System.IO.Stream -&gt; System.Threading.Tasks.Task" Usage="coreWebView2.CapturePreviewAsync (imageFormat, imageStream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageFormat" Type="Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat" />
+        <Parameter Name="imageStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="imageFormat">The format of the image to be captured.</param>
+        <param name="imageStream">The stream to which the resulting image binary data is written.</param>
+        <summary>
+            Captures an image of what WebView is displaying.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            When CapturePreviewAsync finishes writing to the stream, the Invoke method on the provided handler parameter is called.
+            </remarks>
+        <altmember cref="T:Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat" />
+      </Docs>
+    </Member>
+    <Member MemberName="ClearVirtualHostNameToFolderMapping">
+      <MemberSignature Language="C#" Value="public void ClearVirtualHostNameToFolderMapping (string hostName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearVirtualHostNameToFolderMapping(string hostName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.ClearVirtualHostNameToFolderMapping(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearVirtualHostNameToFolderMapping (hostName As String)" />
+      <MemberSignature Language="F#" Value="member this.ClearVirtualHostNameToFolderMapping : string -&gt; unit" Usage="coreWebView2.ClearVirtualHostNameToFolderMapping hostName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostName" Type="System.String" Index="0" FrameworkAlternate="WebView2-dotnet-1.0.721-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="hostName">The host name to be removed from the mapping.</param>
+        <summary>
+            Clears a host name mapping for local folder that was added by <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.SetVirtualHostNameToFolderMapping(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind)" />.
+            </summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.SetVirtualHostNameToFolderMapping(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind)" />
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsFullScreenElement">
+      <MemberSignature Language="C#" Value="public bool ContainsFullScreenElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContainsFullScreenElement" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2.ContainsFullScreenElement" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainsFullScreenElement As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ContainsFullScreenElement : bool" Usage="Microsoft.Web.WebView2.Core.CoreWebView2.ContainsFullScreenElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates if the WebView contains a fullscreen HTML element.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsFullScreenElementChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;object&gt; ContainsFullScreenElementChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;object&gt; ContainsFullScreenElementChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContainsFullScreenElementChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ContainsFullScreenElementChanged As EventHandler(Of Object) " />
+      <MemberSignature Language="F#" Value="member this.ContainsFullScreenElementChanged : EventHandler&lt;obj&gt; " Usage="member this.ContainsFullScreenElementChanged : System.EventHandler&lt;System.obj&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ContainsFullScreenElementChanged is raised when the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.ContainsFullScreenElement" /> property changes.
+            </summary>
+        <remarks>
+            An HTML element inside the WebView may enter fullscreen to the size of the WebView or leave fullscreen. This event is useful when, for example, a video element requests to go fullscreen. The listener of this event may resize the WebView in response.
+            </remarks>
+        <altmember cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.ContainsFullScreenElement" />
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLoading">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs&gt; ContentLoading;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs&gt; ContentLoading" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ContentLoading As EventHandler(Of CoreWebView2ContentLoadingEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.ContentLoading : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs&gt; " Usage="member this.ContentLoading : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ContentLoading is raised before any content is loaded, including scripts added with <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync(System.String)" />. ContentLoading is not raised if a same page navigation occurs (such as through fragment navigations or <c>history.pushState</c> navigations).
+            </summary>
+        <remarks>
+            This operation follows the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /> and <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" /> events and precedes the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.HistoryChanged" /> and <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" /> events.
+            </remarks>
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" />
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.HistoryChanged" />
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" />
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" />
+      </Docs>
+    </Member>
+    <Member MemberName="CookieManager">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2CookieManager CookieManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Web.WebView2.Core.CoreWebView2CookieManager CookieManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2.CookieManager" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CookieManager As CoreWebView2CookieManager" />
+      <MemberSignature Language="F#" Value="member this.CookieManager : Microsoft.Web.WebView2.Core.CoreWebView2CookieManager" Usage="Microsoft.Web.WebView2.Core.CoreWebView2.CookieManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2CookieManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2CookieManager" /> object associated with this <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <altmember cref="T:Microsoft.Web.WebView2.Core.CoreWebView2CookieManager" />
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentTitle">
+      <MemberSignature Language="C#" Value="public string DocumentTitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentTitle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2.DocumentTitle" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DocumentTitle As String" />
+      <MemberSignature Language="F#" Value="member this.DocumentTitle : string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2.DocumentTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the title for the current top-level document.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If the document has no explicit title or is otherwise empty, a default that may or may not match the URI of the document is used.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentTitleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;object&gt; DocumentTitleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;object&gt; DocumentTitleChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.DocumentTitleChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event DocumentTitleChanged As EventHandler(Of Object) " />
+      <MemberSignature Language="F#" Value="member this.DocumentTitleChanged : EventHandler&lt;obj&gt; " Usage="member this.DocumentTitleChanged : System.EventHandler&lt;System.obj&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DocumentTitleChanged is raised when the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.DocumentTitle" /> property changes and may be raised before or after the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" /> event.
+            </summary>
+        <remarks>To be added.</remarks>
+        <altmember cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.DocumentTitle" />
+      </Docs>
+    </Member>
+    <Member MemberName="DOMContentLoaded">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs&gt; DOMContentLoaded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs&gt; DOMContentLoaded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.DOMContentLoaded" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event DOMContentLoaded As EventHandler(Of CoreWebView2DOMContentLoadedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.DOMContentLoaded : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs&gt; " Usage="member this.DOMContentLoaded : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DOMContentLoaded is raised when the initial HTML document has been parsed.
+            </summary>
+        <remarks>
+            This aligns with the the document's DOMContentLoaded event in HTML.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Environment">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2Environment Environment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Web.WebView2.Core.CoreWebView2Environment Environment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2.Environment" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Environment As CoreWebView2Environment" />
+      <MemberSignature Language="F#" Value="member this.Environment : Microsoft.Web.WebView2.Core.CoreWebView2Environment" Usage="Microsoft.Web.WebView2.Core.CoreWebView2.Environment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2Environment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Exposes the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" /> used to create this <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteScriptAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; ExecuteScriptAsync (string javaScript);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; ExecuteScriptAsync(string javaScript) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.ExecuteScriptAsync(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ExecuteScriptAsync (javaScript As String) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ExecuteScriptAsync : string -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="coreWebView2.ExecuteScriptAsync javaScript" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="javaScript" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="javaScript">The JavaScript code to be run in the current top-level document rendered in the WebView.</param>
+        <summary>
+            Runs JavaScript code from the <paramref name="javaScript" /> parameter in the current top-level document rendered in the WebView.
+            </summary>
+        <returns>
+            A JSON encoded string that represents the result of running the provided JavaScript.
+            </returns>
+        <remarks>
+            If the result is <c>undefined</c>, contains a reference cycle, or otherwise is not able to be encoded into JSON, the JSON <c>null</c> value is returned as the <c>"null"</c> string.
+            
+            A function that has no explicit return value returns <c>undefined</c>. If the script that was run throws an unhandled exception, then the result is also <c>null</c>. This method is applied asynchronously. If the method is run after the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /> event during a navigation, the script runs in the new document when loading it, around the time <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" /> is run. This operation works even if <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsScriptEnabled" /> is set to <c>false</c>.
+            </remarks>
+        <altmember cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsScriptEnabled" />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameNavigationCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs&gt; FrameNavigationCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs&gt; FrameNavigationCompleted" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.FrameNavigationCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event FrameNavigationCompleted As EventHandler(Of CoreWebView2NavigationCompletedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.FrameNavigationCompleted : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs&gt; " Usage="member this.FrameNavigationCompleted : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            FrameNavigationCompleted is raised when a child frame has completely loaded (<c>body.onload</c> has been raised) or loading stopped with error.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameNavigationStarting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs&gt; FrameNavigationStarting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs&gt; FrameNavigationStarting" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.FrameNavigationStarting" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event FrameNavigationStarting As EventHandler(Of CoreWebView2NavigationStartingEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.FrameNavigationStarting : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs&gt; " Usage="member this.FrameNavigationStarting : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            FrameNavigationStarting is raised when a child frame in the WebView requests permission to navigate to a different URI.
+            </summary>
+        <remarks>
+            Redirects raise this operation as well. You may block corresponding navigations until the event handler returns.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDevToolsProtocolEventReceiver">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver GetDevToolsProtocolEventReceiver (string eventName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver GetDevToolsProtocolEventReceiver(string eventName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.GetDevToolsProtocolEventReceiver(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDevToolsProtocolEventReceiver (eventName As String) As CoreWebView2DevToolsProtocolEventReceiver" />
+      <MemberSignature Language="F#" Value="member this.GetDevToolsProtocolEventReceiver : string -&gt; Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver" Usage="coreWebView2.GetDevToolsProtocolEventReceiver eventName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventName">The full name of the event in the format <c>{domain}.{event}</c>.</param>
+        <summary>
+            Gets a DevTools Protocol event receiver that allows you to subscribe to a DevToolsProtocol event.
+            </summary>
+        <returns>A Devtools Protocol event receiver.</returns>
+        <remarks>
+            For more information about DevToolsProtocol events description and event args, navigate to [DevTools Protocol Viewer](https://aka.ms/DevToolsProtocolDocs).
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GoBack">
+      <MemberSignature Language="C#" Value="public void GoBack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GoBack() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoBack" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GoBack ()" />
+      <MemberSignature Language="F#" Value="member this.GoBack : unit -&gt; unit" Usage="coreWebView2.GoBack " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Navigates the WebView to the previous page in the navigation history.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GoForward">
+      <MemberSignature Language="C#" Value="public void GoForward ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GoForward() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoForward" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GoForward ()" />
+      <MemberSignature Language="F#" Value="member this.GoForward : unit -&gt; unit" Usage="coreWebView2.GoForward " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Navigates the WebView to the next page in the navigation history.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HistoryChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;object&gt; HistoryChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;object&gt; HistoryChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.HistoryChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event HistoryChanged As EventHandler(Of Object) " />
+      <MemberSignature Language="F#" Value="member this.HistoryChanged : EventHandler&lt;obj&gt; " Usage="member this.HistoryChanged : System.EventHandler&lt;System.obj&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            HistoryChanged is raised when there is change of navigation history for the top level document.
+            </summary>
+        <remarks>
+            Use HistoryChanged to verify that the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoBack" /> or <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoForward" /> value has changed. HistoryChanged is also raised for using <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoBack" /> or <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoForward" />. HistoryChanged is raised after <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" /> and <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" />.
+            </remarks>
+        <altmember cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoForward" />
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" />
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" />
+        <altmember cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoBack" />
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public void Navigate (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Navigate(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.Navigate(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Navigate (uri As String)" />
+      <MemberSignature Language="F#" Value="member this.Navigate : string -&gt; unit" Usage="coreWebView2.Navigate uri" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">The URI to navigate to.</param>
+        <summary>
+            Causes a navigation of the top level document to the specified URI.
+            </summary>
+        <remarks>
+            For more information, navigate to [Navigation event](https://docs.microsoft.com/microsoft-edge/webview2/concepts/navigation-events). Note that this operation starts a navigation and the corresponding <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /> event is raised sometime after Navigate runs.
+            </remarks>
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" />
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" />
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateToString">
+      <MemberSignature Language="C#" Value="public void NavigateToString (string htmlContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NavigateToString(string htmlContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.NavigateToString(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub NavigateToString (htmlContent As String)" />
+      <MemberSignature Language="F#" Value="member this.NavigateToString : string -&gt; unit" Usage="coreWebView2.NavigateToString htmlContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="htmlContent" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="htmlContent">A source HTML of a new document.</param>
+        <summary>
+            Initiates a navigation to <paramref name="htmlContent" /> as source HTML of a new document.
+            </summary>
+        <remarks>
+            The <c>htmlContent</c> parameter may not be larger than 2 MB in total size. The origin of the new page is <c>about:blank</c>.
+            </remarks>
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" />
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" />
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateWithWebResourceRequest">
+      <MemberSignature Language="C#" Value="public void NavigateWithWebResourceRequest (Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest Request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NavigateWithWebResourceRequest(class Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest Request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.NavigateWithWebResourceRequest(Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub NavigateWithWebResourceRequest (Request As CoreWebView2WebResourceRequest)" />
+      <MemberSignature Language="F#" Value="member this.NavigateWithWebResourceRequest : Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest -&gt; unit" Usage="coreWebView2.NavigateWithWebResourceRequest Request" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Request" Type="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest" Index="0" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="Request">The constructed web resource object to provide post data or additional request headers during navigation.</param>
+        <summary>
+            Navigates using a constructed <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest" /> object.
+            </summary>
+        <remarks>
+            The headers in the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest" /> override headers added by WebView2 runtime except for Cookie headers. Method can only be either <c>GET</c> or <c>POST</c>. Provided post data will only be sent only if the method is <c>POST</c> and the uri scheme is <c>HTTP(S)</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs&gt; NavigationCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs&gt; NavigationCompleted" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event NavigationCompleted As EventHandler(Of CoreWebView2NavigationCompletedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.NavigationCompleted : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs&gt; " Usage="member this.NavigationCompleted : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            NavigationCompleted is raised when the WebView has completely loaded (<c>body.onload</c> has been raised) or loading stopped with error.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationStarting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs&gt; NavigationStarting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs&gt; NavigationStarting" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event NavigationStarting As EventHandler(Of CoreWebView2NavigationStartingEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.NavigationStarting : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs&gt; " Usage="member this.NavigationStarting : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            NavigationStarting is raised when the WebView main frame is requesting permission to navigate to a different URI.
+            </summary>
+        <remarks>
+            Redirects raises this event as well. You may block corresponding navigations until the event handler returns.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewWindowRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs&gt; NewWindowRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs&gt; NewWindowRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.NewWindowRequested" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event NewWindowRequested As EventHandler(Of CoreWebView2NewWindowRequestedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.NewWindowRequested : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs&gt; " Usage="member this.NewWindowRequested : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            NewWindowRequested is raised when content inside the WebView requests to open a new window, such as through <c>window.open()</c>.
+            </summary>
+        <remarks>
+            The app passes a target WebView that is considered the opened window.
+            If a deferral is not taken on the event args, scripts that resulted in the new window that are requested are blocked until the event handler returns. If a deferral is taken, then scripts are blocked until the deferral is completed.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenDevToolsWindow">
+      <MemberSignature Language="C#" Value="public void OpenDevToolsWindow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OpenDevToolsWindow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.OpenDevToolsWindow" />
+      <MemberSignature Language="VB.NET" Value="Public Sub OpenDevToolsWindow ()" />
+      <MemberSignature Language="F#" Value="member this.OpenDevToolsWindow : unit -&gt; unit" Usage="coreWebView2.OpenDevToolsWindow " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Opens the DevTools window for the current document in the WebView.
+            </summary>
+        <remarks>
+            Does nothing if run when the DevTools window is already open.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs&gt; PermissionRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs&gt; PermissionRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.PermissionRequested" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PermissionRequested As EventHandler(Of CoreWebView2PermissionRequestedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.PermissionRequested : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs&gt; " Usage="member this.PermissionRequested : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            PermissionRequested is raised when content in a WebView requests permission to access some privileged resources.
+            </summary>
+        <remarks>
+            If a deferral is not taken on the event args, the subsequent scripts are blocked until the event handler returns. If a deferral is taken, the scripts are blocked until the deferral is completed.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostWebMessageAsJson">
+      <MemberSignature Language="C#" Value="public void PostWebMessageAsJson (string webMessageAsJson);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PostWebMessageAsJson(string webMessageAsJson) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsJson(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PostWebMessageAsJson (webMessageAsJson As String)" />
+      <MemberSignature Language="F#" Value="member this.PostWebMessageAsJson : string -&gt; unit" Usage="coreWebView2.PostWebMessageAsJson webMessageAsJson" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webMessageAsJson" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="webMessageAsJson">The web message to be posted to the top level document in this WebView.</param>
+        <summary>
+            Posts the specified <paramref name="webMessageAsJson" /> to the top level document in this WebView.
+            </summary>
+        <remarks>
+            Runs the message event of the <c>window.chrome.webview</c> of the top-level document. JavaScript in that document may subscribe and unsubscribe to the event using the following code:
+            
+            <code>
+            window.chrome.webview.addEventListener('message', handler)
+            window.chrome.webview.removeEventListener('message', handler)
+            </code>
+            
+            The event args is an instance of <c>MessageEvent</c>. The <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsWebMessageEnabled" /> setting must be <c>true</c> or this method will fail with E_INVALIDARG. The event arg's <c>data</c> property of the event arg is the <c>webMessageAsJson</c><see cref="T:System.String" /> parameter parsed as a JSON string into a JavaScript object. The event arg's <c>source</c> property of the event arg is a reference to the <c>window.chrome.webview</c> object. For information about sending messages from the HTML document in the WebView to the host, navigate to <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" />. The message is sent asynchronously. If a navigation occurs before the message is posted to the page, the message is not be sent.
+            </remarks>
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" />
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsString(System.String)" />
+        <altmember cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsWebMessageEnabled" />
+      </Docs>
+    </Member>
+    <Member MemberName="PostWebMessageAsString">
+      <MemberSignature Language="C#" Value="public void PostWebMessageAsString (string webMessageAsString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PostWebMessageAsString(string webMessageAsString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsString(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PostWebMessageAsString (webMessageAsString As String)" />
+      <MemberSignature Language="F#" Value="member this.PostWebMessageAsString : string -&gt; unit" Usage="coreWebView2.PostWebMessageAsString webMessageAsString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webMessageAsString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="webMessageAsString">The web message to be posted to the top level document in this WebView.</param>
+        <summary>
+            Posts a message that is a simple <see cref="T:System.String" /> rather than a JSON string representation of a JavaScript object.
+            </summary>
+        <remarks>
+            This behaves in exactly the same manner as <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsJson(System.String)" />, but the <c>data</c> property of the event arg of the <c>window.chrome.webview</c> message is a <see cref="T:System.String" /> with the same value as <c>webMessageAsString</c>. Use this instead of <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsJson(System.String)" /> if you want to communicate using simple strings rather than JSON objects.
+            </remarks>
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsJson(System.String)" />
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" />
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessFailed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs&gt; ProcessFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs&gt; ProcessFailed" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.ProcessFailed" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ProcessFailed As EventHandler(Of CoreWebView2ProcessFailedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.ProcessFailed : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs&gt; " Usage="member this.ProcessFailed : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ProcessFailed is raised when a WebView process ends unexpectedly or becomes unresponsive.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reload">
+      <MemberSignature Language="C#" Value="public void Reload ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reload() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.Reload" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reload ()" />
+      <MemberSignature Language="F#" Value="member this.Reload : unit -&gt; unit" Usage="coreWebView2.Reload " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reloads the current page.
+            </summary>
+        <remarks>
+            This is similar to navigating to the URI of current top level document including all navigation events firing and respecting any entries in the HTTP cache. But, the back or forward history will not be modified.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveHostObjectFromScript">
+      <MemberSignature Language="C#" Value="public void RemoveHostObjectFromScript (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveHostObjectFromScript(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.RemoveHostObjectFromScript(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveHostObjectFromScript (name As String)" />
+      <MemberSignature Language="F#" Value="member this.RemoveHostObjectFromScript : string -&gt; unit" Usage="coreWebView2.RemoveHostObjectFromScript name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the host object to be removed.</param>
+        <summary>
+            Removes the host object specified by the name so that it is no longer accessible from JavaScript code in the WebView.
+            </summary>
+        <remarks>
+            While new access attempts are denied, if the object is already obtained by JavaScript code in the WebView, the JavaScript code continues to have access to that object. Running this method for a name that is already removed or never added fails.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveScriptToExecuteOnDocumentCreated">
+      <MemberSignature Language="C#" Value="public void RemoveScriptToExecuteOnDocumentCreated (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveScriptToExecuteOnDocumentCreated(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.RemoveScriptToExecuteOnDocumentCreated(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveScriptToExecuteOnDocumentCreated (id As String)" />
+      <MemberSignature Language="F#" Value="member this.RemoveScriptToExecuteOnDocumentCreated : string -&gt; unit" Usage="coreWebView2.RemoveScriptToExecuteOnDocumentCreated id" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">The ID corresponds to the JavaScript code to be removed from the list of scripts.</param>
+        <summary>
+            Removes the corresponding JavaScript added via <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync(System.String)" /> with the specified script ID.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveWebResourceRequestedFilter">
+      <MemberSignature Language="C#" Value="public void RemoveWebResourceRequestedFilter (string uri, Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext ResourceContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveWebResourceRequestedFilter(string uri, valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext ResourceContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.RemoveWebResourceRequestedFilter(System.String,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveWebResourceRequestedFilter (uri As String, ResourceContext As CoreWebView2WebResourceContext)" />
+      <MemberSignature Language="F#" Value="member this.RemoveWebResourceRequestedFilter : string * Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext -&gt; unit" Usage="coreWebView2.RemoveWebResourceRequestedFilter (uri, ResourceContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="ResourceContext" Type="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext" />
+      </Parameters>
+      <Docs>
+        <param name="uri">An URI to at which a web resource filter was added.</param>
+        <param name="ResourceContext">A previously added resource context filter to be removed.</param>
+        <summary>
+            Removes a matching WebResource filter that was previously added for the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebResourceRequested" /> event.
+            </summary>
+        <remarks>
+            If the same filter was added multiple times, then it must need to be removed as many times as it was added for the removal to be effective.
+            </remarks>
+        <exception cref="T:System.ArgumentException">A filter that was never added.</exception>
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddWebResourceRequestedFilter(System.String,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext)" />
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptDialogOpening">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs&gt; ScriptDialogOpening;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs&gt; ScriptDialogOpening" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.ScriptDialogOpening" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ScriptDialogOpening As EventHandler(Of CoreWebView2ScriptDialogOpeningEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.ScriptDialogOpening : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs&gt; " Usage="member this.ScriptDialogOpening : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ScriptDialogOpening is raised when a JavaScript dialog (<c>alert</c>, <c>confirm</c>, <c>prompt</c>, or <c>beforeunload</c>) displays for the WebView.
+            </summary>
+        <remarks>
+            This event only is raised if the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreDefaultScriptDialogsEnabled" /> property is set to <c>false</c>. This event suppresses dialogs or replaces default dialogs with custom dialogs.
+            
+            If a deferral is not taken on the event args, the subsequent scripts are blocked until the event handler returns. If a deferral is taken, the scripts are blocked until the deferral is completed.
+            </remarks>
+        <altmember cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreDefaultScriptDialogsEnabled" />
+      </Docs>
+    </Member>
+    <Member MemberName="Settings">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2Settings Settings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Web.WebView2.Core.CoreWebView2Settings Settings" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2.Settings" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Settings As CoreWebView2Settings" />
+      <MemberSignature Language="F#" Value="member this.Settings : Microsoft.Web.WebView2.Core.CoreWebView2Settings" Usage="Microsoft.Web.WebView2.Core.CoreWebView2.Settings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2Settings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Settings" /> object contains various modifiable settings for the running WebView.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVirtualHostNameToFolderMapping">
+      <MemberSignature Language="C#" Value="public void SetVirtualHostNameToFolderMapping (string hostName, string folderPath, Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind accessKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetVirtualHostNameToFolderMapping(string hostName, string folderPath, valuetype Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind accessKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.SetVirtualHostNameToFolderMapping(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetVirtualHostNameToFolderMapping (hostName As String, folderPath As String, accessKind As CoreWebView2HostResourceAccessKind)" />
+      <MemberSignature Language="F#" Value="member this.SetVirtualHostNameToFolderMapping : string * string * Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind -&gt; unit" Usage="coreWebView2.SetVirtualHostNameToFolderMapping (hostName, folderPath, accessKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostName" Type="System.String" Index="0" FrameworkAlternate="WebView2-dotnet-1.0.721-prerelease" />
+        <Parameter Name="folderPath" Type="System.String" Index="1" FrameworkAlternate="WebView2-dotnet-1.0.721-prerelease" />
+        <Parameter Name="accessKind" Type="Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind" Index="2" FrameworkAlternate="WebView2-dotnet-1.0.721-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="hostName">A virtual host name.</param>
+        <param name="folderPath">A folder path name to be mapped to the virtual host name.</param>
+        <param name="accessKind">The level of access to resources under the virtual host from other sites.</param>
+        <summary>
+            Sets a mapping between a virtual host name and a folder path to make available to web sites via that host name.
+            </summary>
+        <remarks>
+          <para>
+            After setting the mapping, documents loaded in the WebView can use HTTP or HTTPS URLs at the specified host name specified by <c>hostName</c> to access files in the local folder specified by <c>folderPath</c>.
+            This mapping applies to both top-level document and iframe navigations as well as subresource references from a document. This also applies to dedicated and shared worker scripts but does not apply to service worker scripts.
+            
+            Both absolute and relative paths are supported for <c>folderPath</c>. Relative paths are interpreted as relative to the folder where the exe of the app is in.
+            </para>
+          <para>
+            For example, after calling
+            <code>
+            SetVirtualHostNameToFolderMapping(
+              "appassets.example", "assets",
+              CoreWebView2HostResourceAccessKind.Deny);
+            </code>
+            , navigating to <c>https://appassets.example/my-local-file.html</c> will show content from my-local-file.html in the assets subfolder located on disk under the same path as the app's executable file.
+            </para>
+          <para>
+            You should typically choose virtual host names that are never used by real sites.
+            If you own a domain such as <c>example.com</c>, another option is to use a subdomain reserved for the app (like <c>my-app.example.com</c>).
+            </para>
+          <para>
+            [RFC 6761](https://tools.ietf.org/html/rfc6761) has reserved several special-use domain names that are guaranteed to not be used by real sites (for example, <c>.example</c>, <c>.test</c>, and <c>.invalid</c>.)
+            </para>
+          <para>
+            Apps should use distinct domain names when mapping folder from different sources that should be isolated from each other. For instance, the app might use app-file.example for files that ship as part of the app, and book1.example might be used for files containing books from a less trusted source that were previously downloaded and saved to the disk by the app.
+            </para>
+          <para>
+            The host name used in the APIs is canonicalized using Chromium's host name parsing logic before being used internally.
+            </para>
+          <para>
+            All host names that are canonicalized to the same string are considered identical.
+            For example, <c>EXAMPLE.COM</c> and <c>example.com</c> are treated as the same host name.
+            An international host name and its Punycode-encoded host name are considered the same host name. There is no DNS resolution for host name and the trailing '.' is not normalized as part of canonicalization.
+            </para>
+          <para>
+            Therefore <c>example.com</c> and <c>example.com.</c> are treated as different host names. Similarly, <c>virtual-host-name</c> and <c>virtual-host-name.example.com</c> are treated as different host names even if the machine has a DNS suffix of <c>example.com</c>.
+            </para>
+          <para>
+            Specify the minimal cross-origin access necessary to run the app. If there is not a need to access local resources from other origins, use <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind.Deny" />.
+            </para>
+        </remarks>
+        <example>
+          <code>
+            webView.CoreWebView2.SetVirtualHostNameToFolderMapping(
+                "appassets.example", "assets", CoreWebView2HostResourceAccessKind.DenyCors);
+            webView.Source = new Uri("https://appassets.example/index.html");
+            </code>
+        </example>
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.ClearVirtualHostNameToFolderMapping(System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2.Source" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Source As String" />
+      <MemberSignature Language="F#" Value="member this.Source : string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the current top level document.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This value potentially changes as a part of the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" /> event raised for some cases such as navigating to a different site or fragment navigations. It remains the same for other types of navigations such as page refreshes or <c>history.pushState</c> with the same URL as the current page.
+            </remarks>
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" />
+      </Docs>
+    </Member>
+    <Member MemberName="SourceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs&gt; SourceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs&gt; SourceChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event SourceChanged As EventHandler(Of CoreWebView2SourceChangedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.SourceChanged : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs&gt; " Usage="member this.SourceChanged : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SourceChanged is raised when the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.Source" /> property changes.
+            </summary>
+        <remarks>
+            SourceChanged is raised when navigating to a different site or fragment navigations. It is not raised for other types of navigations such as page refreshes or <c>history.pushState</c> with the same URL as the current page. This event is raised before <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" /> for navigation to a new document.
+            </remarks>
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" />
+        <altmember cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.Source" />
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="coreWebView2.Stop " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops all navigations and pending resource fetches.
+            </summary>
+        <remarks>
+            Does not stop scripts.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebMessageReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs&gt; WebMessageReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs&gt; WebMessageReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event WebMessageReceived As EventHandler(Of CoreWebView2WebMessageReceivedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.WebMessageReceived : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs&gt; " Usage="member this.WebMessageReceived : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            WebMessageReceived is raised when the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsWebMessageEnabled" /> setting is set and the top-level document of the WebView runs <c>window.chrome.webview.postMessage</c>.
+            </summary>
+        <remarks>
+            The <c>postMessage</c> function is <c>void postMessage(object)</c> where object is any object supported by JSON conversion.
+            When <c>postMessage</c> is called, the handler's Invoke method will be called with the <c>object</c> parameter <c>postMessage</c> converted to a JSON string.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebResourceRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs&gt; WebResourceRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs&gt; WebResourceRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebResourceRequested" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event WebResourceRequested As EventHandler(Of CoreWebView2WebResourceRequestedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.WebResourceRequested : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs&gt; " Usage="member this.WebResourceRequested : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            WebResourceRequested is raised when the WebView is performing a URL request to a matching URL and resource context filter that was added with <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddWebResourceRequestedFilter(System.String,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext)" />.
+            </summary>
+        <remarks>
+            At least one filter must be added for the event to be raised.
+            The web resource requested may be blocked until the event handler returns if a deferral is not taken on the event args. If a deferral is taken, then the web resource requested is blocked until the deferral is completed.
+            </remarks>
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddWebResourceRequestedFilter(System.String,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext)" />
+      </Docs>
+    </Member>
+    <Member MemberName="WebResourceResponseReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseReceivedEventArgs&gt; WebResourceResponseReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseReceivedEventArgs&gt; WebResourceResponseReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebResourceResponseReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event WebResourceResponseReceived As EventHandler(Of CoreWebView2WebResourceResponseReceivedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.WebResourceResponseReceived : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseReceivedEventArgs&gt; " Usage="member this.WebResourceResponseReceived : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseReceivedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            WebResourceResponseReceived is raised when the WebView receives the response for a request for a web resource (any URI resolution performed by the WebView; such as HTTP/HTTPS, file and data requests from redirects, navigations, declarations in HTML, implicit favicon lookups, and fetch API usage in the document). The host app can use this event to view the actual request and response for a web resource. There is no guarantee about the order in which the WebView processes the response and the host app's handler runs. The app's handler will not block the WebView from processing the response.
+            </summary>
+        <remarks>
+            The event args include the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest" /> as sent by the wire and <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse" /> received, including any additional headers added by the network stack that were not be included as part of the associated <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebResourceRequested" /> event, such as Authentication headers.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowCloseRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;object&gt; WindowCloseRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;object&gt; WindowCloseRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2.WindowCloseRequested" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event WindowCloseRequested As EventHandler(Of Object) " />
+      <MemberSignature Language="F#" Value="member this.WindowCloseRequested : EventHandler&lt;obj&gt; " Usage="member this.WindowCloseRequested : System.EventHandler&lt;System.obj&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            WindowCloseRequested is raised when content inside the WebView requested to close the window, such as after <c>window.close()</c> is run.
+            </summary>
+        <remarks>
+            The app should close the WebView and related app window if that makes sense to the app.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

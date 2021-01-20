@@ -1,0 +1,229 @@
+<Type Name="CoreWebView2ScriptDialogOpeningEventArgs" FullName="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs">
+  <TypeSignature Language="C#" Value="public class CoreWebView2ScriptDialogOpeningEventArgs" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2ScriptDialogOpeningEventArgs extends System.Object" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2ScriptDialogOpeningEventArgs" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="F#" Value="type CoreWebView2ScriptDialogOpeningEventArgs = class" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="C#" Value="public class CoreWebView2ScriptDialogOpeningEventArgs : EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2ScriptDialogOpeningEventArgs extends System.EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2ScriptDialogOpeningEventArgs&#xA;Inherits EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="F#" Value="type CoreWebView2ScriptDialogOpeningEventArgs = class&#xA;    inherit EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease">System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Event args for the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ScriptDialogOpening" /> event.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public void Accept ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Accept() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Accept" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Accept ()" />
+      <MemberSignature Language="F#" Value="member this.Accept : unit -&gt; unit" Usage="coreWebView2ScriptDialogOpeningEventArgs.Accept " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Responds with **OK** to <c>confirm</c>, <c>prompt</c>, and <c>beforeunload</c> dialogs. Not run this method to indicate cancel.
+            </summary>
+        <remarks>
+            From JavaScript, this means that the <c>confirm</c> function and <c>beforeunload</c> event returns <c>true</c> if Accept is run. And for the <c>prompt</c> function it returns the value of <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.ResultText" /> if Accept is run and otherwise returns <c>false</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultText">
+      <MemberSignature Language="C#" Value="public string DefaultText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.DefaultText" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultText As String" />
+      <MemberSignature Language="F#" Value="member this.DefaultText : string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.DefaultText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the default value to use for the result of the <c>prompt</c> JavaScript function.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is the second parameter passed to the JavaScript prompt dialog.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDeferral">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2Deferral GetDeferral ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Web.WebView2.Core.CoreWebView2Deferral GetDeferral() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.GetDeferral" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDeferral () As CoreWebView2Deferral" />
+      <MemberSignature Language="F#" Value="member this.GetDeferral : unit -&gt; Microsoft.Web.WebView2.Core.CoreWebView2Deferral" Usage="coreWebView2ScriptDialogOpeningEventArgs.GetDeferral " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2Deferral</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Deferral" /> object.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Use this to <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Deferral.Complete" /> the event at a later time.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kind">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind Kind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind Kind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Kind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Kind As CoreWebView2ScriptDialogKind" />
+      <MemberSignature Language="F#" Value="member this.Kind : Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind" Usage="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Kind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the kind of JavaScript dialog box.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Accept, confirm, prompt, or beforeunload.
+            </remarks>
+        <altmember cref="T:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind" />
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Message" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Message As String" />
+      <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the message of the dialog box.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            From JavaScript this is the first parameter passed to <c>alert</c>, <c>confirm</c>, and <c>prompt</c> and is empty for <c>beforeunload</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResultText">
+      <MemberSignature Language="C#" Value="public string ResultText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResultText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.ResultText" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResultText As String" />
+      <MemberSignature Language="F#" Value="member this.ResultText : string with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.ResultText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the return value from the JavaScript <c>prompt</c> function if <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Accept" /> is run.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This value is ignored for <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Kind" />s other than <seealso cref="F:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Prompt" />. If <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Accept" /> is not run, this value is ignored and <c>false</c> is returned from <c>prompt</c>.
+            </remarks>
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Accept" />
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uri As String" />
+      <MemberSignature Language="F#" Value="member this.Uri : string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the page that requested the dialog box.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

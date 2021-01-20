@@ -1,0 +1,590 @@
+<Type Name="CoreWebView2Environment" FullName="Microsoft.Web.WebView2.Core.CoreWebView2Environment">
+  <TypeSignature Language="C#" Value="public class CoreWebView2Environment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2Environment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2Environment" />
+  <TypeSignature Language="F#" Value="type CoreWebView2Environment = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This represents the WebView2 Environment.
+            </summary>
+    <remarks>
+            WebViews created from an environment run on the Browser process specified with environment parameters and objects created from an environment should be used in the same environment. Using it in different environments are not guaranteed to be compatible and may fail.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BrowserVersionString">
+      <MemberSignature Language="C#" Value="public string BrowserVersionString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BrowserVersionString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Environment.BrowserVersionString" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BrowserVersionString As String" />
+      <MemberSignature Language="F#" Value="member this.BrowserVersionString : string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Environment.BrowserVersionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the browser version info of the current <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />, including channel name if it is not the stable channel.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            It matches the format of the <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.GetAvailableBrowserVersionString(System.String)" /> method. Channel names are <c>beta</c>, <c>dev</c>, and <c>canary</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareBrowserVersions">
+      <MemberSignature Language="C#" Value="public static int CompareBrowserVersions (string version1, string version2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 CompareBrowserVersions(string version1, string version2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CompareBrowserVersions(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CompareBrowserVersions (version1 As String, version2 As String) As Integer" />
+      <MemberSignature Language="F#" Value="static member CompareBrowserVersions : string * string -&gt; int" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Environment.CompareBrowserVersions (version1, version2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version1" Type="System.String" Index="0" FrameworkAlternate="WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.721-prerelease" />
+        <Parameter Name="version2" Type="System.String" Index="1" FrameworkAlternate="WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.721-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="version1">
+            One of the version strings to compare.
+            </param>
+        <param name="version2">
+            The other version string to compare.
+            </param>
+        <summary>
+            Compares two instances of browser versions correctly and returns an integer that indicates whether the first instance is older, the same as, or newer than the second instance.
+            </summary>
+        <returns>
+            An integer that indicates whether the first instance is older, the same as, or newer than the second instance.
+            <list type="table"><listheader><description>Value Type</description><description>Condition</description></listheader><item><description>Less than zero</description><description><c>version1</c> is older than <c>version2</c>.</description></item><item><description>Zero</description><description><c>version1</c> is the same as <c>version2</c>.</description></item><item><description>Greater than zero</description><description><c>version1</c> is newer than <c>version2</c>.</description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.Web.WebView2.Core.CoreWebView2Environment&gt; CreateAsync (string browserExecutableFolder = default, string userDataFolder = default, Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions options = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2Environment&gt; CreateAsync(string browserExecutableFolder, string userDataFolder, class Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateAsync (Optional browserExecutableFolder As String = Nothing, Optional userDataFolder As String = Nothing, Optional options As CoreWebView2EnvironmentOptions = Nothing) As Task(Of CoreWebView2Environment)" />
+      <MemberSignature Language="F#" Value="static member CreateAsync : string * string * Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions -&gt; System.Threading.Tasks.Task&lt;Microsoft.Web.WebView2.Core.CoreWebView2Environment&gt;" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync (browserExecutableFolder, userDataFolder, options)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Web.WebView2.Core.CoreWebView2Environment&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="browserExecutableFolder" Type="System.String" />
+        <Parameter Name="userDataFolder" Type="System.String" />
+        <Parameter Name="options" Type="Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions" />
+      </Parameters>
+      <Docs>
+        <param name="browserExecutableFolder">
+             The relative path to the folder that contains a custom version of WebView2 Runtime.
+             <para>
+             To use a fixed version of the WebView2 Runtime, pass the relative
+             folder path that contains the fixed version of the WebView2 Runtime
+             to <c>browserExecutableFolder</c>. To create WebView2 controls that
+             use the installed version of the WebView2 Runtime that exists on
+             user machines, pass a <c>null</c> or empty string to
+             <c>browserExecutableFolder</c>. In this scenario, the API tries to
+             find a compatible version of the WebView2 Runtime that is installed
+             on the user machine (first at the machine level, and then per user)
+             using the selected channel preference. The path of fixed version of
+             the WebView2 Runtime should not contain _\Edge\Application\_. When
+             such a path is used, the API fails with <c>ERROR_NOT_SUPPORTED</c>.
+             </para></param>
+        <param name="userDataFolder">
+             The user data folder location for WebView2.
+             <para>
+             The path is either an absolute file path or a relative file path
+             that is interpreted as relative to the compiled code for the
+             current process. The default user data _{Executable File
+             Name}.WebView2_ folder is created in the same directory next to the
+             compiled code for the app. WebView2 creation fails if the compiled
+             code is running in a directory in which the process does not have
+             permission to create a new directory. The app is responsible to
+             clean up the associated user data folder when it is done.
+             </para></param>
+        <param name="options">
+             Options used to create WebView2 Environment.
+             <para>
+             As a browser process may be shared among WebViews, WebView creation
+             fails if the specified <c>options</c> does not match the options of
+             the WebViews that are currently running in the shared browser
+             process.
+             </para></param>
+        <summary>
+             Creates a WebView2 Environment using the installed or a custom WebView2 Runtime version.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>
+             The default channel search order is the WebView2 Runtime, Beta, Dev, and
+             Canary. When an override <c>WEBVIEW2_RELEASE_CHANNEL_PREFERENCE</c> environment
+             variable or applicable <c>releaseChannelPreference</c> registry value is set to
+             <c>1</c>, the channel search order is reversed.
+             </para>
+          <para>
+             To use a fixed version of the WebView2 Runtime, pass the relative
+             folder path that contains the fixed version of the WebView2 Runtime
+             to <c>browserExecutableFolder</c>. To create WebView2 controls that
+             use the installed version of the WebView2 Runtime that exists on
+             user machines, pass a <c>null</c> or empty string to
+             <c>browserExecutableFolder</c>. In this scenario, the API tries to
+             find a compatible version of the WebView2 Runtime that is installed
+             on the user machine (first at the machine level, and then per user)
+             using the selected channel preference. The path of fixed version of
+             the WebView2 Runtime should not contain _\Edge\Application\_. When
+             such a path is used, the API fails with the following error.
+             </para>
+          <para>
+             The <paramref name="browserExecutableFolder" />, <paramref name="userDataFolder" />, and <paramref name="options" /> may be
+             overriden by values either specified in environment variables or in
+             the registry.
+             </para>
+          <para>
+             When creating a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" /> the following environment variables are verified.
+             </para>
+          <code>
+             WEBVIEW2_BROWSER_EXECUTABLE_FOLDER
+             WEBVIEW2_USER_DATA_FOLDER
+             WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS
+             WEBVIEW2_RELEASE_CHANNEL_PREFERENCE
+             </code>
+          <para>
+             If browser executable folder or user data folder is specified in an
+             environment variable or in the registry, the specified <paramref name="browserExecutableFolder" /> or <paramref name="userDataFolder" /> values are overridden. If additional browser
+             arguments are specified in an environment variable or in the
+             registry, it is appended to the corresponding value in the specified
+             <paramref name="options" />.
+             </para>
+          <para>
+             While not strictly overrides, additional environment variables may be set.
+             </para>
+          <code>
+             WEBVIEW2_WAIT_FOR_SCRIPT_DEBUGGER
+             </code>
+          <para>
+             When found with a non-empty value, this indicates that the WebView
+             is being launched under a script debugger. In this case, the WebView
+             issues a <c>Page.waitForDebugger</c> CDP command that runs the
+             script inside the WebView to pause on launch, until a debugger
+             issues a corresponding <c>Runtime.runIfWaitingForDebugger</c> CDP
+             command to resume the runtime.
+             Note that this environment variable does not have a registry key equivalent.
+             </para>
+          <code>
+             WEBVIEW2_PIPE_FOR_SCRIPT_DEBUGGER
+             </code>
+          <para>
+             When found with a non-empty value, it indicates that the WebView is
+             being launched under a script debugger that also supports host apps
+             that use multiple WebViews. The value is used as the identifier for
+             a named pipe that is opened and written to when a new WebView is
+             created by the host app. The payload should match the payload of the
+             <c>remote-debugging-port</c> JSON target and an external debugger
+             may use it to attach to a specific WebView instance. The format of
+             the pipe created by the debugger should be
+             <c>\\.\pipe\WebView2\Debugger\{app_name}\{pipe_name}</c>, where the
+             following are true.
+             <list type="bullet"><item><description><c>{app_name}</c> is the host app exe file name, for example, <c>WebView2Example.exe</c></description></item><item><description><c>{pipe_name}</c> is the value set for <c>WEBVIEW2_PIPE_FOR_SCRIPT_DEBUGGER</c></description></item></list>
+             
+             To enable debugging of the targets identified by the JSON, you must
+             set the <c>WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS</c> environment
+             variable to send <c>--remote-debugging-port={port_num}</c>, where
+             the following is true.
+             <list type="bullet"><item><description><c>{port_num}</c> is the port on which the CDP server binds.</description></item></list>
+             
+             If both <c>WEBVIEW2_PIPE_FOR_SCRIPT_DEBUGGER</c> and
+             <c>WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS</c> environment variables,
+             the WebViews hosted in your app and associated contents may exposed
+             to 3rd party apps such as debuggers. Note that this environment
+             variable does not have a registry key equivalent.
+             </para>
+          <para>
+             If none of those environment variables exist, then the registry is examined
+             next.
+             </para>
+          <code>
+             [{Root}]\Software\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+             "{AppId}"=""
+            
+             [{Root}]\Software\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+             "{AppId}"=""
+            
+             [{Root}]\Software\Policies\Microsoft\Edge\WebView2\AdditionalBrowserArguments
+             "{AppId}"=""
+            
+             [{Root}]\Software\Policies\Microsoft\Edge\WebView2\UserDataFolder
+             "{AppId}"=""
+             </code>
+          <para>
+             Use a group policy under **Administrative Templates** &gt;
+             **Microsoft Edge WebView2** to configure browser executable folder
+             and release channel preference.
+             </para>
+          <para>
+             In the unlikely scenario where some instances of WebView are open during a
+             browser update, the deletion of the previous WebView2 Runtime may be
+             blocked. To avoid running out of disk space, a new WebView creation fails
+             with the following error if it detects that too many previous WebView2
+             Runtime versions exist.
+             </para>
+          <code>
+             ERROR_DISK_FULL
+             </code>
+          <para>
+             The default maximum number of WebView2 Runtime versions allowed is <c>20</c>.
+             To override the maximum number of the previous WebView2 Runtime versions
+             allowed, set the value of the following environment variable.
+             </para>
+          <code>
+             WEBVIEW2_MAX_INSTANCES
+             </code>
+          <para>
+             If the Webview depends upon an installed WebView2 Runtime version and it is
+             uninstalled, any subsequent creation fails with the following error.
+             </para>
+          <code>
+             ERROR_PRODUCT_UNINSTALLED
+             </code>
+          <para>
+             First verify with Root as <c>HKLM</c> and then <c>HKCU</c>. <c>AppId</c> is first set to
+             the Application User Model ID of the process, then if no corresponding
+             registry key, the <c>AppId</c> is set to the compiled code name of the process,
+             or if that is not a registry key then <c>*</c>. If an override registry key is
+             found, use the <c>browserExecutableFolder</c> and <c>userDataFolder</c> registry
+             values as replacements and append <c>additionalBrowserArguments</c> registry
+             values for the corresponding values in the provided <paramref name="options" />.
+             </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCoreWebView2CompositionControllerAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Web.WebView2.Core.CoreWebView2CompositionController&gt; CreateCoreWebView2CompositionControllerAsync (IntPtr ParentWindow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2CompositionController&gt; CreateCoreWebView2CompositionControllerAsync(native int ParentWindow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateCoreWebView2CompositionControllerAsync(System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateCoreWebView2CompositionControllerAsync (ParentWindow As IntPtr) As Task(Of CoreWebView2CompositionController)" />
+      <MemberSignature Language="F#" Value="member this.CreateCoreWebView2CompositionControllerAsync : nativeint -&gt; System.Threading.Tasks.Task&lt;Microsoft.Web.WebView2.Core.CoreWebView2CompositionController&gt;" Usage="coreWebView2Environment.CreateCoreWebView2CompositionControllerAsync ParentWindow" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease">
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Web.WebView2.Core.CoreWebView2CompositionController&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ParentWindow" Type="System.IntPtr" Index="0" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="ParentWindow">The HWND in which the app will connect the visual tree of the WebView.</param>
+        <summary>
+            Asynchronously creates a new WebView for use with visual hosting.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <c>ParentWindow</c> will be the HWND that the app will receive pointer/mouse input meant for the WebView (and will need to use <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendMouseInput(Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind,Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys,System.UInt32,System.Drawing.Point)" /> or <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendPointerInput(Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind,Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo)" /> to forward). If the app moves the WebView visual tree to underneath a different window, then it needs to set <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ParentWindow" /> to update the new parent HWND of the visual tree.
+            
+            Set <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.RootVisualTarget" /> property on the created <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController" /> to provide a visual to host the browser's visual tree.
+            
+            It is recommended that the application set Application User Model ID for the process or the application window. If none is set, during WebView creation a generated Application User Model ID is set to root window of <c>ParentWindow</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCoreWebView2ControllerAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.Web.WebView2.Core.CoreWebView2Controller&gt; CreateCoreWebView2ControllerAsync (IntPtr ParentWindow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2Controller&gt; CreateCoreWebView2ControllerAsync(native int ParentWindow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateCoreWebView2ControllerAsync(System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateCoreWebView2ControllerAsync (ParentWindow As IntPtr) As Task(Of CoreWebView2Controller)" />
+      <MemberSignature Language="F#" Value="member this.CreateCoreWebView2ControllerAsync : nativeint -&gt; System.Threading.Tasks.Task&lt;Microsoft.Web.WebView2.Core.CoreWebView2Controller&gt;" Usage="coreWebView2Environment.CreateCoreWebView2ControllerAsync ParentWindow" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Diagnostics.DebuggerStepThrough]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerStepThrough&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Web.WebView2.Core.CoreWebView2Controller&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ParentWindow" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="ParentWindow">The HWND in which the WebView should be displayed and from which receive input.</param>
+        <summary>
+            Asynchronously creates a new WebView.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            The WebView adds a child window to the provided window during WebView creation. Z-order and other things impacted by sibling window order are affected accordingly.
+            
+            <para>
+            It is recommended that the application set Application User Model ID for the process or the application window. If none is set, during WebView creation a generated Application User Model ID is set to root window of <c>ParentWindow</c>.
+            </para><para>
+            It is recommended that the app handles restart manager messages, to gracefully restart it in the case when the app is using the WebView2 Runtime from a certain installation and that installation is being uninstalled. For example, if a user installs a version of the WebView2 Runtime and opts to use another version of the WebView2 Runtime for testing the app, and then uninstalls the 1st version of the WebView2 Runtime without closing the app, the app restarts to allow un-installation to succeed.
+            </para><para>
+            When the app retries CreateCoreWebView2ControllerAsync upon failure, it is recommended that the app restarts from creating a new WebView2 Environment. If a WebView2 Runtime update happens, the version associated with a WebView2 Environment may have been removed and causing the object to no longer work. Creating a new WebView2 Environment works since it uses the latest version.
+            </para><para>
+            WebView creation fails if a running instance using the same user data folder exists, and the Environment objects have different <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions" />. For example, if a WebView was created with one <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions.Language" />, an attempt to create a WebView with a different <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions.Language" /> using the same user data folder fails.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCoreWebView2PointerInfo">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo CreateCoreWebView2PointerInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo CreateCoreWebView2PointerInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateCoreWebView2PointerInfo" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateCoreWebView2PointerInfo () As CoreWebView2PointerInfo" />
+      <MemberSignature Language="F#" Value="member this.CreateCoreWebView2PointerInfo : unit -&gt; Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" Usage="coreWebView2Environment.CreateCoreWebView2PointerInfo " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an empty <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            The returned <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" /> needs to be populated with all of the relevant info before calling <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendPointerInput(Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind,Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo)" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWebResourceRequest">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest CreateWebResourceRequest (string uri, string Method, System.IO.Stream postData, string Headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest CreateWebResourceRequest(string uri, string Method, class System.IO.Stream postData, string Headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateWebResourceRequest(System.String,System.String,System.IO.Stream,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateWebResourceRequest (uri As String, Method As String, postData As Stream, Headers As String) As CoreWebView2WebResourceRequest" />
+      <MemberSignature Language="F#" Value="member this.CreateWebResourceRequest : string * string * System.IO.Stream * string -&gt; Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest" Usage="coreWebView2Environment.CreateWebResourceRequest (uri, Method, postData, Headers)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" Index="0" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+        <Parameter Name="Method" Type="System.String" Index="1" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+        <Parameter Name="postData" Type="System.IO.Stream" Index="2" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+        <Parameter Name="Headers" Type="System.String" Index="3" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="uri">The request URI.</param>
+        <param name="Method">The HTTP request method.</param>
+        <param name="postData" />
+        <param name="Headers">The raw request header string delimited by CRLF (optional in last header).</param>
+        <summary>
+            Creates a new <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest" /> object.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <c>uri</c> parameter must be absolute URI. It's also possible to create this object with <c>null</c> headers string and then use the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders" /> to construct the headers line by line.
+            </remarks>
+        <altmember cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest" />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWebResourceResponse">
+      <MemberSignature Language="C#" Value="public System.Net.Http.HttpResponseMessage CreateWebResourceResponse (System.IO.Stream Content, int StatusCode, string ReasonPhrase, string Headers);" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.Http.HttpResponseMessage CreateWebResourceResponse(class System.IO.Stream Content, int32 StatusCode, string ReasonPhrase, string Headers) cil managed" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateWebResourceResponse(System.IO.Stream,System.Int32,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateWebResourceResponse (Content As Stream, StatusCode As Integer, ReasonPhrase As String, Headers As String) As HttpResponseMessage" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="F#" Value="member this.CreateWebResourceResponse : System.IO.Stream * int * string * string -&gt; System.Net.Http.HttpResponseMessage" Usage="coreWebView2Environment.CreateWebResourceResponse (Content, StatusCode, ReasonPhrase, Headers)" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse CreateWebResourceResponse (System.IO.Stream Content, int StatusCode, string ReasonPhrase, string Headers);" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse CreateWebResourceResponse(class System.IO.Stream Content, int32 StatusCode, string ReasonPhrase, string Headers) cil managed" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateWebResourceResponse (Content As Stream, StatusCode As Integer, ReasonPhrase As String, Headers As String) As CoreWebView2WebResourceResponse" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="F#" Value="member this.CreateWebResourceResponse : System.IO.Stream * int * string * string -&gt; Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse" Usage="coreWebView2Environment.CreateWebResourceResponse (Content, StatusCode, ReasonPhrase, Headers)" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease">System.Net.Http.HttpResponseMessage</ReturnType>
+        <ReturnType FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease">Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Content" Type="System.IO.Stream" />
+        <Parameter Name="StatusCode" Type="System.Int32" />
+        <Parameter Name="ReasonPhrase" Type="System.String" />
+        <Parameter Name="Headers" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Content">HTTP response content as stream.</param>
+        <param name="StatusCode">The HTTP response status code.</param>
+        <param name="ReasonPhrase">The HTTP response reason phrase.</param>
+        <param name="Headers">The raw response header string delimited by newline.</param>
+        <summary>
+            Creates a new <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse" /> object.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            It is also possible to create this object with empty headers string and then use the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders" /> to construct the headers line by line.
+            </remarks>
+        <altmember cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetAvailableBrowserVersionString">
+      <MemberSignature Language="C#" Value="public static string GetAvailableBrowserVersionString (string browserExecutableFolder = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetAvailableBrowserVersionString(string browserExecutableFolder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.GetAvailableBrowserVersionString(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetAvailableBrowserVersionString (Optional browserExecutableFolder As String = Nothing) As String" />
+      <MemberSignature Language="F#" Value="static member GetAvailableBrowserVersionString : string -&gt; string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Environment.GetAvailableBrowserVersionString browserExecutableFolder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="browserExecutableFolder" Type="System.String" Index="0" FrameworkAlternate="WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.721-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="browserExecutableFolder">
+            The relative path to the folder that contains the WebView2 Runtime.
+            </param>
+        <summary>
+            Gets the browser version info including channel name if it is not the stable channel or WebView2 Runtime.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderForHwnd">
+      <MemberSignature Language="C#" Value="public object GetProviderForHwnd (IntPtr hwnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetProviderForHwnd(native int hwnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.GetProviderForHwnd(System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetProviderForHwnd (hwnd As IntPtr) As Object" />
+      <MemberSignature Language="F#" Value="member this.GetProviderForHwnd : nativeint -&gt; obj" Usage="coreWebView2Environment.GetProviderForHwnd hwnd" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.IntPtr" Index="0" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">The HWND associated with the UI Automation Provider</param>
+        <summary>
+            Returns the UI Automation Provider for the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController" /> that corresponds with the given <paramref name="hwnd" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewBrowserVersionAvailable">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;object&gt; NewBrowserVersionAvailable;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;object&gt; NewBrowserVersionAvailable" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2Environment.NewBrowserVersionAvailable" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event NewBrowserVersionAvailable As EventHandler(Of Object) " />
+      <MemberSignature Language="F#" Value="member this.NewBrowserVersionAvailable : EventHandler&lt;obj&gt; " Usage="member this.NewBrowserVersionAvailable : System.EventHandler&lt;System.obj&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            NewBrowserVersionAvailable is raised when a newer version of the WebView2 Runtime is installed and available using WebView2.
+            </summary>
+        <remarks>
+            To use the newer version of the browser you must create a new environment and WebView. The event is only raised for new version from the same WebView2 Runtime from which the code is running. When not running with installed WebView2 Runtime, no event is raised.
+            
+            Because a user data folder is only able to be used by one browser process at a time, if you want to use the same user data folder in the WebViews using the new version of the browser, you must close the environment and instance of WebView that are using the older version of the browser first. Or simply prompt the user to restart the app.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

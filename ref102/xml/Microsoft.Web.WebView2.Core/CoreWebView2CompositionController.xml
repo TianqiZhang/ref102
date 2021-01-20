@@ -1,0 +1,314 @@
+<Type Name="CoreWebView2CompositionController" FullName="Microsoft.Web.WebView2.Core.CoreWebView2CompositionController">
+  <TypeSignature Language="C#" Value="public class CoreWebView2CompositionController" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2CompositionController extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2CompositionController" />
+  <TypeSignature Language="F#" Value="type CoreWebView2CompositionController = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class is an extension of the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" /> class to support visual hosting.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateCoreWebView2PointerInfoFromPointerId">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo CreateCoreWebView2PointerInfoFromPointerId (uint PointerId, IntPtr ParentWindow, System.Numerics.Matrix4x4 transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo CreateCoreWebView2PointerInfoFromPointerId(unsigned int32 PointerId, native int ParentWindow, valuetype System.Numerics.Matrix4x4 transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.CreateCoreWebView2PointerInfoFromPointerId(System.UInt32,System.IntPtr,System.Numerics.Matrix4x4)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateCoreWebView2PointerInfoFromPointerId (PointerId As UInteger, ParentWindow As IntPtr, transform As Matrix4x4) As CoreWebView2PointerInfo" />
+      <MemberSignature Language="F#" Value="member this.CreateCoreWebView2PointerInfoFromPointerId : uint32 * nativeint * System.Numerics.Matrix4x4 -&gt; Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" Usage="coreWebView2CompositionController.CreateCoreWebView2PointerInfoFromPointerId (PointerId, ParentWindow, transform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="PointerId" Type="System.UInt32" />
+        <Parameter Name="ParentWindow" Type="System.IntPtr" />
+        <Parameter Name="transform" Type="System.Numerics.Matrix4x4" />
+      </Parameters>
+      <Docs>
+        <param name="PointerId">The PointerId received from the system to be converted into a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" />.</param>
+        <param name="ParentWindow">The HWND that contains the WebView. This can be any HWND in the hwnd tree that contains the WebView.</param>
+        <param name="transform">The transform from that HWND to the WebView.</param>
+        <summary>
+            Converts a <paramref name="PointerId" /> received from the system into a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            The returned <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" /> is used in <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendPointerInput(Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind,Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo)" />. The <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo.PointerKind" /> must be either pen or touch or the function will fail.
+            </remarks>
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendMouseInput(Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind,Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys,System.UInt32,System.Drawing.Point)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Cursor">
+      <MemberSignature Language="C#" Value="public IntPtr Cursor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Cursor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.Cursor" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Cursor As IntPtr" />
+      <MemberSignature Language="F#" Value="member this.Cursor : nativeint" Usage="Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.Cursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current cursor that WebView thinks it should be.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The cursor should be set in WM_SETCURSOR through Mouse.SetCursor or set on the corresponding parent/ancestor HWND of the WebView through ::SetClassLongPtr. The HCURSOR can be freed so CopyCursor/DestroyCursor is recommended to keep your own copy if you are doing more than immediately setting the cursor.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;object&gt; CursorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;object&gt; CursorChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.CursorChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event CursorChanged As EventHandler(Of Object) " />
+      <MemberSignature Language="F#" Value="member this.CursorChanged : EventHandler&lt;obj&gt; " Usage="member this.CursorChanged : System.EventHandler&lt;System.obj&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The event is raised when WebView thinks the cursor should be changed.
+            </summary>
+        <remarks>
+            For example, when the mouse cursor is currently the default cursor but is then moved over text, it may try to change to the IBeam cursor.
+            It is expected for the developer to send <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.Leave" /> messages (in addition to <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.Move" /> messages) through <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendMouseInput(Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind,Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys,System.UInt32,System.Drawing.Point)" />. This is to ensure that the mouse is actually within the WebView that sends out CursorChanged events.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragLeave">
+      <MemberSignature Language="C#" Value="public void DragLeave ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DragLeave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.DragLeave" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DragLeave ()" />
+      <MemberSignature Language="F#" Value="member this.DragLeave : unit -&gt; unit" Usage="coreWebView2CompositionController.DragLeave " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            The drag operation has left the WebView.
+            </summary>
+        <remarks>
+            The hosting application must register as an IDropTarget and implement and forward [DragLeave](https://docs.microsoft.com/en-us/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragleave) calls to this function. In addition the hosting application needs to create an IDropTargetHelper and call the corresponding [IDropTargetHelper::DragLeave](https://docs.microsoft.com/en-us/windows/win32/api/shobjidl_core/nf-shobjidl_core-idroptargethelper-dragleave) function on that object before forwarding the call to WebView.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragOver">
+      <MemberSignature Language="C#" Value="public uint DragOver (uint keyState, System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int32 DragOver(unsigned int32 keyState, valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.DragOver(System.UInt32,System.Drawing.Point)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DragOver (keyState As UInteger, point As Point) As UInteger" />
+      <MemberSignature Language="F#" Value="member this.DragOver : uint32 * System.Drawing.Point -&gt; uint32" Usage="coreWebView2CompositionController.DragOver (keyState, point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyState" Type="System.UInt32" Index="0" FrameworkAlternate="WebView2-dotnet-1.0.721-prerelease" />
+        <Parameter Name="point" Type="System.Drawing.Point" Index="1" FrameworkAlternate="WebView2-dotnet-1.0.721-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="keyState">The keyState from <c>IDropTarget::DragOver</c></param>
+        <param name="point">The point from <c>IDropTarget::DragOver</c></param>
+        <summary>
+            The drag operation is over the WebView.
+            </summary>
+        <returns>
+            A uint that is set as the effect for <c>IDropTarget::DragOver</c></returns>
+        <remarks>
+            The hosting application must register as an IDropTarget and implement and forward [DragOver](https://docs.microsoft.com/en-us/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover) calls to this function. In addition, the hosting application needs to create an IDropTargetHelper and call the corresponding [IDropTargetHelper::DragOver](https://docs.microsoft.com/en-us/windows/win32/api/shobjidl_core/nf-shobjidl_core-idroptargethelper-dragover) function on that object before forwarding the call to the WebView.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootVisualTarget">
+      <MemberSignature Language="C#" Value="public object RootVisualTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object RootVisualTarget" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.RootVisualTarget" />
+      <MemberSignature Language="VB.NET" Value="Public Property RootVisualTarget As Object" />
+      <MemberSignature Language="F#" Value="member this.RootVisualTarget : obj with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.RootVisualTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the root visual in the hosting app's visual tree.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This visual is where the WebView will connect its visual tree. The app uses this visual to position the WebView within the app. The app still needs to use the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" /> property to size the WebView. The RootVisualTarget property can be an IDCompositionVisual or a Windows::UI::Composition::ContainerVisual. WebView will connect its visual tree to the provided visual before returning from the property setter. The app needs to commit on its device setting the RootVisualTarget property. The RootVisualTarget property supports being set to <c>null</c> to disconnect the WebView from the app's visual tree.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMouseInput">
+      <MemberSignature Language="C#" Value="public void SendMouseInput (Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind eventKind, Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys virtualKeys, uint mouseData, System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendMouseInput(valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind eventKind, valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys virtualKeys, unsigned int32 mouseData, valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendMouseInput(Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind,Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys,System.UInt32,System.Drawing.Point)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendMouseInput (eventKind As CoreWebView2MouseEventKind, virtualKeys As CoreWebView2MouseEventVirtualKeys, mouseData As UInteger, point As Point)" />
+      <MemberSignature Language="F#" Value="member this.SendMouseInput : Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind * Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys * uint32 * System.Drawing.Point -&gt; unit" Usage="coreWebView2CompositionController.SendMouseInput (eventKind, virtualKeys, mouseData, point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventKind" Type="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind" />
+        <Parameter Name="virtualKeys" Type="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys" />
+        <Parameter Name="mouseData" Type="System.UInt32" />
+        <Parameter Name="point" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="eventKind">The mouse event kind.</param>
+        <param name="virtualKeys">The virtual keys associated with the <c>eventKind</c>.</param>
+        <param name="mouseData">The amount of wheel movement.</param>
+        <param name="point">The absolute position of the mouse, or the amount of motion since the last mouse event was generated, depending on the <c>eventKind</c>.</param>
+        <summary>
+            Sends mouse input to the WebView.
+            </summary>
+        <remarks>
+            If <c>eventKind</c> is <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.HorizontalWheel" /> or <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.Wheel" />, then <c>mouseData</c> specifies the amount of wheel movement.
+            A positive value indicates that the wheel was rotated forward, away from the user; a negative value indicates that the wheel was rotated backward, toward the user. One wheel click is defined as WHEEL_DELTA, which is 120. If <c>eventKind</c> is <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.XButtonDoubleClick" />, <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.XButtonDown" />, or <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.XButtonUp" />, then <c>mouseData</c> specifies which X buttons were pressed or released. This value should be 1 if the first X button is pressed/released and 2 if the second X button is pressed/released. If <c>eventKind</c> is <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.Leave" />, then <c>virtualKeys</c>, <c>mouseData</c>, and point should all be zero. If <c>eventKind</c> is any other value, then <c>mouseData</c> should be zero. <c>point</c> is expected to be in the client coordinate space of the WebView. To track mouse events that start in the WebView and can potentially move outside of the WebView and host application, calling SetCapture and ReleaseCapture is recommended. To dismiss hover popups, it is also recommended to send <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind.Leave" /> messages.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendPointerInput">
+      <MemberSignature Language="C#" Value="public void SendPointerInput (Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind eventType, Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo pointerInfo);" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendPointerInput(valuetype Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind eventType, class Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo pointerInfo) cil managed" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendPointerInput(Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind,Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendPointerInput (eventType As CoreWebView2PointerEventKind, pointerInfo As CoreWebView2PointerInfo)" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease" />
+      <MemberSignature Language="F#" Value="member this.SendPointerInput : Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind * Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo -&gt; unit" Usage="coreWebView2CompositionController.SendPointerInput (eventType, pointerInfo)" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease" />
+      <MemberSignature Language="C#" Value="public void SendPointerInput (Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind eventKind, Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo pointerInfo);" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendPointerInput(valuetype Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind eventKind, class Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo pointerInfo) cil managed" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendPointerInput (eventKind As CoreWebView2PointerEventKind, pointerInfo As CoreWebView2PointerInfo)" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="F#" Value="member this.SendPointerInput : Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind * Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo -&gt; unit" Usage="coreWebView2CompositionController.SendPointerInput (eventKind, pointerInfo)" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind" Index="0" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease" />
+        <Parameter Name="eventKind" Type="Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind" Index="0" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+        <Parameter Name="pointerInfo" Type="Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" Index="1" />
+      </Parameters>
+      <Docs>
+        <param name="eventType">To be added.</param>
+        <param name="eventKind">The pointer event kind.</param>
+        <param name="pointerInfo">The pointer information.</param>
+        <summary>
+            Sends pen or pointer input to the WebView.
+            </summary>
+        <remarks>
+            Accepts touch or pen pointer input of kinds defined in <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind" />.
+            Any pointer input from the system must be converted into a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo" /> first.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemCursorId">
+      <MemberSignature Language="C#" Value="public uint SystemCursorId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 SystemCursorId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SystemCursorId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SystemCursorId As UInteger" />
+      <MemberSignature Language="F#" Value="member this.SystemCursorId : uint32" Usage="Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SystemCursorId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current system cursor ID reported by the underlying rendering engine for WebView.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UIAProvider">
+      <MemberSignature Language="C#" Value="public object UIAProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object UIAProvider" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.UIAProvider" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UIAProvider As Object" />
+      <MemberSignature Language="F#" Value="member this.UIAProvider : obj" Usage="Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.UIAProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the UI Automation Provider for the WebView.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

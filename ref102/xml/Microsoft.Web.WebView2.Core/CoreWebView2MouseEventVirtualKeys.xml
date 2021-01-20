@@ -1,0 +1,214 @@
+<Type Name="CoreWebView2MouseEventVirtualKeys" FullName="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys">
+  <TypeSignature Language="C#" Value="public enum CoreWebView2MouseEventVirtualKeys" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CoreWebView2MouseEventVirtualKeys extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CoreWebView2MouseEventVirtualKeys" />
+  <TypeSignature Language="F#" Value="type CoreWebView2MouseEventVirtualKeys = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Flags]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Flags&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Mouse event virtual keys associated with a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind" /> for <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendMouseInput(Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind,Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys,System.UInt32,System.Drawing.Point)" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="Control" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys Control = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.Control" />
+      <MemberSignature Language="VB.NET" Value="Control" />
+      <MemberSignature Language="F#" Value="Control = 8" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.Control" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            Ctrl key is down, <c>MK_CONTROL</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftButton">
+      <MemberSignature Language="C#" Value="LeftButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys LeftButton = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.LeftButton" />
+      <MemberSignature Language="VB.NET" Value="LeftButton" />
+      <MemberSignature Language="F#" Value="LeftButton = 1" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.LeftButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Left mouse button is down, <c>MK_LBUTTON</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleButton">
+      <MemberSignature Language="C#" Value="MiddleButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys MiddleButton = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.MiddleButton" />
+      <MemberSignature Language="VB.NET" Value="MiddleButton" />
+      <MemberSignature Language="F#" Value="MiddleButton = 16" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.MiddleButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>
+            Middle mouse button is down, <c>MK_MBUTTON</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            No additional keys pressed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightButton">
+      <MemberSignature Language="C#" Value="RightButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys RightButton = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.RightButton" />
+      <MemberSignature Language="VB.NET" Value="RightButton" />
+      <MemberSignature Language="F#" Value="RightButton = 2" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.RightButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Right mouse button is down, <c>MK_RBUTTON</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Shift">
+      <MemberSignature Language="C#" Value="Shift" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys Shift = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.Shift" />
+      <MemberSignature Language="VB.NET" Value="Shift" />
+      <MemberSignature Language="F#" Value="Shift = 4" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.Shift" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Shift key is down, <c>MK_SHIFT</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XButton1">
+      <MemberSignature Language="C#" Value="XButton1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys XButton1 = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.XButton1" />
+      <MemberSignature Language="VB.NET" Value="XButton1" />
+      <MemberSignature Language="F#" Value="XButton1 = 32" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.XButton1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys</ReturnType>
+      </ReturnValue>
+      <MemberValue>32</MemberValue>
+      <Docs>
+        <summary>
+            First X button is down, <c>MK_XBUTTON1</c>.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XButton2">
+      <MemberSignature Language="C#" Value="XButton2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys XButton2 = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.XButton2" />
+      <MemberSignature Language="VB.NET" Value="XButton2" />
+      <MemberSignature Language="F#" Value="XButton2 = 64" Usage="Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys.XButton2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys</ReturnType>
+      </ReturnValue>
+      <MemberValue>64</MemberValue>
+      <Docs>
+        <summary>
+            Second X button is down, <c>MK_XBUTTON2</c>.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

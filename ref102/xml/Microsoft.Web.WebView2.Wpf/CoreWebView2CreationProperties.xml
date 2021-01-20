@@ -1,0 +1,210 @@
+<Type Name="CoreWebView2CreationProperties" FullName="Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties">
+  <TypeSignature Language="C#" Value="public class CoreWebView2CreationProperties : System.Windows.DependencyObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2CreationProperties extends System.Windows.DependencyObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2CreationProperties&#xA;Inherits DependencyObject" />
+  <TypeSignature Language="F#" Value="type CoreWebView2CreationProperties = class&#xA;    inherit DependencyObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Wpf</AssemblyName>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DependencyObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class is a bundle of the most common parameters used to create a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />.
+            Its main purpose is to be set to <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CreationProperties" /> in order to customize the environment used by a <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> during implicit initialization.
+            It is also a nice WPF integration utility which allows commonly used environment parameters to be dependency properties and be created and used in markup.
+            </summary>
+    <remarks>
+            This class isn't intended to contain all possible environment customization options.
+            If you need complete control over the environment used by a WebView2 control then you'll need to initialize the control explicitly by
+            creating your own environment with <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" /> and passing it to <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment)" />
+            *before* you set the <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.Source" /> property to anything.
+            See the <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> class documentation for an initialization overview.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CoreWebView2CreationProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Wpf</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of <see cref="T:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties" /> with default data for all properties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrowserExecutableFolder">
+      <MemberSignature Language="C#" Value="public string BrowserExecutableFolder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BrowserExecutableFolder" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.BrowserExecutableFolder" />
+      <MemberSignature Language="VB.NET" Value="Public Property BrowserExecutableFolder As String" />
+      <MemberSignature Language="F#" Value="member this.BrowserExecutableFolder : string with get, set" Usage="Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.BrowserExecutableFolder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Wpf</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value to pass as the browserExecutableFolder parameter of <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" /> when creating an environment with this instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrowserExecutableFolderProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BrowserExecutableFolderProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BrowserExecutableFolderProperty" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.BrowserExecutableFolderProperty" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly BrowserExecutableFolderProperty As DependencyProperty " />
+      <MemberSignature Language="F#" Value=" staticval mutable BrowserExecutableFolderProperty : System.Windows.DependencyProperty" Usage="Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.BrowserExecutableFolderProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Wpf</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The WPF DependencyProperty which backs the <see cref="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.BrowserExecutableFolder" /> property.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.Language" />
+      <MemberSignature Language="VB.NET" Value="Public Property Language As String" />
+      <MemberSignature Language="F#" Value="member this.Language : string with get, set" Usage="Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Wpf</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value to use for the Language property of the CoreWebView2EnvironmentOptions parameter passed to <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" /> when creating an environment with this instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LanguageProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LanguageProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LanguageProperty" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.LanguageProperty" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly LanguageProperty As DependencyProperty " />
+      <MemberSignature Language="F#" Value=" staticval mutable LanguageProperty : System.Windows.DependencyProperty" Usage="Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.LanguageProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Wpf</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The WPF DependencyProperty which backs the <see cref="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.Language" /> property.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserDataFolder">
+      <MemberSignature Language="C#" Value="public string UserDataFolder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserDataFolder" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.UserDataFolder" />
+      <MemberSignature Language="VB.NET" Value="Public Property UserDataFolder As String" />
+      <MemberSignature Language="F#" Value="member this.UserDataFolder : string with get, set" Usage="Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.UserDataFolder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Wpf</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value to pass as the userDataFolder parameter of <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" /> when creating an environment with this instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserDataFolderProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty UserDataFolderProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty UserDataFolderProperty" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.UserDataFolderProperty" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly UserDataFolderProperty As DependencyProperty " />
+      <MemberSignature Language="F#" Value=" staticval mutable UserDataFolderProperty : System.Windows.DependencyProperty" Usage="Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.UserDataFolderProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Wpf</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The WPF DependencyProperty which backs the <see cref="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.UserDataFolder" /> property.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

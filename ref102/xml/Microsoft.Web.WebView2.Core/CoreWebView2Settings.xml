@@ -1,0 +1,305 @@
+<Type Name="CoreWebView2Settings" FullName="Microsoft.Web.WebView2.Core.CoreWebView2Settings">
+  <TypeSignature Language="C#" Value="public class CoreWebView2Settings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2Settings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2Settings" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2Settings" />
+  <TypeSignature Language="F#" Value="type CoreWebView2Settings = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines properties that enable, disable, or modify WebView features.
+            </summary>
+    <remarks>
+            Setting changes made after <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /> event do not apply until the next top-level navigation.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AreDefaultContextMenusEnabled">
+      <MemberSignature Language="C#" Value="public bool AreDefaultContextMenusEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AreDefaultContextMenusEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreDefaultContextMenusEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property AreDefaultContextMenusEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AreDefaultContextMenusEnabled : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreDefaultContextMenusEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether the default context menus are shown to the user in WebView.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default value is <c>true</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AreDefaultScriptDialogsEnabled">
+      <MemberSignature Language="C#" Value="public bool AreDefaultScriptDialogsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AreDefaultScriptDialogsEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreDefaultScriptDialogsEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property AreDefaultScriptDialogsEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AreDefaultScriptDialogsEnabled : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreDefaultScriptDialogsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether WebView renders the default Javascript dialog box.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is used when loading a new HTML document. If set to <c>false</c>, WebView does not render the default JavaScript dialog box (specifically those displayed by the JavaScript alert, confirm, prompt functions and <c>beforeunload</c> event). Instead, WebView raises <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ScriptDialogOpening" /> event that contains all of the information for the dialog and allow the host app to show a custom UI. The default value is <c>true</c>.
+            </remarks>
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ScriptDialogOpening" />
+      </Docs>
+    </Member>
+    <Member MemberName="AreDevToolsEnabled">
+      <MemberSignature Language="C#" Value="public bool AreDevToolsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AreDevToolsEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreDevToolsEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property AreDevToolsEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AreDevToolsEnabled : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreDevToolsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether the user is able to use the context menu or keyboard shortcuts to open the DevTools window.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default value is <c>true</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AreHostObjectsAllowed">
+      <MemberSignature Language="C#" Value="public bool AreHostObjectsAllowed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AreHostObjectsAllowed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreHostObjectsAllowed" />
+      <MemberSignature Language="VB.NET" Value="Public Property AreHostObjectsAllowed As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AreHostObjectsAllowed : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreHostObjectsAllowed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether host objects are accessible from the page in WebView.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default value is <c>true</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AreRemoteObjectsAllowed">
+      <MemberSignature Language="C#" Value="public bool AreRemoteObjectsAllowed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AreRemoteObjectsAllowed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreRemoteObjectsAllowed" />
+      <MemberSignature Language="VB.NET" Value="Public Property AreRemoteObjectsAllowed As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AreRemoteObjectsAllowed : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreRemoteObjectsAllowed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBuiltInErrorPageEnabled">
+      <MemberSignature Language="C#" Value="public bool IsBuiltInErrorPageEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBuiltInErrorPageEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsBuiltInErrorPageEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsBuiltInErrorPageEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsBuiltInErrorPageEnabled : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsBuiltInErrorPageEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether to disable built in error page for navigation failure and render process failure.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            When disabled, blank page is displayed when related error happens. The default value is <c>true</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsScriptEnabled">
+      <MemberSignature Language="C#" Value="public bool IsScriptEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsScriptEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsScriptEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsScriptEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsScriptEnabled : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsScriptEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether running JavaScript is enabled in all future navigations in the WebView.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This only affects scripts in the document. Scripts injected with <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.ExecuteScriptAsync(System.String)" /> runs even if script is disabled. The default value is <c>true</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStatusBarEnabled">
+      <MemberSignature Language="C#" Value="public bool IsStatusBarEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStatusBarEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsStatusBarEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsStatusBarEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsStatusBarEnabled : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsStatusBarEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether the status bar is displayed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The status bar is usually displayed in the lower left of the WebView and shows things such as the URI of a link when the user hovers over it and other information. The default value is <c>true</c>.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWebMessageEnabled">
+      <MemberSignature Language="C#" Value="public bool IsWebMessageEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWebMessageEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsWebMessageEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsWebMessageEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsWebMessageEnabled : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsWebMessageEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether communication from the host to the top-level HTML document of the WebView is allowed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is used when loading a new HTML document. If set to <c>true</c>, communication from the host to the top-level HTML document of the WebView is allowed using <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsJson(System.String)" />, <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsString(System.String)" />, and message event of <c>window.chrome.webview</c>. Communication from the top-level HTML document of the WebView to the host is allowed using <c>window.chrome.webview.postMessage</c> function and the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" /> event. If set to <c>false</c>, then communication is disallowed. <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsJson(System.String)" /> and <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsString(System.String)" /> fail and <c>window.chrome.webview.postMessage</c> fails by throwing an instance of an Error object. The default value is <c>true</c>.
+            </remarks>
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsJson(System.String)" />
+        <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsString(System.String)" />
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" />
+      </Docs>
+    </Member>
+    <Member MemberName="IsZoomControlEnabled">
+      <MemberSignature Language="C#" Value="public bool IsZoomControlEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsZoomControlEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsZoomControlEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsZoomControlEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsZoomControlEnabled : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsZoomControlEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether the user is able to impact the zoom of the WebView.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            When disabled, the user is not able to zoom using Ctrl++, Ctr+-, or Ctrl+mouse wheel, but the zoom is set using <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /> property. The default value is <c>true</c>.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,62 @@
+<Type Name="ICoreWebView2StagingHostObjectHelper" FullName="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2StagingHostObjectHelper">
+  <TypeSignature Language="C#" Value="public interface ICoreWebView2StagingHostObjectHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICoreWebView2StagingHostObjectHelper" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2StagingHostObjectHelper" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ICoreWebView2StagingHostObjectHelper" />
+  <TypeSignature Language="F#" Value="type ICoreWebView2StagingHostObjectHelper = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("DF362C62-3B8E-484A-8DE0-FE2CB31EDBC5")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("DF362C62-3B8E-484A-8DE0-FE2CB31EDBC5")&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsMethodMember">
+      <MemberSignature Language="C#" Value="public int IsMethodMember (ref object rawObject, string memberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IsMethodMember(object&amp; rawObject, [in]string memberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2StagingHostObjectHelper.IsMethodMember(System.Object@,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsMethodMember (ByRef rawObject As Object, memberName As String) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member IsMethodMember : obj * string -&gt; int" Usage="iCoreWebView2StagingHostObjectHelper.IsMethodMember (rawObject, memberName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawObject" Type="System.Object" RefType="ref" />
+        <Parameter Name="memberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="rawObject">To be added.</param>
+        <param name="memberName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,169 @@
+<Type Name="CoreWebView2PermissionRequestedEventArgs" FullName="Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs">
+  <TypeSignature Language="C#" Value="public class CoreWebView2PermissionRequestedEventArgs" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2PermissionRequestedEventArgs extends System.Object" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2PermissionRequestedEventArgs" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="F#" Value="type CoreWebView2PermissionRequestedEventArgs = class" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="C#" Value="public class CoreWebView2PermissionRequestedEventArgs : EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2PermissionRequestedEventArgs extends System.EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2PermissionRequestedEventArgs&#xA;Inherits EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="F#" Value="type CoreWebView2PermissionRequestedEventArgs = class&#xA;    inherit EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease">System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Event args for the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.PermissionRequested" /> event.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetDeferral">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2Deferral GetDeferral ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Web.WebView2.Core.CoreWebView2Deferral GetDeferral() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.GetDeferral" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDeferral () As CoreWebView2Deferral" />
+      <MemberSignature Language="F#" Value="member this.GetDeferral : unit -&gt; Microsoft.Web.WebView2.Core.CoreWebView2Deferral" Usage="coreWebView2PermissionRequestedEventArgs.GetDeferral " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2Deferral</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Deferral" /> object.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Use the deferral object to make the permission decision at a later time.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserInitiated">
+      <MemberSignature Language="C#" Value="public bool IsUserInitiated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUserInitiated" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.IsUserInitiated" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsUserInitiated As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsUserInitiated : bool" Usage="Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.IsUserInitiated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <c>true</c> when the permission request was initiated through a user gesture such as clicking an anchor tag with target.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Being initiated through a user gesture does not mean that user intended to access the associated resource.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionKind">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind PermissionKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind PermissionKind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.PermissionKind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PermissionKind As CoreWebView2PermissionKind" />
+      <MemberSignature Language="F#" Value="member this.PermissionKind : Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind" Usage="Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.PermissionKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the kind of the permission that is requested.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2PermissionState State { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Web.WebView2.Core.CoreWebView2PermissionState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.State" />
+      <MemberSignature Language="VB.NET" Value="Public Property State As CoreWebView2PermissionState" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Web.WebView2.Core.CoreWebView2PermissionState with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2PermissionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the status of a permission request. For example, whether the request is granted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The default value is <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2PermissionState.Default" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uri As String" />
+      <MemberSignature Language="F#" Value="member this.Uri : string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the origin of the web content that requests the permission.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

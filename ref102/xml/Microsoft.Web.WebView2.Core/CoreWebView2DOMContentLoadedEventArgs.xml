@@ -1,0 +1,47 @@
+<Type Name="CoreWebView2DOMContentLoadedEventArgs" FullName="Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs">
+  <TypeSignature Language="C#" Value="public class CoreWebView2DOMContentLoadedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2DOMContentLoadedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2DOMContentLoadedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="F#" Value="type CoreWebView2DOMContentLoadedEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Event args for the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.DOMContentLoaded" /> event.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NavigationId">
+      <MemberSignature Language="C#" Value="public ulong NavigationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 NavigationId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs.NavigationId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NavigationId As ULong" />
+      <MemberSignature Language="F#" Value="member this.NavigationId : uint64" Usage="Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs.NavigationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the ID of the navigation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

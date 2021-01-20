@@ -1,0 +1,451 @@
+<Type Name="CoreWebView2WebErrorStatus" FullName="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus">
+  <TypeSignature Language="C#" Value="public enum CoreWebView2WebErrorStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CoreWebView2WebErrorStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CoreWebView2WebErrorStatus" />
+  <TypeSignature Language="F#" Value="type CoreWebView2WebErrorStatus = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Indicates the error status values for web navigations.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CannotConnect">
+      <MemberSignature Language="C#" Value="CannotConnect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus CannotConnect = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CannotConnect" />
+      <MemberSignature Language="VB.NET" Value="CannotConnect" />
+      <MemberSignature Language="F#" Value="CannotConnect = 12" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CannotConnect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>12</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that a connection to the destination was not established.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateCommonNameIsIncorrect">
+      <MemberSignature Language="C#" Value="CertificateCommonNameIsIncorrect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus CertificateCommonNameIsIncorrect = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateCommonNameIsIncorrect" />
+      <MemberSignature Language="VB.NET" Value="CertificateCommonNameIsIncorrect" />
+      <MemberSignature Language="F#" Value="CertificateCommonNameIsIncorrect = 1" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateCommonNameIsIncorrect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the SSL certificate common name does not match the web address.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateExpired">
+      <MemberSignature Language="C#" Value="CertificateExpired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus CertificateExpired = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateExpired" />
+      <MemberSignature Language="VB.NET" Value="CertificateExpired" />
+      <MemberSignature Language="F#" Value="CertificateExpired = 2" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateExpired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the SSL certificate has expired.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateIsInvalid">
+      <MemberSignature Language="C#" Value="CertificateIsInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus CertificateIsInvalid = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateIsInvalid" />
+      <MemberSignature Language="VB.NET" Value="CertificateIsInvalid" />
+      <MemberSignature Language="F#" Value="CertificateIsInvalid = 5" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateIsInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the SSL certificate is not valid. The certificate may not match the public key pins for the host name, the certificate is signed by an untrusted authority or using a weak sign algorithm, the certificate claimed DNS names violate name constraints, the certificate contains a weak key, the validity period of the certificate is too long, lack of revocation information or revocation mechanism, non-unique host name, lack of certificate transparency information, or the certificate is chained to a [legacy Symantec root](https://security.googleblog.com/2018/03/distrust-of-symantec-pki-immediate.html).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateRevoked">
+      <MemberSignature Language="C#" Value="CertificateRevoked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus CertificateRevoked = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateRevoked" />
+      <MemberSignature Language="VB.NET" Value="CertificateRevoked" />
+      <MemberSignature Language="F#" Value="CertificateRevoked = 4" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateRevoked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the SSL certificate has been revoked.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCertificateContainsErrors">
+      <MemberSignature Language="C#" Value="ClientCertificateContainsErrors" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus ClientCertificateContainsErrors = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ClientCertificateContainsErrors" />
+      <MemberSignature Language="VB.NET" Value="ClientCertificateContainsErrors" />
+      <MemberSignature Language="F#" Value="ClientCertificateContainsErrors = 3" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ClientCertificateContainsErrors" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the SSL client certificate contains errors.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionAborted">
+      <MemberSignature Language="C#" Value="ConnectionAborted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus ConnectionAborted = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ConnectionAborted" />
+      <MemberSignature Language="VB.NET" Value="ConnectionAborted" />
+      <MemberSignature Language="F#" Value="ConnectionAborted = 9" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ConnectionAborted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the connection was stopped.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionReset">
+      <MemberSignature Language="C#" Value="ConnectionReset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus ConnectionReset = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ConnectionReset" />
+      <MemberSignature Language="VB.NET" Value="ConnectionReset" />
+      <MemberSignature Language="F#" Value="ConnectionReset = 10" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ConnectionReset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>10</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the connection was reset.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Disconnected">
+      <MemberSignature Language="C#" Value="Disconnected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus Disconnected = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.Disconnected" />
+      <MemberSignature Language="VB.NET" Value="Disconnected" />
+      <MemberSignature Language="F#" Value="Disconnected = 11" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.Disconnected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>11</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the Internet connection has been lost.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorHttpInvalidServerResponse">
+      <MemberSignature Language="C#" Value="ErrorHttpInvalidServerResponse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus ErrorHttpInvalidServerResponse = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ErrorHttpInvalidServerResponse" />
+      <MemberSignature Language="VB.NET" Value="ErrorHttpInvalidServerResponse" />
+      <MemberSignature Language="F#" Value="ErrorHttpInvalidServerResponse = 8" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ErrorHttpInvalidServerResponse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the server returned an invalid or unrecognized response.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HostNameNotResolved">
+      <MemberSignature Language="C#" Value="HostNameNotResolved" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus HostNameNotResolved = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.HostNameNotResolved" />
+      <MemberSignature Language="VB.NET" Value="HostNameNotResolved" />
+      <MemberSignature Language="F#" Value="HostNameNotResolved = 13" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.HostNameNotResolved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>13</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the provided host name was not able to be resolved.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationCanceled">
+      <MemberSignature Language="C#" Value="OperationCanceled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus OperationCanceled = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.OperationCanceled" />
+      <MemberSignature Language="VB.NET" Value="OperationCanceled" />
+      <MemberSignature Language="F#" Value="OperationCanceled = 14" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.OperationCanceled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>14</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the operation was canceled.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectFailed">
+      <MemberSignature Language="C#" Value="RedirectFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus RedirectFailed = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.RedirectFailed" />
+      <MemberSignature Language="VB.NET" Value="RedirectFailed" />
+      <MemberSignature Language="F#" Value="RedirectFailed = 15" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.RedirectFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>15</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the request redirect failed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerUnreachable">
+      <MemberSignature Language="C#" Value="ServerUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus ServerUnreachable = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ServerUnreachable" />
+      <MemberSignature Language="VB.NET" Value="ServerUnreachable" />
+      <MemberSignature Language="F#" Value="ServerUnreachable = 6" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ServerUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the host is unreachable.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="Timeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus Timeout = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.Timeout" />
+      <MemberSignature Language="VB.NET" Value="Timeout" />
+      <MemberSignature Language="F#" Value="Timeout = 7" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.Timeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the connection has timed out.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnexpectedError">
+      <MemberSignature Language="C#" Value="UnexpectedError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus UnexpectedError = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.UnexpectedError" />
+      <MemberSignature Language="VB.NET" Value="UnexpectedError" />
+      <MemberSignature Language="F#" Value="UnexpectedError = 16" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.UnexpectedError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>
+            An unexpected error occurred.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.Unknown" />
+      <MemberSignature Language="VB.NET" Value="Unknown" />
+      <MemberSignature Language="F#" Value="Unknown = 0" Usage="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that an unknown error occurred.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

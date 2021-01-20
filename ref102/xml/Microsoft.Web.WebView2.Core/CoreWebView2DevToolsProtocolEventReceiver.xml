@@ -1,0 +1,58 @@
+<Type Name="CoreWebView2DevToolsProtocolEventReceiver" FullName="Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver">
+  <TypeSignature Language="C#" Value="public class CoreWebView2DevToolsProtocolEventReceiver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2DevToolsProtocolEventReceiver extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2DevToolsProtocolEventReceiver" />
+  <TypeSignature Language="F#" Value="type CoreWebView2DevToolsProtocolEventReceiver = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A Receiver is created for a particular DevTools Protocol event and allows you to subscribe and unsubscribe from that event.
+            </summary>
+    <remarks>
+            Obtained from the WebView object using <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.GetDevToolsProtocolEventReceiver(System.String)" />.
+            </remarks>
+    <altmember cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.GetDevToolsProtocolEventReceiver(System.String)" />
+  </Docs>
+  <Members>
+    <Member MemberName="DevToolsProtocolEventReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs&gt; DevToolsProtocolEventReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs&gt; DevToolsProtocolEventReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver.DevToolsProtocolEventReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event DevToolsProtocolEventReceived As EventHandler(Of CoreWebView2DevToolsProtocolEventReceivedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.DevToolsProtocolEventReceived : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs&gt; " Usage="member this.DevToolsProtocolEventReceived : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DevToolsProtocolEventReceived is raised when the corresponding DevToolsProtocol event is raised.
+            </summary>
+        <remarks>
+            The handler's Invoke method will be called whenever the corresponding DevToolsProtocol event fires. Invoke will be called with an event args object containing the DevTools Protocol event's parameter object as a JSON string.
+            </remarks>
+        <altmember cref="T:Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,122 @@
+<Type Name="CoreWebView2Deferral" FullName="Microsoft.Web.WebView2.Core.CoreWebView2Deferral">
+  <TypeSignature Language="C#" Value="public class CoreWebView2Deferral" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2Deferral extends System.Object" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2Deferral" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2Deferral" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease" />
+  <TypeSignature Language="F#" Value="type CoreWebView2Deferral = class" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease" />
+  <TypeSignature Language="C#" Value="public class CoreWebView2Deferral : IDisposable" FrameworkAlternate="WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2Deferral extends System.Object implements class System.IDisposable" FrameworkAlternate="WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2Deferral&#xA;Implements IDisposable" FrameworkAlternate="WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="F#" Value="type CoreWebView2Deferral = class&#xA;    interface IDisposable" FrameworkAlternate="WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface FrameworkAlternate="WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease">
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            This is used to complete deferrals on event args that support getting deferrals using the <c>GetDeferral</c> method. This class implements <see cref="T:System.IDisposable" />.
+            </summary>
+    <remarks />
+  </Docs>
+  <Members>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public void Complete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Complete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Deferral.Complete" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Complete ()" />
+      <MemberSignature Language="F#" Value="member this.Complete : unit -&gt; unit" Usage="coreWebView2Deferral.Complete " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Completes the associated deferred event.
+            </summary>
+        <remarks>
+            Complete should only be run once for each deferral taken.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Deferral.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="coreWebView2Deferral.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Public implementation of Dispose pattern.
+            </summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Deferral.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="coreWebView2Deferral.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" Index="0" FrameworkAlternate="WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.721-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,63 @@
+<Type Name="CoreWebView2BoundsMode" FullName="Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode">
+  <TypeSignature Language="C#" Value="public enum CoreWebView2BoundsMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CoreWebView2BoundsMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CoreWebView2BoundsMode" />
+  <TypeSignature Language="F#" Value="type CoreWebView2BoundsMode = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Mode for how the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" /> property is interpreted in relation to the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScale" /> property.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="UseRasterizationScale">
+      <MemberSignature Language="C#" Value="UseRasterizationScale" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode UseRasterizationScale = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode.UseRasterizationScale" />
+      <MemberSignature Language="VB.NET" Value="UseRasterizationScale" />
+      <MemberSignature Language="F#" Value="UseRasterizationScale = 1" Usage="Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode.UseRasterizationScale" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+          <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" /> property represents logical pixels and the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScale" /> property is used to get the physical size of the WebView.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseRawPixels">
+      <MemberSignature Language="C#" Value="UseRawPixels" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode UseRawPixels = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode.UseRawPixels" />
+      <MemberSignature Language="VB.NET" Value="UseRawPixels" />
+      <MemberSignature Language="F#" Value="UseRawPixels = 0" Usage="Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode.UseRawPixels" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+          <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" /> property represents raw pixels. Physical size of WebView is not impacted by <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScale" /></summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

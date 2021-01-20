@@ -1,0 +1,202 @@
+<Type Name="CoreWebView2NavigationStartingEventArgs" FullName="Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs">
+  <TypeSignature Language="C#" Value="public class CoreWebView2NavigationStartingEventArgs" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2NavigationStartingEventArgs extends System.Object" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2NavigationStartingEventArgs" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="F#" Value="type CoreWebView2NavigationStartingEventArgs = class" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease;WebView2-dotnet-0.9.628-prerelease" />
+  <TypeSignature Language="C#" Value="public class CoreWebView2NavigationStartingEventArgs : EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2NavigationStartingEventArgs extends System.EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2NavigationStartingEventArgs&#xA;Inherits EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="F#" Value="type CoreWebView2NavigationStartingEventArgs = class&#xA;    inherit EventArgs" FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.721-prerelease" />
+  <TypeSignature Language="C#" Value="public class CoreWebView2NavigationStartingEventArgs : System.ComponentModel.CancelEventArgs" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2NavigationStartingEventArgs extends System.ComponentModel.CancelEventArgs" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2NavigationStartingEventArgs&#xA;Inherits CancelEventArgs" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease" />
+  <TypeSignature Language="F#" Value="type CoreWebView2NavigationStartingEventArgs = class&#xA;    inherit CancelEventArgs" FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.721-prerelease">System.EventArgs</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="WebView2-dotnet-1.0.674-prerelease">System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Event args for the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /> event.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cancel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.Cancel" />
+      <MemberSignature Language="VB.NET" Value="Public Property Cancel As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Cancel : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.Cancel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether to cancel the navigation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If set to <c>true</c>, the navigation is no longer present and the content of the current page is intact. For performance reasons, <c>GET</c> HTTP requests may happen, while the host is responding. You may set cookies and use part of a request for the navigation. Cancellation for navigation to <c>about:blank</c> or frame navigation to srcdoc is not supported and ignored.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRedirected">
+      <MemberSignature Language="C#" Value="public bool IsRedirected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRedirected" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.IsRedirected" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsRedirected As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsRedirected : bool" Usage="Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.IsRedirected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <c>true</c> when the navigation is redirected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserInitiated">
+      <MemberSignature Language="C#" Value="public bool IsUserInitiated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUserInitiated" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.IsUserInitiated" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsUserInitiated As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsUserInitiated : bool" Usage="Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.IsUserInitiated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <c>true</c> when the navigation was initiated through a user gesture as opposed to programmatic navigation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationId">
+      <MemberSignature Language="C#" Value="public ulong NavigationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 NavigationId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.NavigationId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NavigationId As ULong" />
+      <MemberSignature Language="F#" Value="member this.NavigationId : uint64" Usage="Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.NavigationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the ID of the navigation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestHeaders">
+      <MemberSignature Language="C#" Value="public System.Net.Http.Headers.HttpRequestHeaders RequestHeaders { get; }" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Http.Headers.HttpRequestHeaders RequestHeaders" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.RequestHeaders" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestHeaders As HttpRequestHeaders" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="F#" Value="member this.RequestHeaders : System.Net.Http.Headers.HttpRequestHeaders" Usage="Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.RequestHeaders" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders RequestHeaders { get; }" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders RequestHeaders" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestHeaders As CoreWebView2HttpRequestHeaders" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="F#" Value="member this.RequestHeaders : Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders" Usage="Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.RequestHeaders" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease">System.Net.Http.Headers.HttpRequestHeaders</ReturnType>
+        <ReturnType FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease">Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the HTTP request headers for the navigation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Note, you are not able to modify the HTTP request headers in a <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /> event.
+            </remarks>
+        <altmember cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" />
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uri As String" />
+      <MemberSignature Language="F#" Value="member this.Uri : string" Usage="Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the uri of the requested navigation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

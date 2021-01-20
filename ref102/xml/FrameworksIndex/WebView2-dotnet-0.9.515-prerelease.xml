@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Framework Name="WebView2-dotnet-0.9.515-prerelease">
+  <Assemblies>
+    <Assembly Name="Microsoft.Web.WebView2.Core" Version="0.0.0.0" />
+    <Assembly Name="Microsoft.Web.WebView2.WinForms" Version="1.0.0.0" />
+    <Assembly Name="Microsoft.Web.WebView2.Wpf" Version="1.0.0.0" />
+  </Assemblies>
+  <Namespace Name="Microsoft.Web.WebView2.Core">
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2">
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContainsFullScreenElementChanged" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.DocumentTitleChanged" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.FrameNavigationCompleted" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.FrameNavigationStarting" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.HistoryChanged" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.NewWindowRequested" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.PermissionRequested" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.ProcessFailed" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.ScriptDialogOpening" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebResourceRequested" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2.WindowCloseRequested" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddHostObjectToScript(System.String,System.Object)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.AddWebResourceRequestedFilter(System.String,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.CallDevToolsProtocolMethodAsync(System.String,System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.CapturePreviewAsync(Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat,System.IO.Stream)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.ExecuteScriptAsync(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.GetDevToolsProtocolEventReceiver(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoBack" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoForward" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.Navigate(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.NavigateToString(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.OpenDevToolsWindow" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsJson(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.PostWebMessageAsString(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.Reload" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.RemoveHostObjectFromScript(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.RemoveScriptToExecuteOnDocumentCreated(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.RemoveWebResourceRequestedFilter(System.String,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2.Stop" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2.BrowserProcessId" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoBack" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoForward" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2.ContainsFullScreenElement" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2.DocumentTitle" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2.Settings" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2.Source" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs">
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs.Handled" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs.KeyEventKind" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs.KeyEventLParam" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs.PhysicalKeyStatus" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs.VirtualKey" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat">
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat.Jpeg" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat.Png" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs">
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs.IsErrorPage" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs.NavigationId" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2Controller" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller">
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.AcceleratorKeyPressed" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.GotFocus" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.LostFocus" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.MoveFocusRequested" />
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactorChanged" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Close" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2Controller.MoveFocus(Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2Controller.NotifyParentWindowPositionChanged" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2Controller.SetBoundsAndZoomFactor(System.Windows.Rect,System.Double)" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.CoreWebView2" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.IsVisible" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ParentWindow" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2Deferral" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2Deferral">
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2Deferral.Complete" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs">
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs.ParameterObjectAsJson" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver">
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver.DevToolsProtocolEventReceived" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2Environment" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment">
+      <Member Id="E:Microsoft.Web.WebView2.Core.CoreWebView2Environment.NewBrowserVersionAvailable" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateCoreWebView2ControllerAsync(System.IntPtr)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateWebResourceResponse(System.IO.Stream,System.Int32,System.String,System.String)" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Environment.BrowserVersionString" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions">
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions.#ctor(System.String,System.String,System.String)" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions.AdditionalBrowserArguments" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions.Language" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions.TargetCompatibleBrowserVersion" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2KeyEventKind" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2KeyEventKind">
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2KeyEventKind.KeyDown" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2KeyEventKind.KeyUp" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2KeyEventKind.SystemKeyDown" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2KeyEventKind.SystemKeyUp" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason">
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason.Next" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason.Previous" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason.Programmatic" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs">
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs.Handled" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs.Reason" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs">
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs.IsSuccess" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs.NavigationId" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs.WebErrorStatus" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs">
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.Cancel" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.IsRedirected" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.IsUserInitiated" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.NavigationId" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.RequestHeaders" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs.Uri" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs">
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs.GetDeferral" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs.Handled" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs.IsUserInitiated" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs.NewWindow" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs.Uri" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind">
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind.Camera" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind.ClipboardRead" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind.Geolocation" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind.Microphone" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind.Notifications" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind.OtherSensors" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind.UnknownPermission" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs">
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.GetDeferral" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.IsUserInitiated" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.PermissionKind" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.State" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs.Uri" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2PermissionState" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2PermissionState">
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PermissionState.Allow" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PermissionState.Default" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PermissionState.Deny" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus">
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.IsExtendedKey" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.IsKeyReleased" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.IsMenuKeyDown" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.RepeatCount" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.ScanCode" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.WasKeyDown" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs">
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs.ProcessFailedKind" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedKind" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedKind">
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedKind.BrowserProcessExited" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedKind.RenderProcessExited" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedKind.RenderProcessUnresponsive" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind">
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Alert" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Beforeunload" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Confirm" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Prompt" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs">
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Accept" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.GetDeferral" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.DefaultText" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Kind" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Message" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.ResultText" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs.Uri" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2Settings" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2Settings">
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreDefaultContextMenusEnabled" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreDefaultScriptDialogsEnabled" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreDevToolsEnabled" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.AreRemoteObjectsAllowed" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsBuiltInErrorPageEnabled" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsScriptEnabled" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsStatusBarEnabled" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsWebMessageEnabled" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2Settings.IsZoomControlEnabled" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs">
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs.IsNewDocument" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus">
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CannotConnect" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateCommonNameIsIncorrect" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateExpired" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateIsInvalid" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.CertificateRevoked" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ClientCertificateContainsErrors" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ConnectionAborted" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ConnectionReset" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.Disconnected" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ErrorHttpInvalidServerResponse" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.HostNameNotResolved" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.OperationCanceled" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.RedirectFailed" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.ServerUnreachable" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.Timeout" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.UnexpectedError" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus.Unknown" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs">
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs.TryGetWebMessageAsString" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs.Source" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs.WebMessageAsJson" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext">
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.All" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.CspViolationReport" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Document" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.EventSource" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Fetch" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Font" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Image" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Manifest" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Media" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Other" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Ping" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Script" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.SignedExchange" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Stylesheet" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.TextTrack" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.Websocket" />
+      <Member Id="F:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext.XmlHttpRequest" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs" Id="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs">
+      <Member Id="M:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs.GetDeferral" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs.Request" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs.ResourceContext" />
+      <Member Id="P:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs.Response" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.EdgeNotFoundException" Id="T:Microsoft.Web.WebView2.Core.EdgeNotFoundException">
+      <Member Id="M:Microsoft.Web.WebView2.Core.EdgeNotFoundException.#ctor" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.EdgeNotFoundException.#ctor(System.Exception)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.EdgeNotFoundException.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.EdgeNotFoundException.#ctor(System.String,System.Exception)" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Core.HostObjectHelper" Id="T:Microsoft.Web.WebView2.Core.HostObjectHelper">
+      <Member Id="M:Microsoft.Web.WebView2.Core.HostObjectHelper.#ctor" />
+      <Member Id="M:Microsoft.Web.WebView2.Core.HostObjectHelper.IsMethod(System.Object,System.String)" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.Web.WebView2.Core.Raw">
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT" Id="T:Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_KEY_EVENT_KIND" Id="T:Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_KEY_EVENT_KIND" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_MOVE_FOCUS_REASON" Id="T:Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_MOVE_FOCUS_REASON" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_PERMISSION_KIND" Id="T:Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_PERMISSION_KIND" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_PERMISSION_STATE" Id="T:Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_PERMISSION_STATE" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_PHYSICAL_KEY_STATUS" Id="T:Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_PHYSICAL_KEY_STATUS" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_PROCESS_FAILED_KIND" Id="T:Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_PROCESS_FAILED_KIND" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_SCRIPT_DIALOG_KIND" Id="T:Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_SCRIPT_DIALOG_KIND" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_WEB_ERROR_STATUS" Id="T:Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_WEB_ERROR_STATUS" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_WEB_RESOURCE_CONTEXT" Id="T:Microsoft.Web.WebView2.Core.Raw.COREWEBVIEW2_WEB_RESOURCE_CONTEXT" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.EventRegistrationToken" Id="T:Microsoft.Web.WebView2.Core.Raw.EventRegistrationToken" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2AcceleratorKeyPressedEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2AcceleratorKeyPressedEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2AcceleratorKeyPressedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2AcceleratorKeyPressedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2CallDevToolsProtocolMethodCompletedHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2CallDevToolsProtocolMethodCompletedHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2CapturePreviewCompletedHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2CapturePreviewCompletedHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ContainsFullScreenElementChangedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ContainsFullScreenElementChangedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ContentLoadingEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ContentLoadingEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ContentLoadingEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ContentLoadingEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2Controller" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2Controller" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2CreateCoreWebView2ControllerCompletedHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2CreateCoreWebView2ControllerCompletedHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2Deferral" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2Deferral" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2DevToolsProtocolEventReceivedEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2DevToolsProtocolEventReceivedEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2DevToolsProtocolEventReceivedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2DevToolsProtocolEventReceivedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2DevToolsProtocolEventReceiver" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2DevToolsProtocolEventReceiver" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2DocumentTitleChangedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2DocumentTitleChangedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2Environment" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2Environment" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2EnvironmentOptions" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2EnvironmentOptions" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ExecuteScriptCompletedHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ExecuteScriptCompletedHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2FocusChangedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2FocusChangedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2HistoryChangedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2HistoryChangedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2HttpHeadersCollectionIterator" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2HttpHeadersCollectionIterator" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2HttpRequestHeaders" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2HttpRequestHeaders" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2HttpResponseHeaders" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2HttpResponseHeaders" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2MoveFocusRequestedEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2MoveFocusRequestedEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2MoveFocusRequestedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2MoveFocusRequestedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NavigationCompletedEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NavigationCompletedEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NavigationCompletedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NavigationCompletedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NavigationStartingEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NavigationStartingEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NavigationStartingEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NavigationStartingEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NewBrowserVersionAvailableEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NewBrowserVersionAvailableEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NewWindowRequestedEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NewWindowRequestedEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NewWindowRequestedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2NewWindowRequestedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2PermissionRequestedEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2PermissionRequestedEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2PermissionRequestedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2PermissionRequestedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ProcessFailedEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ProcessFailedEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ProcessFailedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ProcessFailedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ScriptDialogOpeningEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ScriptDialogOpeningEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ScriptDialogOpeningEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ScriptDialogOpeningEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2Settings" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2Settings" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2SourceChangedEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2SourceChangedEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2SourceChangedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2SourceChangedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebMessageReceivedEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebMessageReceivedEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebMessageReceivedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebMessageReceivedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebResourceRequest" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebResourceRequest" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebResourceRequestedEventArgs" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebResourceRequestedEventArgs" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebResourceRequestedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebResourceRequestedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebResourceResponse" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WebResourceResponse" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WindowCloseRequestedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2WindowCloseRequestedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ZoomFactorChangedEventHandler" Id="T:Microsoft.Web.WebView2.Core.Raw.ICoreWebView2ZoomFactorChangedEventHandler" />
+    <Type Name="Microsoft.Web.WebView2.Core.Raw.tagRECT" Id="T:Microsoft.Web.WebView2.Core.Raw.tagRECT" />
+  </Namespace>
+  <Namespace Name="Microsoft.Web.WebView2.WinForms">
+    <Type Name="Microsoft.Web.WebView2.WinForms.WebView2" Id="T:Microsoft.Web.WebView2.WinForms.WebView2">
+      <Member Id="E:Microsoft.Web.WebView2.WinForms.WebView2.ContentLoading" />
+      <Member Id="E:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2Ready" />
+      <Member Id="E:Microsoft.Web.WebView2.WinForms.WebView2.NavigationCompleted" />
+      <Member Id="E:Microsoft.Web.WebView2.WinForms.WebView2.NavigationStarting" />
+      <Member Id="E:Microsoft.Web.WebView2.WinForms.WebView2.SourceChanged" />
+      <Member Id="E:Microsoft.Web.WebView2.WinForms.WebView2.WebMessageReceived" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.#ctor" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.Dispose(System.Boolean)" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment)" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.ExecuteScriptAsync(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.GoBack" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.GoForward" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.NavigateToString(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.OnEnter(System.EventArgs)" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.OnSizeChanged(System.EventArgs)" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.OnVisibleChanged(System.EventArgs)" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.Reload" />
+      <Member Id="M:Microsoft.Web.WebView2.WinForms.WebView2.Stop" />
+      <Member Id="P:Microsoft.Web.WebView2.WinForms.WebView2.CanGoBack" />
+      <Member Id="P:Microsoft.Web.WebView2.WinForms.WebView2.CanGoForward" />
+      <Member Id="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" />
+      <Member Id="P:Microsoft.Web.WebView2.WinForms.WebView2.Source" />
+      <Member Id="P:Microsoft.Web.WebView2.WinForms.WebView2.ZoomFactor" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Microsoft.Web.WebView2.Wpf">
+    <Type Name="Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties" Id="T:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties">
+      <Member Id="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.BrowserExecutableFolderProperty" />
+      <Member Id="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.LanguageProperty" />
+      <Member Id="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.UserDataFolderProperty" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.#ctor" />
+      <Member Id="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.BrowserExecutableFolder" />
+      <Member Id="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.Language" />
+      <Member Id="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.UserDataFolder" />
+    </Type>
+    <Type Name="Microsoft.Web.WebView2.Wpf.WebView2" Id="T:Microsoft.Web.WebView2.Wpf.WebView2">
+      <Member Id="E:Microsoft.Web.WebView2.Wpf.WebView2.ContentLoading" />
+      <Member Id="E:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2Ready" />
+      <Member Id="E:Microsoft.Web.WebView2.Wpf.WebView2.NavigationCompleted" />
+      <Member Id="E:Microsoft.Web.WebView2.Wpf.WebView2.NavigationStarting" />
+      <Member Id="E:Microsoft.Web.WebView2.Wpf.WebView2.SourceChanged" />
+      <Member Id="E:Microsoft.Web.WebView2.Wpf.WebView2.WebMessageReceived" />
+      <Member Id="F:Microsoft.Web.WebView2.Wpf.WebView2.CanGoBackProperty" />
+      <Member Id="F:Microsoft.Web.WebView2.Wpf.WebView2.CanGoForwardProperty" />
+      <Member Id="F:Microsoft.Web.WebView2.Wpf.WebView2.CreationPropertiesProperty" />
+      <Member Id="F:Microsoft.Web.WebView2.Wpf.WebView2.SourceProperty" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.#ctor" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.BuildWindowCore(System.Runtime.InteropServices.HandleRef)" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.DestroyWindowCore(System.Runtime.InteropServices.HandleRef)" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.Dispose(System.Boolean)" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment)" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.ExecuteScriptAsync(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.GoBack" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.GoForward" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.HasFocusWithinCore" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.NavigateToString(System.String)" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.OnKeyUp(System.Windows.Input.KeyEventArgs)" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.OnPreviewKeyUp(System.Windows.Input.KeyEventArgs)" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.OnWindowPositionChanged(System.Windows.Rect)" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.Reload" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.Stop" />
+      <Member Id="M:Microsoft.Web.WebView2.Wpf.WebView2.TabIntoCore(System.Windows.Input.TraversalRequest)" />
+      <Member Id="P:Microsoft.Web.WebView2.Wpf.WebView2.CanGoBack" />
+      <Member Id="P:Microsoft.Web.WebView2.Wpf.WebView2.CanGoForward" />
+      <Member Id="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" />
+      <Member Id="P:Microsoft.Web.WebView2.Wpf.WebView2.CreationProperties" />
+      <Member Id="P:Microsoft.Web.WebView2.Wpf.WebView2.Source" />
+    </Type>
+  </Namespace>
+</Framework>

@@ -1,0 +1,126 @@
+<Type Name="CoreWebView2ScriptDialogKind" FullName="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind">
+  <TypeSignature Language="C#" Value="public enum CoreWebView2ScriptDialogKind" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CoreWebView2ScriptDialogKind extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CoreWebView2ScriptDialogKind" />
+  <TypeSignature Language="F#" Value="type CoreWebView2ScriptDialogKind = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Specifies the JavaScript dialog kind used in <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alert">
+      <MemberSignature Language="C#" Value="Alert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind Alert = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Alert" />
+      <MemberSignature Language="VB.NET" Value="Alert" />
+      <MemberSignature Language="F#" Value="Alert = 0" Usage="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Alert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the dialog uses <c>window.alert</c> JavaScript function.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Beforeunload">
+      <MemberSignature Language="C#" Value="Beforeunload" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind Beforeunload = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Beforeunload" />
+      <MemberSignature Language="VB.NET" Value="Beforeunload" />
+      <MemberSignature Language="F#" Value="Beforeunload = 3" Usage="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Beforeunload" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the dialog uses <c>window.beforeunload</c> JavaScript event.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Confirm">
+      <MemberSignature Language="C#" Value="Confirm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind Confirm = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Confirm" />
+      <MemberSignature Language="VB.NET" Value="Confirm" />
+      <MemberSignature Language="F#" Value="Confirm = 1" Usage="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Confirm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the dialog uses <c>window.confirm</c> JavaScript function.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Prompt">
+      <MemberSignature Language="C#" Value="Prompt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind Prompt = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Prompt" />
+      <MemberSignature Language="VB.NET" Value="Prompt" />
+      <MemberSignature Language="F#" Value="Prompt = 2" Usage="Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind.Prompt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the dialog uses <c>window.prompt</c> JavaScript function.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

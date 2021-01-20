@@ -1,0 +1,179 @@
+<Type Name="CoreWebView2PhysicalKeyStatus" FullName="Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus">
+  <TypeSignature Language="C#" Value="public struct CoreWebView2PhysicalKeyStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CoreWebView2PhysicalKeyStatus extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus" />
+  <TypeSignature Language="VB.NET" Value="Public Structure CoreWebView2PhysicalKeyStatus" />
+  <TypeSignature Language="F#" Value="type CoreWebView2PhysicalKeyStatus = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains the information packed into the LPARAM sent to a Win32 key event.
+            </summary>
+    <remarks>
+            For more information about <c>WM_KEYDOWN</c>, navigate to [WM_KEYDOWN message](https://docs.microsoft.com/windows/win32/inputdev/wm-keydown).
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsExtendedKey">
+      <MemberSignature Language="C#" Value="public int IsExtendedKey;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 IsExtendedKey" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.IsExtendedKey" />
+      <MemberSignature Language="VB.NET" Value="Public IsExtendedKey As Integer " />
+      <MemberSignature Language="F#" Value="val mutable IsExtendedKey : int" Usage="Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.IsExtendedKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that the key is an extended key.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyReleased">
+      <MemberSignature Language="C#" Value="public int IsKeyReleased;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 IsKeyReleased" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.IsKeyReleased" />
+      <MemberSignature Language="VB.NET" Value="Public IsKeyReleased As Integer " />
+      <MemberSignature Language="F#" Value="val mutable IsKeyReleased : int" Usage="Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.IsKeyReleased" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that the key was released.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMenuKeyDown">
+      <MemberSignature Language="C#" Value="public int IsMenuKeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 IsMenuKeyDown" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.IsMenuKeyDown" />
+      <MemberSignature Language="VB.NET" Value="Public IsMenuKeyDown As Integer " />
+      <MemberSignature Language="F#" Value="val mutable IsMenuKeyDown : int" Usage="Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.IsMenuKeyDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that a menu key is held down (context code).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatCount">
+      <MemberSignature Language="C#" Value="public uint RepeatCount;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int32 RepeatCount" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.RepeatCount" />
+      <MemberSignature Language="VB.NET" Value="Public RepeatCount As UInteger " />
+      <MemberSignature Language="F#" Value="val mutable RepeatCount : uint32" Usage="Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.RepeatCount" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the repeat count for the current message.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScanCode">
+      <MemberSignature Language="C#" Value="public uint ScanCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int32 ScanCode" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.ScanCode" />
+      <MemberSignature Language="VB.NET" Value="Public ScanCode As UInteger " />
+      <MemberSignature Language="F#" Value="val mutable ScanCode : uint32" Usage="Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.ScanCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies the scan code.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WasKeyDown">
+      <MemberSignature Language="C#" Value="public int WasKeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 WasKeyDown" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.WasKeyDown" />
+      <MemberSignature Language="VB.NET" Value="Public WasKeyDown As Integer " />
+      <MemberSignature Language="F#" Value="val mutable WasKeyDown : int" Usage="Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus.WasKeyDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that the key was held down.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

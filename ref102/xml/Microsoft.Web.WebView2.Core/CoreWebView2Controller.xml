@@ -1,0 +1,583 @@
+<Type Name="CoreWebView2Controller" FullName="Microsoft.Web.WebView2.Core.CoreWebView2Controller">
+  <TypeSignature Language="C#" Value="public class CoreWebView2Controller" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoreWebView2Controller extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" />
+  <TypeSignature Language="VB.NET" Value="Public Class CoreWebView2Controller" />
+  <TypeSignature Language="F#" Value="type CoreWebView2Controller = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.628.0</AssemblyVersion>
+    <AssemblyVersion>1.0.664.37</AssemblyVersion>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class is the owner of the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.CoreWebView2" /> object, and
+            provides support for resizing, showing and hiding, focusing, and other
+            functionality related to windowing and composition.
+            </summary>
+    <remarks>
+            The <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" /> owns the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.CoreWebView2" />, and if all references to the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" /> go away, the WebView will be closed.
+            </remarks>
+    <remarks>
+            The CoreWebView2Controller owns the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.CoreWebView2" />, and if all references to the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" /> go away, the WebView is closed.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceleratorKeyPressed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs&gt; AcceleratorKeyPressed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs&gt; AcceleratorKeyPressed" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.AcceleratorKeyPressed" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event AcceleratorKeyPressed As EventHandler(Of CoreWebView2AcceleratorKeyPressedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.AcceleratorKeyPressed : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs&gt; " Usage="member this.AcceleratorKeyPressed : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            AcceleratorKeyPressed is raised when an accelerator key or key combo is pressed or released while the WebView is focused.
+            </summary>
+        <remarks>
+            A key is considered an accelerator if either of the following conditions are true:
+            
+            <list type="bullet"><item><description>
+            Ctrl or Alt is currently being held.
+            </description></item><item><description>
+            The pressed key does not map to a character.
+            </description></item></list>
+            
+            A few specific keys are never considered accelerators, such as Shift. The Escape key is always considered an accelerator.
+            
+            Autorepeated key events caused by holding the key down will also raise this event. Filter out the auto-repeated key events by verifying <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs.KeyEventLParam" /> or <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs.PhysicalKeyStatus" />.
+            
+            In windowed mode, this event is synchronous. Until you set <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs.Handled" /> to <c>true</c> or the event handler returns, the browser process is blocked and outgoing cross-process COM calls will fail with RPC_E_CANTCALLOUT_ININPUTSYNCCALL. All <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.CoreWebView2" /> methods work, however.
+            
+            In windowless mode, the event is asynchronous. Further input do not reach the browser until the event handler returns or <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs.Handled" /> is set to <c>true</c>, but the browser process is not blocked, and outgoing COM calls work normally.
+            
+            It is recommended to set <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs.Handled" /> to <c>true</c> as early as you are able to know that you want to handle the accelerator key.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect Bounds { get; set; }" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect Bounds" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" />
+      <MemberSignature Language="VB.NET" Value="Public Property Bounds As Rect" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="F#" Value="member this.Bounds : System.Windows.Rect with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; set; }" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="VB.NET" Value="Public Property Bounds As Rectangle" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberSignature Language="F#" Value="member this.Bounds : System.Drawing.Rectangle with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease">System.Windows.Rect</ReturnType>
+        <ReturnType FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.721-prerelease">System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the WebView bounds.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Bounds are relative to the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ParentWindow" />. The app has two ways to position a WebView:
+            <list type="bullet"><item><description>
+            Create a child HWND that is the WebView parent HWND. Position the window where the WebView should be. Use (0, 0) for the top-left corner (the offset) of the Bounds of the WebView.
+            </description></item><item><description>
+            Use the top-most window of the app as the WebView parent HWND. For example, to position ebView correctly in the app, set the top-left corner of the Bounds of the WebView.
+            </description></item></list>
+            
+            The values of Bounds are limited by the coordinate space of the host.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoundsMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode BoundsMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode BoundsMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.BoundsMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property BoundsMode As CoreWebView2BoundsMode" />
+      <MemberSignature Language="F#" Value="member this.BoundsMode : Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Controller.BoundsMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the WebView bounds mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            BoundsMode affects how setting the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" /> and <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScale" /> properties work. Bounds mode can either be in <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode.UseRawPixels" /> mode or <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode.UseRasterizationScale" /> mode.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Close" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Close ()" />
+      <MemberSignature Language="F#" Value="member this.Close : unit -&gt; unit" Usage="coreWebView2Controller.Close " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Closes the WebView and cleans up the underlying browser instance.
+            </summary>
+        <remarks>
+            Cleaning up the browser instance releases the resources powering the WebView. The browser instance is shut down if no other WebViews are using it.
+            
+            After running Close, all methods fail and event handlers stop running. Specifically, the WebView releases the associated references to any associated event handlers when Close is run.
+            
+            Close is implicitly run when the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" /> loses the final reference and is destructed. But it is best practice to explicitly run Close to avoid any accidental cycle of references between the WebView and the app code. Specifically, if you capture a reference to the WebView in an event handler you create a reference cycle between the WebView and the event handler. Run Close to break the cycle by releasing all event handlers. But to avoid the situation, it is best to both explicitly run Close on the WebView and to not capture a reference to the WebView to ensure the WebView is cleaned up correctly.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CoreWebView2">
+      <MemberSignature Language="C#" Value="public Microsoft.Web.WebView2.Core.CoreWebView2 CoreWebView2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Web.WebView2.Core.CoreWebView2 CoreWebView2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.CoreWebView2" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CoreWebView2 As CoreWebView2" />
+      <MemberSignature Language="F#" Value="member this.CoreWebView2 : Microsoft.Web.WebView2.Core.CoreWebView2" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Controller.CoreWebView2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.CoreWebView2" /> associated with this <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <altmember cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.CoreWebView2" />
+      </Docs>
+    </Member>
+    <Member MemberName="GotFocus">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;object&gt; GotFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;object&gt; GotFocus" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.GotFocus" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event GotFocus As EventHandler(Of Object) " />
+      <MemberSignature Language="F#" Value="member this.GotFocus : EventHandler&lt;obj&gt; " Usage="member this.GotFocus : System.EventHandler&lt;System.obj&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            GotFocus is raised when WebView gets focus.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVisible" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.IsVisible" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsVisible As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsVisible : bool with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Controller.IsVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether to show or hide the WebView.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If <c>IsVisible</c> is set to <c>false</c>, the WebView is transparent and is not rendered. However, this does not affect the window containing the WebView (the <c>ParentWindow</c> parameter that was passed to <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateCoreWebView2ControllerAsync(System.IntPtr)" />). If you want that window to disappear too, run <see cref="M:System.Windows.Forms.Control.Hide" /> or <see cref="!:System.Windows.Window.Hide" /> on it directly in addition to modifying this.
+            WebView as a child window does not get window messages when the top window is minimized or restored. For performance reason, developer should set <c>IsVisible</c> property of the WebView to <c>false</c> when the app window is minimized and back to <c>true</c> when app window is restored. App window can do this by handling SC_MINIMIZE and SC_RESTORE command upon receiving <c>WM_SYSCOMMAND</c> message.
+            </remarks>
+        <altmember cref="M:System.Windows.Forms.Control.Hide" />
+        <altmember cref="!:System.Windows.Window.Hide" />
+      </Docs>
+    </Member>
+    <Member MemberName="LostFocus">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;object&gt; LostFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;object&gt; LostFocus" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.LostFocus" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event LostFocus As EventHandler(Of Object) " />
+      <MemberSignature Language="F#" Value="member this.LostFocus : EventHandler&lt;obj&gt; " Usage="member this.LostFocus : System.EventHandler&lt;System.obj&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            LostFocus is raised when WebView loses focus.
+            </summary>
+        <remarks>
+            In the case where <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.MoveFocusRequested" /> event is raised, the focus is still on WebView when <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.MoveFocusRequested" /> event is raised. LostFocus is only raised afterwards when code of the app or default action of <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.MoveFocusRequested" /> event sets focus away from WebView.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocus">
+      <MemberSignature Language="C#" Value="public void MoveFocus (Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveFocus(valuetype Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Controller.MoveFocus(Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub MoveFocus (reason As CoreWebView2MoveFocusReason)" />
+      <MemberSignature Language="F#" Value="member this.MoveFocus : Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason -&gt; unit" Usage="coreWebView2Controller.MoveFocus reason" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reason" Type="Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason" />
+      </Parameters>
+      <Docs>
+        <param name="reason">The reason for moving focus.</param>
+        <summary>
+            Moves focus into WebView.
+            </summary>
+        <remarks>
+            WebView will get focus and focus will be set to correspondent element in the page hosted in the WebView. For <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason.Programmatic" /> reason, focus is set to previously focused element or the default element if no previously focused element exists. For <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason.Next" /> reason, focus is set to the first element. For <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason.Previous" /> reason, focus is set to the last element. WebView changes focus through user interaction including selecting into a WebView or Tab into it. For tabbing, the app runs MoveFocus with <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason.Next" /> or <see cref="F:Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason.Previous" /> to align with Tab and Shift+Tab respectively when it decides the WebView is the next tabbable element.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs&gt; MoveFocusRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs&gt; MoveFocusRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.MoveFocusRequested" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event MoveFocusRequested As EventHandler(Of CoreWebView2MoveFocusRequestedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.MoveFocusRequested : EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs&gt; " Usage="member this.MoveFocusRequested : System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MoveFocusRequested is raised when user tries to tab out of the WebView.
+            </summary>
+        <remarks>
+            The focus of the WebView has not changed when this event is raised.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyParentWindowPositionChanged">
+      <MemberSignature Language="C#" Value="public void NotifyParentWindowPositionChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NotifyParentWindowPositionChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Controller.NotifyParentWindowPositionChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Sub NotifyParentWindowPositionChanged ()" />
+      <MemberSignature Language="F#" Value="member this.NotifyParentWindowPositionChanged : unit -&gt; unit" Usage="coreWebView2Controller.NotifyParentWindowPositionChanged " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Tells WebView that the main WebView parent (or any ancestor) HWND moved.
+            </summary>
+        <remarks>
+            This is a notification separate from <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" />. This is needed for accessibility and certain dialogs in WebView to work correctly.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentWindow">
+      <MemberSignature Language="C#" Value="public IntPtr ParentWindow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ParentWindow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ParentWindow" />
+      <MemberSignature Language="VB.NET" Value="Public Property ParentWindow As IntPtr" />
+      <MemberSignature Language="F#" Value="member this.ParentWindow : nativeint with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Controller.ParentWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the parent window provided by the app or sets the parent window that this WebView is using to render content.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            It initially returns the <c>ParentWindow</c> passed into <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateCoreWebView2ControllerAsync(System.IntPtr)" />. Setting the property causes the WebView to re-parent the main WebView window to the newly provided window.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RasterizationScale">
+      <MemberSignature Language="C#" Value="public double RasterizationScale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 RasterizationScale" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScale" />
+      <MemberSignature Language="VB.NET" Value="Public Property RasterizationScale As Double" />
+      <MemberSignature Language="F#" Value="member this.RasterizationScale : double with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the WebView rasterization scale.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The rasterization scale is the combination of the monitor DPI scale and text scaling set by the user. This value shoud be updated when the DPI scale of the app's top level window changes (i.e. monitor DPI scale changes or the window changes monitor) or when the text scale factor of the system changes.
+            Rasterization scale applies to the WebView content, as well as popups, context menus, scroll bars, etc. Normal app scaling scenarios should use the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /> property or <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Controller.SetBoundsAndZoomFactor(System.Drawing.Rectangle,System.Double)" /> method.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RasterizationScaleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;object&gt; RasterizationScaleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;object&gt; RasterizationScaleChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScaleChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event RasterizationScaleChanged As EventHandler(Of Object) " />
+      <MemberSignature Language="F#" Value="member this.RasterizationScaleChanged : EventHandler&lt;obj&gt; " Usage="member this.RasterizationScaleChanged : System.EventHandler&lt;System.obj&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RasterizationScalechanged is raised when the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScale" /> property changes.
+            </summary>
+        <remarks>
+            The event is raised when the Webview detects that the monitor DPI scale has changed, <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ShouldDetectMonitorScaleChanges" /> is true, and the Webview has changed the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScale" /> property.
+            </remarks>
+        <altmember cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScale" />
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundsAndZoomFactor">
+      <MemberSignature Language="C#" Value="public void SetBoundsAndZoomFactor (System.Drawing.Rectangle Bounds, double ZoomFactor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBoundsAndZoomFactor(valuetype System.Drawing.Rectangle Bounds, float64 ZoomFactor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Controller.SetBoundsAndZoomFactor(System.Drawing.Rectangle,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetBoundsAndZoomFactor (Bounds As Rectangle, ZoomFactor As Double)" />
+      <MemberSignature Language="F#" Value="member this.SetBoundsAndZoomFactor : System.Drawing.Rectangle * double -&gt; unit" Usage="coreWebView2Controller.SetBoundsAndZoomFactor (Bounds, ZoomFactor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Bounds" Type="System.Drawing.Rectangle" Index="0" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.721-prerelease" />
+        <Parameter Name="ZoomFactor" Type="System.Double" Index="1" FrameworkAlternate="WebView2-dotnet-0.9.628-prerelease;WebView2-dotnet-1.0.674-prerelease;WebView2-dotnet-1.0.664.37;WebView2-dotnet-1.0.721-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="Bounds">The bounds to be updated.</param>
+        <param name="ZoomFactor">The zoom factor to be updated.</param>
+        <summary>
+            Updates <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" /> and <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /> properties at the same time.
+            </summary>
+        <remarks>
+            This operation is atomic from the perspective of the host. After returning from this function, the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" /> and <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /> properties are both updated if the function is successful, or neither is updated if the function fails. If <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" /> and <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /> are both updated by the same scale (for example, <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" /> and <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /> are both doubled), then the page does not display a change in <c>window.innerWidth</c> or <c>window.innerHeight</c> and the WebView renders the content at the new size and zoom without intermediate renderings. This function also updates just one of <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /> or <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.Bounds" /> by passing in the new value for one and the current value for the other.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundsAndZoomFactor">
+      <MemberSignature Language="C#" Value="public void SetBoundsAndZoomFactor (System.Windows.Rect Bounds, double ZoomFactor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBoundsAndZoomFactor(valuetype System.Windows.Rect Bounds, float64 ZoomFactor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Web.WebView2.Core.CoreWebView2Controller.SetBoundsAndZoomFactor(System.Windows.Rect,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetBoundsAndZoomFactor (Bounds As Rect, ZoomFactor As Double)" />
+      <MemberSignature Language="F#" Value="member this.SetBoundsAndZoomFactor : System.Windows.Rect * double -&gt; unit" Usage="coreWebView2Controller.SetBoundsAndZoomFactor (Bounds, ZoomFactor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Bounds" Type="System.Windows.Rect" Index="0" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+        <Parameter Name="ZoomFactor" Type="System.Double" Index="1" FrameworkAlternate="WebView2-dotnet-0.9.515-prerelease;WebView2-dotnet-0.9.538-prerelease;WebView2-dotnet-0.9.579-prerelease" />
+      </Parameters>
+      <Docs>
+        <param name="Bounds">To be added.</param>
+        <param name="ZoomFactor">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldDetectMonitorScaleChanges">
+      <MemberSignature Language="C#" Value="public int ShouldDetectMonitorScaleChanges { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ShouldDetectMonitorScaleChanges" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ShouldDetectMonitorScaleChanges" />
+      <MemberSignature Language="VB.NET" Value="Public Property ShouldDetectMonitorScaleChanges As Integer" />
+      <MemberSignature Language="F#" Value="member this.ShouldDetectMonitorScaleChanges : int with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Controller.ShouldDetectMonitorScaleChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether the WebView will detect monitor scale changes.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            ShouldDetectMonitorScaleChanges property determines whether the WebView attempts to track monitor DPI scale schanges. When true, the WebView will track monitor DPI scale changes, update the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScale" /> property, and fire <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScaleChanged" /> event. When false, the WebView will not track monitor DPI scale changes, and the app must update the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScale" /> property itself. <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.RasterizationScaleChanged" /> event will never fire when ShouldDetectMonitorScaleChanges is false.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomFactor">
+      <MemberSignature Language="C#" Value="public double ZoomFactor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ZoomFactor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" />
+      <MemberSignature Language="VB.NET" Value="Public Property ZoomFactor As Double" />
+      <MemberSignature Language="F#" Value="member this.ZoomFactor : double with get, set" Usage="Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the zoom factor for the WebView.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Note that changing zoom factor may cause <c>window.innerWidth</c> or <c>window.innerHeight</c> and page layout to change. A zoom factor that is applied by the host by setting this ZoomFactor property becomes the new default zoom for the WebView. This zoom factor applies across navigations and is the zoom factor WebView is returned to when the user presses Ctrl+0. When the zoom factor is changed by the user (resulting in the app receiving <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactorChanged" />), that zoom applies only for the current page. Any user applied zoom is only for the current page and is reset on a navigation. Specifying a ZoomFactor less than or equal to 0 is not allowed. WebView also has an internal supported zoom factor range. When a specified zoom factor is out of that range, it is normalized to be within the range, and a <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactorChanged" /> event is raised for the real applied zoom factor. When this range normalization happens, this reports the zoom factor specified during the previous modification of the ZoomFactor property until the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactorChanged" /> event is received after WebView applies the normalized zoom factor.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomFactorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;object&gt; ZoomFactorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;object&gt; ZoomFactorChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactorChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ZoomFactorChanged As EventHandler(Of Object) " />
+      <MemberSignature Language="F#" Value="member this.ZoomFactorChanged : EventHandler&lt;obj&gt; " Usage="member this.ZoomFactorChanged : System.EventHandler&lt;System.obj&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+        <AssemblyVersion>0.9.628.0</AssemblyVersion>
+        <AssemblyVersion>1.0.664.37</AssemblyVersion>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ZoomFactorChanged is raised when the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /> property changes.
+            </summary>
+        <remarks>
+            The event may be raised because the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /> property was modified, or due to the user manually modifying the zoom. When it is modified using the <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /> property, the internal zoom factor is updated immediately and no ZoomFactorChanged event is raised. WebView associates the last used zoom factor for each site. It is possible for the zoom factor to change when navigating to a different page. When the zoom factor changes due to a navigation change, the ZoomFactorChanged event is raised right after the <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" /> event.
+            </remarks>
+        <altmember cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

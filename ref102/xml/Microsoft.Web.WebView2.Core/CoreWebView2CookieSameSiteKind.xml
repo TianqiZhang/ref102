@@ -1,0 +1,92 @@
+<Type Name="CoreWebView2CookieSameSiteKind" FullName="Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind">
+  <TypeSignature Language="C#" Value="public enum CoreWebView2CookieSameSiteKind" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CoreWebView2CookieSameSiteKind extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CoreWebView2CookieSameSiteKind" />
+  <TypeSignature Language="F#" Value="type CoreWebView2CookieSameSiteKind = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+    <AssemblyVersion>1.0.674.0</AssemblyVersion>
+    <AssemblyVersion>1.0.721.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Kind of cookie SameSite status used in the <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Cookie" /> class.
+            </summary>
+    <remarks>
+            These fields match those as specified in https://developer.mozilla.org/docs/Web/HTTP/Cookies#.
+            Learn more about SameSite cookies here: https://tools.ietf.org/html/draft-west-first-party-cookies-07
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Lax">
+      <MemberSignature Language="C#" Value="Lax" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind Lax = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind.Lax" />
+      <MemberSignature Language="VB.NET" Value="Lax" />
+      <MemberSignature Language="F#" Value="Lax = 1" Usage="Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind.Lax" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Lax SameSite type. The cookie will be sent with "same-site" requests, and with "cross-site" top level navigation.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            None SameSite type. No restrictions on cross-site requests.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strict">
+      <MemberSignature Language="C#" Value="Strict" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind Strict = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind.Strict" />
+      <MemberSignature Language="VB.NET" Value="Strict" />
+      <MemberSignature Language="F#" Value="Strict = 2" Usage="Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind.Strict" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Web.WebView2.Core</AssemblyName>
+        <AssemblyVersion>1.0.674.0</AssemblyVersion>
+        <AssemblyVersion>1.0.721.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Strict SameSite type. The cookie will only be sent along with "same-site" requests.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
