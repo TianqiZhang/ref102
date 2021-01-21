@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Framework Name="cat-2.0">
+<Framework Name="netcore-2.0">
   <Assemblies>
     <Assembly Name="CatLibrary" Version="2.0.0.0" />
     <Assembly Name="MRef.Demo" Version="2.0.0.0" />
