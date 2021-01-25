@@ -276,7 +276,8 @@
             of all services, and the instantiation and initialization of the services associated with the new profile will happen before the
             first Update() of all services.
             A noticable application hesitation may occur during this process. Also any scripts with high priority than this can enter its Update
-            before the new profiles are properly setup.remarks>
+            before the new profiles are properly setup.remarks
+			</remarks>
       </Docs>
     </Member>
     <Member MemberName="CalculateFood">
