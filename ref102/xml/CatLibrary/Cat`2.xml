@@ -74,11 +74,11 @@
     <typeparam name="T">This type should be class and can new instance.</typeparam>
     <typeparam name="K">This type is a struct type, class type can't be used for this parameter.</typeparam>
     <summary>
-      <para>Here's main class of this <i>Demo</i>.</para>
-      <para>You can see mostly type of article within this class and you for more detail, please see the remarks.</para>
-      <para />
-      <para>this class is a template class. It has two Generic parameter. they are: <typeparamref name="T" /> and <typeparamref name="K" />.</para>
-      <para>The extension method of this class can refer to <see cref="T:CatLibrary.ICatExtension" /> class</para>
+      When setting the ActiveProfile during runtime, the destroy of the currently running services will happen after the last LateUpdate()
+            of all services, and the instantiation and initialization of the services associated with the new profile will happen before the
+            first Update() of all services.
+            A noticable application hesitation may occur during this process. Also any scripts with high priority than this can enter its Update
+            before the new profiles are properly setup.
     </summary>
     <remarks>
       <para>Here's all the content you can see in this class.</para>
