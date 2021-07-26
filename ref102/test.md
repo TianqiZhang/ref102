@@ -1,6 +1,11 @@
 > [!WARNING]
 > warning content
 
+> [!NOTE]
+> <p> this is a paragraph. </p>
+> <p> this is a another cross line paragraph.
+> </p>
+
 ```
 <xref:System.Tuple`2?alt=System.Tuple`2&text=Tuple>&lt;<xref:System.String?alt=System.String&text=String>,<xref:CatLibrary.Tom?alt=CatLibrary.Tom&text=Tom>&gt;
 ```
