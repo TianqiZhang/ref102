@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -39,7 +40,7 @@
              * [Bot Builder for
              Node.js](https://docs.botframework.com/en-us/node/builder/overview/)
             
-             © 2016 Microsoft
+             © 2016 Microsoft.
              </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -55,15 +56,16 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The base URI of the service.
+            Gets or sets the base URI of the service.
             </summary>
-        <value>To be added.</value>
+        <value>The base URI.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -78,16 +80,17 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.ServiceClientCredentials</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Subscription credentials which uniquely identify client
+            Gets the subscription credentials which uniquely identify client
             subscription.
             </summary>
-        <value>To be added.</value>
+        <value>The subscription credentials.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -102,15 +105,16 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets json deserialization settings.
+            Gets the JSON deserialization settings.
             </summary>
-        <value>To be added.</value>
+        <value>the JSON deserialization settings.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -125,15 +129,16 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets json serialization settings.
+            Gets the JSON serialization settings.
             </summary>
-        <value>To be added.</value>
+        <value>The JSON serialization settings.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -148,6 +153,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.Teams.ITeamsOperations</ReturnType>
@@ -156,7 +162,7 @@
         <summary>
             Gets the ITeamsOperations.
             </summary>
-        <value>To be added.</value>
+        <value>The ITeamsOperations.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

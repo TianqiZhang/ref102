@@ -8,11 +8,18 @@
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Obsolete("Use `BotComponent` for new components.")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("Use `BotComponent` for new components.")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             ComponentRegistration is a signature class for discovering assets from components. 
@@ -47,6 +54,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -65,7 +73,14 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use resource explorer")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use resource explorer")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -91,7 +106,14 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Obsolete("Use resource explorer")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use resource explorer")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Object&gt;</ReturnType>
       </ReturnValue>

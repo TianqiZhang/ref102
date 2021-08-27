@@ -1,0 +1,45 @@
+<Type Name="CloudChannelServiceHandler" FullName="Microsoft.Bot.Builder.CloudChannelServiceHandler">
+  <TypeSignature Language="C#" Value="public class CloudChannelServiceHandler : Microsoft.Bot.Builder.ChannelServiceHandlerBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CloudChannelServiceHandler extends Microsoft.Bot.Builder.ChannelServiceHandlerBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Bot.Builder.CloudChannelServiceHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Class CloudChannelServiceHandler&#xA;Inherits ChannelServiceHandlerBase" />
+  <TypeSignature Language="F#" Value="type CloudChannelServiceHandler = class&#xA;    inherit ChannelServiceHandlerBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Bot.Builder.ChannelServiceHandlerBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A class to help with the implementation of the Bot Framework protocol using BotFrameworkAuthentication.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CloudChannelServiceHandler (Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication auth);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication auth) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.CloudChannelServiceHandler.#ctor(Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (auth As BotFrameworkAuthentication)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Bot.Builder.CloudChannelServiceHandler : Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication -&gt; Microsoft.Bot.Builder.CloudChannelServiceHandler" Usage="new Microsoft.Bot.Builder.CloudChannelServiceHandler auth" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="auth" Type="Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication" />
+      </Parameters>
+      <Docs>
+        <param name="auth">The Bot Framework Authentication object.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Builder.CloudChannelServiceHandler" /> class, using Bot Framework Authentication.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

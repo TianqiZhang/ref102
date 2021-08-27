@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -28,6 +29,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.Teams.ConversationList&gt;&gt;</ReturnType>
@@ -39,7 +41,7 @@
       </Parameters>
       <Docs>
         <param name="teamId">
-            Team Id
+            Team Id.
             </param>
         <param name="customHeaders">
             The headers that will be added to request.
@@ -48,20 +50,20 @@
             The cancellation token.
             </param>
         <summary>
-            Fetches channel list for a given team
+            Fetches channel list for a given team.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The channel list for a given team.</returns>
         <remarks>
             Fetch the channel list.
             </remarks>
         <exception cref="T:Microsoft.Rest.HttpOperationException">
-            Thrown when the operation returned an invalid status code
+            Thrown when the operation returned an invalid status code.
             </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-            Thrown when unable to deserialize the response
+            Thrown when unable to deserialize the response.
             </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -76,6 +78,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.Teams.TeamDetails&gt;&gt;</ReturnType>
@@ -87,7 +90,7 @@
       </Parameters>
       <Docs>
         <param name="teamId">
-            Team Id
+            Team Id.
             </param>
         <param name="customHeaders">
             The headers that will be added to request.
@@ -96,20 +99,20 @@
             The cancellation token.
             </param>
         <summary>
-            Fetches details related to a team
+            Fetches details related to a team.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The details related to a team.</returns>
         <remarks>
             Fetch details for a team
             </remarks>
         <exception cref="T:Microsoft.Rest.HttpOperationException">
-            Thrown when the operation returned an invalid status code
+            Thrown when the operation returned an invalid status code.
             </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-            Thrown when unable to deserialize the response
+            Thrown when unable to deserialize the response.
             </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>

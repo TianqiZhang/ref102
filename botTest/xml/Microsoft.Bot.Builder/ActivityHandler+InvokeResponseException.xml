@@ -7,6 +7,7 @@
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Exception</BaseTypeName>
@@ -28,6 +29,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -47,6 +49,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -70,6 +73,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="statusCode" Type="System.Net.HttpStatusCode" />
@@ -94,6 +98,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -119,6 +124,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.InvokeResponse</ReturnType>

@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Rest.ServiceClient&lt;Microsoft.Bot.Connector.Teams.TeamsConnectorClient&gt;</BaseTypeName>
@@ -48,7 +49,7 @@
              * [Bot Builder for
              Node.js](https://docs.botframework.com/en-us/node/builder/overview/)
             
-             © 2016 Microsoft
+             © 2016 Microsoft.
              </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -64,6 +65,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="handlers" Type="System.Net.Http.DelegatingHandler[]">
@@ -80,7 +82,7 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the TeamsConnectorClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Teams.TeamsConnectorClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -96,6 +98,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentials" Type="Microsoft.Rest.ServiceClientCredentials" />
@@ -116,11 +119,11 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the TeamsConnectorClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Teams.TeamsConnectorClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -135,6 +138,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="rootHandler" Type="System.Net.Http.HttpClientHandler" />
@@ -155,7 +159,7 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the TeamsConnectorClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Teams.TeamsConnectorClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -171,6 +175,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -191,11 +196,11 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the TeamsConnectorClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Teams.TeamsConnectorClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -210,6 +215,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentials" Type="Microsoft.Rest.ServiceClientCredentials" />
@@ -234,11 +240,11 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the TeamsConnectorClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Teams.TeamsConnectorClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -253,6 +259,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -277,11 +284,11 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the TeamsConnectorClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Teams.TeamsConnectorClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -296,6 +303,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -320,12 +328,43 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the TeamsConnectorClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Teams.TeamsConnectorClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsConnectorClient (Uri baseUri, Microsoft.Rest.ServiceClientCredentials credentials, System.Net.Http.HttpClient customHttpClient, bool disposeHttpClient);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri baseUri, class Microsoft.Rest.ServiceClientCredentials credentials, class System.Net.Http.HttpClient customHttpClient, bool disposeHttpClient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Teams.TeamsConnectorClient.#ctor(System.Uri,Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClient,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (baseUri As Uri, credentials As ServiceClientCredentials, customHttpClient As HttpClient, disposeHttpClient As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Bot.Connector.Teams.TeamsConnectorClient : Uri * Microsoft.Rest.ServiceClientCredentials * System.Net.Http.HttpClient * bool -&gt; Microsoft.Bot.Connector.Teams.TeamsConnectorClient" Usage="new Microsoft.Bot.Connector.Teams.TeamsConnectorClient (baseUri, credentials, customHttpClient, disposeHttpClient)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="credentials" Type="Microsoft.Rest.ServiceClientCredentials" />
+        <Parameter Name="customHttpClient" Type="System.Net.Http.HttpClient" />
+        <Parameter Name="disposeHttpClient" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">Base URI for the Bot Connector service.</param>
+        <param name="credentials">Credentials for the Bot Connector service.</param>
+        <param name="customHttpClient">The HTTP client to use for this connector client.</param>
+        <param name="disposeHttpClient">Whether to dispose the <see cref="T:System.Net.Http.HttpClient" />.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Teams.TeamsConnectorClient" /> class.
+            </summary>
+        <remarks>Constructor specifically designed to be the one that allows control of the disposing of the custom <see cref="T:System.Net.Http.HttpClient" />.
+            <see cref="T:Microsoft.Rest.ServiceClient`1" /> only has one constructor that accepts control of the disposing of the <see cref="T:System.Net.Http.HttpClient" />, so we call that overload here.
+            All other overloads of <see cref="T:Microsoft.Bot.Connector.ConnectorClient" /> will not control this parameter and it will default to true, resulting on disposal of the provided <see cref="T:System.Net.Http.HttpClient" /> when the <see cref="T:Microsoft.Bot.Connector.ConnectorClient" /> is disposed.
+            When reusing <see cref="T:System.Net.Http.HttpClient" /> instances across connectors, pass 'false' for <paramref name="disposeHttpClient" /> to avoid <see cref="T:System.ObjectDisposedException" />.</remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -339,6 +378,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -376,6 +416,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -404,11 +445,11 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the TeamsConnectorClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.Teams.TeamsConnectorClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -426,15 +467,16 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The base URI of the service.
+            Gets or sets the base URI of the service.
             </summary>
-        <value>To be added.</value>
+        <value>The base URI of the service.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -449,15 +491,16 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.ServiceClientCredentials</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Subscription credentials which uniquely identify client subscription.
+            Gets the subscription credentials which uniquely identify client subscription.
             </summary>
-        <value>To be added.</value>
+        <value>The subscription credentials.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -472,15 +515,16 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets json deserialization settings.
+            Gets the JSON deserialization settings.
             </summary>
-        <value>To be added.</value>
+        <value>The JSON deserialization settings.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -495,15 +539,16 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets json serialization settings.
+            Gets the JSON serialization settings.
             </summary>
-        <value>To be added.</value>
+        <value>The JSON serialization settings.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -518,6 +563,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.Teams.ITeamsOperations</ReturnType>
@@ -526,7 +572,7 @@
         <summary>
             Gets the ITeamsOperations.
             </summary>
-        <value>To be added.</value>
+        <value>The ITeamsOperations.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

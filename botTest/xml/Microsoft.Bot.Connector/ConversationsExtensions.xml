@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -31,6 +32,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ConversationResourceResponse&gt;</ReturnType>
@@ -45,15 +47,15 @@
              The operations group for this extension method.
              </param>
         <param name="parameters">
-             Parameters to create the conversation from
+             Parameters to create the conversation from.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             CreateConversation
+             CreateConversation.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A new Conversation.</returns>
         <remarks>
              Create a new Conversation.
             
@@ -76,7 +78,7 @@
              await connect.Conversations.SendToConversationAsync(resource.Id, new
              Activity() ... ) ;
             
-             ```
+             ```  .
              </remarks>
       </Docs>
     </Member>
@@ -91,6 +93,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.ConversationResourceResponse</ReturnType>
@@ -124,6 +127,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.ConversationResourceResponse</ReturnType>
@@ -157,6 +161,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ConversationResourceResponse&gt;</ReturnType>
@@ -192,6 +197,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ConversationResourceResponse&gt;</ReturnType>
@@ -227,6 +233,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -242,18 +249,18 @@
              The operations group for this extension method.
              </param>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="activityId">
-             activityId to delete
+             activityId to delete.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             DeleteActivity
+             DeleteActivity.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A Task representing the asynchronous operation.</returns>
         <remarks>
              Delete an existing activity.
             
@@ -273,6 +280,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -288,18 +296,18 @@
              The operations group for this extension method.
              </param>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="memberId">
-             ID of the member to delete from this conversation
+             ID of the member to delete from this conversation.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             DeleteConversationMember
+             DeleteConversationMember.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A Task representing the asynchronous operation for the task.</returns>
         <remarks>
              Deletes a member from a conversation.
             
@@ -321,6 +329,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.ChannelAccount&gt;&gt;</ReturnType>
@@ -336,18 +345,18 @@
              The operations group for this extension method.
              </param>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="activityId">
-             Activity ID
+             Activity ID.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             GetActivityMembers
+             GetActivityMembers.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A collection of members of an activity.</returns>
         <remarks>
              Enumerate the members of an activity.
             
@@ -368,6 +377,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ChannelAccount&gt;</ReturnType>
@@ -382,19 +392,19 @@
         <param name="operations">
              The operations group for this extension method.
              </param>
-        <param name="conversationId">
-             Conversation ID
-             </param>
         <param name="userId">
-             User ID
+             User ID.
+             </param>
+        <param name="conversationId">
+             Conversation ID.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             GetConversationMember
+             GetConversationMember.
              </summary>
-        <returns>To be added.</returns>
+        <returns>The conversation member.</returns>
         <remarks>
              Enumerate the members of a conversation.
             
@@ -414,6 +424,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.ChannelAccount&gt;&gt;</ReturnType>
@@ -428,15 +439,15 @@
              The operations group for this extension method.
              </param>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             GetConversationMembers
+             GetConversationMembers.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A collection of members of a conversation.</returns>
         <remarks>
              Enumerate the members of a conversation.
             
@@ -456,6 +467,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.PagedMembersResult&gt;</ReturnType>
@@ -472,21 +484,21 @@
              The operations group for this extension method.
              </param>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="pageSize">
-             Suggested page size
+             Suggested page size.
              </param>
         <param name="continuationToken">
-             Continuation Token
+             Continuation Token.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             GetConversationPagedMembers
+             GetConversationPagedMembers.
              </summary>
-        <returns>To be added.</returns>
+        <returns>The <see cref="T:Microsoft.Bot.Schema.PagedMembersResult" />.</returns>
         <remarks>
              Enumerate the members of a conversation one page at a time.
             
@@ -519,6 +531,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ConversationsResult&gt;</ReturnType>
@@ -533,15 +546,15 @@
              The operations group for this extension method.
              </param>
         <param name="continuationToken">
-             skip or continuation token
+             skip or continuation token.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             GetConversations
+             GetConversations.
              </summary>
-        <returns>To be added.</returns>
+        <returns>The Conversation in which this bot has participated.</returns>
         <remarks>
              List the Conversations in which this bot has participated.
             
@@ -568,6 +581,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.ResourceResponse</ReturnType>
@@ -601,6 +615,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -638,6 +653,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -654,21 +670,21 @@
              The operations group for this extension method.
              </param>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="activityId">
-             activityId the reply is to (OPTIONAL)
+             activityId the reply is to (OPTIONAL).
              </param>
         <param name="activity">
-             Activity to send
+             Activity to send.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             ReplyToActivity
+             ReplyToActivity.
              </summary>
-        <returns>To be added.</returns>
+        <returns>The <see cref="T:Microsoft.Bot.Schema.ResourceResponse" />.</returns>
         <remarks>
              This method allows you to reply to an activity.
             
@@ -697,6 +713,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -712,18 +729,18 @@
              The operations group for this extension method.
              </param>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="transcript">
-             Transcript of activities
+             Transcript of activities.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             SendConversationHistory
+             SendConversationHistory.
              </summary>
-        <returns>To be added.</returns>
+        <returns>The <see cref="T:Microsoft.Bot.Schema.ResourceResponse" />.</returns>
         <remarks>
              This method allows you to upload the historic activities to the
              conversation.
@@ -746,6 +763,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.ResourceResponse</ReturnType>
@@ -779,6 +797,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -816,6 +835,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -831,18 +851,18 @@
              The operations group for this extension method.
              </param>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="activity">
-             Activity to send
+             Activity to send.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             SendToConversation
+             SendToConversation.
              </summary>
-        <returns>To be added.</returns>
+        <returns>The <see cref="T:Microsoft.Bot.Schema.ResourceResponse" />.</returns>
         <remarks>
              This method allows you to send an activity to the end of a conversation.
             
@@ -871,6 +891,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.ResourceResponse</ReturnType>
@@ -904,6 +925,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -941,6 +963,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -957,21 +980,21 @@
              The operations group for this extension method.
              </param>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="activityId">
-             activityId to update
+             activityId to update.
              </param>
         <param name="activity">
-             replacement Activity
+             replacement Activity.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             UpdateActivity
+             UpdateActivity.
              </summary>
-        <returns>To be added.</returns>
+        <returns>The <see cref="T:Microsoft.Bot.Schema.ResourceResponse" />.</returns>
         <remarks>
              Edit an existing activity.
             
@@ -994,6 +1017,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -1009,18 +1033,18 @@
              The operations group for this extension method.
              </param>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="attachmentUpload">
-             Attachment data
+             Attachment data.
              </param>
         <param name="cancellationToken">
              The cancellation token.
              </param>
         <summary>
-             UploadAttachment
+             UploadAttachment.
              </summary>
-        <returns>To be added.</returns>
+        <returns>The <see cref="T:Microsoft.Bot.Schema.ResourceResponse" />.</returns>
         <remarks>
              Upload an attachment directly into a channel's blob storage.
             

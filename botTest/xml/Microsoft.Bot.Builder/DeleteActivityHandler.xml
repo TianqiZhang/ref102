@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -34,9 +35,9 @@
             activity.
             <para>The conversation reference's <see cref="P:Microsoft.Bot.Schema.ConversationReference.ActivityId" />
             indicates the activity in the conversation to replace.</para></remarks>
-    <altmember cref="T:Microsoft.Bot.Builder.BotAdapter" />
     <altmember cref="T:Microsoft.Bot.Builder.SendActivitiesHandler" />
     <altmember cref="T:Microsoft.Bot.Builder.UpdateActivityHandler" />
     <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.OnDeleteActivity(Microsoft.Bot.Builder.DeleteActivityHandler)" />
+    <altmember cref="T:Microsoft.Bot.Builder.BotAdapter" />
   </Docs>
 </Type>

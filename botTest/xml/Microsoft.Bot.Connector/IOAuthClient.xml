@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -15,7 +16,7 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary />
+    <summary>IOAuthClient. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -30,15 +31,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The base URI of the service.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets or sets the base URI of the service. </summary>
+        <value>The base URI.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -53,15 +53,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.IBotSignIn</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets the IBotSignIn.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets the IBotSignIn. </summary>
+        <value> The bot sign-in. </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -76,16 +75,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.ServiceClientCredentials</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Subscription credentials which uniquely identify client
-            subscription.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets subscription credentials which uniquely identify client subscription. </summary>
+        <value> The client credentials.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -100,15 +97,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets or sets json deserialization settings.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets the json deserialization settings. </summary>
+        <value>The deserialization settings.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -123,15 +119,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets or sets json serialization settings.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets json serialization settings. </summary>
+        <value>The serialization settings.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -146,15 +141,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.IUserToken</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets the IUserToken.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets the IUserToken. </summary>
+        <value>The <see cref="P:Microsoft.Bot.Connector.IOAuthClient.UserToken" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

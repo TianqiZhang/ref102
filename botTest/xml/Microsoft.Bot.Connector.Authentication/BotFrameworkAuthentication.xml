@@ -1,0 +1,261 @@
+<Type Name="BotFrameworkAuthentication" FullName="Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication">
+  <TypeSignature Language="C#" Value="public abstract class BotFrameworkAuthentication" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BotFrameworkAuthentication extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BotFrameworkAuthentication" />
+  <TypeSignature Language="F#" Value="type BotFrameworkAuthentication = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a Cloud Environment used to authenticate Bot Framework Protocol network calls within this environment.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BotFrameworkAuthentication ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticateChannelRequestAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.Security.Claims.ClaimsIdentity&gt; AuthenticateChannelRequestAsync (string authHeader, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Security.Claims.ClaimsIdentity&gt; AuthenticateChannelRequestAsync(string authHeader, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication.AuthenticateChannelRequestAsync(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function AuthenticateChannelRequestAsync (authHeader As String, cancellationToken As CancellationToken) As Task(Of ClaimsIdentity)" />
+      <MemberSignature Language="F#" Value="abstract member AuthenticateChannelRequestAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Security.Claims.ClaimsIdentity&gt;&#xA;override this.AuthenticateChannelRequestAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Security.Claims.ClaimsIdentity&gt;" Usage="botFrameworkAuthentication.AuthenticateChannelRequestAsync (authHeader, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Security.Claims.ClaimsIdentity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authHeader" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="authHeader">The http auth header received in the skill request.</param>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Authenticate Bot Framework Protocol requests to Skills.
+            </summary>
+        <returns>Asynchronous Task with <see cref="T:System.Security.Claims.ClaimsIdentity" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticateRequestAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult&gt; AuthenticateRequestAsync (Microsoft.Bot.Schema.Activity activity, string authHeader, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult&gt; AuthenticateRequestAsync(class Microsoft.Bot.Schema.Activity activity, string authHeader, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication.AuthenticateRequestAsync(Microsoft.Bot.Schema.Activity,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function AuthenticateRequestAsync (activity As Activity, authHeader As String, cancellationToken As CancellationToken) As Task(Of AuthenticateRequestResult)" />
+      <MemberSignature Language="F#" Value="abstract member AuthenticateRequestAsync : Microsoft.Bot.Schema.Activity * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult&gt;" Usage="botFrameworkAuthentication.AuthenticateRequestAsync (activity, authHeader, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="Microsoft.Bot.Schema.Activity" />
+        <Parameter Name="authHeader" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="activity">The inbound Activity.</param>
+        <param name="authHeader">The http auth header.</param>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Validate Bot Framework Protocol requests.
+            </summary>
+        <returns>Asynchronous Task with <see cref="T:Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.UnauthorizedAccessException">If the validation returns false.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticateStreamingRequestAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult&gt; AuthenticateStreamingRequestAsync (string authHeader, string channelIdHeader, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult&gt; AuthenticateStreamingRequestAsync(string authHeader, string channelIdHeader, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication.AuthenticateStreamingRequestAsync(System.String,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function AuthenticateStreamingRequestAsync (authHeader As String, channelIdHeader As String, cancellationToken As CancellationToken) As Task(Of AuthenticateRequestResult)" />
+      <MemberSignature Language="F#" Value="abstract member AuthenticateStreamingRequestAsync : string * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult&gt;" Usage="botFrameworkAuthentication.AuthenticateStreamingRequestAsync (authHeader, channelIdHeader, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authHeader" Type="System.String" />
+        <Parameter Name="channelIdHeader" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="authHeader">The http auth header.</param>
+        <param name="channelIdHeader">The channel Id HTTP header.</param>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Validate Bot Framework Protocol requests.
+            </summary>
+        <returns>Asynchronous Task with <see cref="T:Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.UnauthorizedAccessException">If the validation returns false.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBotFrameworkClient">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Bot.Builder.Skills.BotFrameworkClient CreateBotFrameworkClient ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Bot.Builder.Skills.BotFrameworkClient CreateBotFrameworkClient() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication.CreateBotFrameworkClient" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateBotFrameworkClient () As BotFrameworkClient" />
+      <MemberSignature Language="F#" Value="abstract member CreateBotFrameworkClient : unit -&gt; Microsoft.Bot.Builder.Skills.BotFrameworkClient&#xA;override this.CreateBotFrameworkClient : unit -&gt; Microsoft.Bot.Builder.Skills.BotFrameworkClient" Usage="botFrameworkAuthentication.CreateBotFrameworkClient " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Builder.Skills.BotFrameworkClient</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a <see cref="T:Microsoft.Bot.Builder.Skills.BotFrameworkClient" /> used for calling Skills.
+            </summary>
+        <returns>A <see cref="T:Microsoft.Bot.Builder.Skills.BotFrameworkClient" /> instance to call Skills.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateConnectorFactory">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Bot.Connector.Authentication.ConnectorFactory CreateConnectorFactory (System.Security.Claims.ClaimsIdentity claimsIdentity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Bot.Connector.Authentication.ConnectorFactory CreateConnectorFactory(class System.Security.Claims.ClaimsIdentity claimsIdentity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication.CreateConnectorFactory(System.Security.Claims.ClaimsIdentity)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateConnectorFactory (claimsIdentity As ClaimsIdentity) As ConnectorFactory" />
+      <MemberSignature Language="F#" Value="abstract member CreateConnectorFactory : System.Security.Claims.ClaimsIdentity -&gt; Microsoft.Bot.Connector.Authentication.ConnectorFactory" Usage="botFrameworkAuthentication.CreateConnectorFactory claimsIdentity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Connector.Authentication.ConnectorFactory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claimsIdentity" Type="System.Security.Claims.ClaimsIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="claimsIdentity">The inbound <see cref="T:Microsoft.Bot.Schema.Activity" />'s <see cref="T:System.Security.Claims.ClaimsIdentity" />.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.Bot.Connector.Authentication.ConnectorFactory" /> that can be used to create <see cref="T:Microsoft.Bot.Connector.IConnectorClient" /> that use credentials from this particular cloud environment.
+            </summary>
+        <returns>A <see cref="T:Microsoft.Bot.Connector.Authentication.ConnectorFactory" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUserTokenClientAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.Authentication.UserTokenClient&gt; CreateUserTokenClientAsync (System.Security.Claims.ClaimsIdentity claimsIdentity, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Connector.Authentication.UserTokenClient&gt; CreateUserTokenClientAsync(class System.Security.Claims.ClaimsIdentity claimsIdentity, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication.CreateUserTokenClientAsync(System.Security.Claims.ClaimsIdentity,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateUserTokenClientAsync (claimsIdentity As ClaimsIdentity, cancellationToken As CancellationToken) As Task(Of UserTokenClient)" />
+      <MemberSignature Language="F#" Value="abstract member CreateUserTokenClientAsync : System.Security.Claims.ClaimsIdentity * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.Authentication.UserTokenClient&gt;" Usage="botFrameworkAuthentication.CreateUserTokenClientAsync (claimsIdentity, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Connector.Authentication.UserTokenClient&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claimsIdentity" Type="System.Security.Claims.ClaimsIdentity" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="claimsIdentity">The inbound <see cref="T:Microsoft.Bot.Schema.Activity" />'s <see cref="T:System.Security.Claims.ClaimsIdentity" />.</param>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Creates the appropriate <see cref="T:Microsoft.Bot.Connector.Authentication.UserTokenClient" /> instance.
+            </summary>
+        <returns>Asynchronous Task with <see cref="T:Microsoft.Bot.Connector.Authentication.UserTokenClient" /> instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCallerIdAsync">
+      <MemberSignature Language="C#" Value="protected internal System.Threading.Tasks.Task&lt;string&gt; GenerateCallerIdAsync (Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory credentialFactory, System.Security.Claims.ClaimsIdentity claimsIdentity, string callerId, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; GenerateCallerIdAsync(class Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory credentialFactory, class System.Security.Claims.ClaimsIdentity claimsIdentity, string callerId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication.GenerateCallerIdAsync(Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory,System.Security.Claims.ClaimsIdentity,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Function GenerateCallerIdAsync (credentialFactory As ServiceClientCredentialsFactory, claimsIdentity As ClaimsIdentity, callerId As String, cancellationToken As CancellationToken) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.GenerateCallerIdAsync : Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory * System.Security.Claims.ClaimsIdentity * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="botFrameworkAuthentication.GenerateCallerIdAsync (credentialFactory, claimsIdentity, callerId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="credentialFactory" Type="Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory" />
+        <Parameter Name="claimsIdentity" Type="System.Security.Claims.ClaimsIdentity" />
+        <Parameter Name="callerId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="credentialFactory">A <see cref="T:Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory" /> to use.</param>
+        <param name="claimsIdentity">The inbound claims.</param>
+        <param name="callerId">The default callerId to use if this is not a skill.</param>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Generates the appropriate callerId to write onto the activity, this might be null.
+            </summary>
+        <returns>The callerId, this might be null.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOriginatingAudience">
+      <MemberSignature Language="C#" Value="public virtual string GetOriginatingAudience ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetOriginatingAudience() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication.GetOriginatingAudience" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetOriginatingAudience () As String" />
+      <MemberSignature Language="F#" Value="abstract member GetOriginatingAudience : unit -&gt; string&#xA;override this.GetOriginatingAudience : unit -&gt; string" Usage="botFrameworkAuthentication.GetOriginatingAudience " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the originating audience from Bot OAuth scope.
+            </summary>
+        <returns>The originating audience.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

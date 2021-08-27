@@ -1,0 +1,44 @@
+<Type Name="ConversationConstants" FullName="Microsoft.Bot.Connector.ConversationConstants">
+  <TypeSignature Language="C#" Value="public static class ConversationConstants" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ConversationConstants extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Bot.Connector.ConversationConstants" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConversationConstants" />
+  <TypeSignature Language="F#" Value="type ConversationConstants = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Values and constants used for Conversation specific info.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConversationIdHttpHeaderName">
+      <MemberSignature Language="C#" Value="public const string ConversationIdHttpHeaderName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ConversationIdHttpHeaderName" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Bot.Connector.ConversationConstants.ConversationIdHttpHeaderName" />
+      <MemberSignature Language="VB.NET" Value="Public Const ConversationIdHttpHeaderName As String " />
+      <MemberSignature Language="F#" Value="val mutable ConversationIdHttpHeaderName : string" Usage="Microsoft.Bot.Connector.ConversationConstants.ConversationIdHttpHeaderName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of Http Request Header to add Conversation Id to skills requests.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

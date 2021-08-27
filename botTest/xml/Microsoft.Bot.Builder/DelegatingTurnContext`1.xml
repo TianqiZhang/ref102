@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
@@ -46,6 +47,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="innerTurnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
@@ -72,6 +74,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.Activity</ReturnType>
@@ -98,6 +101,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.BotAdapter</ReturnType>
@@ -124,6 +128,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -143,10 +148,10 @@
         <remarks>The conversation reference's <see cref="P:Microsoft.Bot.Schema.ConversationReference.ActivityId" />
             indicates the activity in the conversation to delete.
             <para>Not all channels support this operation. For channels that don't, this call may throw an exception.</para></remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnDeleteActivity(Microsoft.Bot.Builder.DeleteActivityHandler)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.DeleteActivityAsync(System.String,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivitiesAsync(Microsoft.Bot.Schema.IActivity[],System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.UpdateActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnDeleteActivity(Microsoft.Bot.Builder.DeleteActivityHandler)" />
       </Docs>
     </Member>
     <Member MemberName="DeleteActivityAsync">
@@ -163,6 +168,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -180,11 +186,11 @@
             </summary>
         <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
-        <para>Not all channels support this operation. For channels that don\'t, this call may throw an exception.</para>
-        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnDeleteActivity(Microsoft.Bot.Builder.DeleteActivityHandler)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.DeleteActivityAsync(Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivitiesAsync(Microsoft.Bot.Schema.IActivity[],System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.UpdateActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
+        <para>Not all channels support this operation. For channels that don\'t, this call may throw an exception.</para>
+        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnDeleteActivity(Microsoft.Bot.Builder.DeleteActivityHandler)" />
       </Docs>
     </Member>
     <Member MemberName="Microsoft.Bot.Builder.ITurnContext&lt;T&gt;.Activity">
@@ -201,6 +207,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -227,6 +234,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.ITurnContext</ReturnType>
@@ -244,11 +252,11 @@
             the adapter calls the registered handlers in the order in which they were
             added to the context object.
             </remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.DeleteActivityAsync(Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.DeleteActivityAsync(System.String,System.Threading.CancellationToken)" />
         <altmember cref="T:Microsoft.Bot.Builder.DeleteActivityHandler" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnSendActivities(Microsoft.Bot.Builder.SendActivitiesHandler)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnUpdateActivity(Microsoft.Bot.Builder.UpdateActivityHandler)" />
+        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.DeleteActivityAsync(Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="OnSendActivities">
@@ -265,6 +273,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.ITurnContext</ReturnType>
@@ -283,12 +292,12 @@
             the adapter calls the registered handlers in the order in which they were
             added to the context object.
             </remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivityAsync(System.String,System.String,System.String,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivitiesAsync(Microsoft.Bot.Schema.IActivity[],System.Threading.CancellationToken)" />
         <altmember cref="T:Microsoft.Bot.Builder.SendActivitiesHandler" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnUpdateActivity(Microsoft.Bot.Builder.UpdateActivityHandler)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnDeleteActivity(Microsoft.Bot.Builder.DeleteActivityHandler)" />
+        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivityAsync(System.String,System.String,System.String,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="OnUpdateActivity">
@@ -305,6 +314,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.ITurnContext</ReturnType>
@@ -322,10 +332,10 @@
             the adapter calls the registered handlers in the order in which they were
             added to the context object.
             </remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.UpdateActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
         <altmember cref="T:Microsoft.Bot.Builder.UpdateActivityHandler" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnSendActivities(Microsoft.Bot.Builder.SendActivitiesHandler)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnDeleteActivity(Microsoft.Bot.Builder.DeleteActivityHandler)" />
+        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.UpdateActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="Responded">
@@ -342,6 +352,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -370,6 +381,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse[]&gt;</ReturnType>
@@ -389,11 +401,11 @@
         <remarks>If the activities are successfully sent, the task result contains
             an array of <see cref="T:Microsoft.Bot.Schema.ResourceResponse" /> objects containing the IDs that
             the receiving channel assigned to the activities.</remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnSendActivities(Microsoft.Bot.Builder.SendActivitiesHandler)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivityAsync(System.String,System.String,System.String,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.UpdateActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.DeleteActivityAsync(Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnSendActivities(Microsoft.Bot.Builder.SendActivitiesHandler)" />
       </Docs>
     </Member>
     <Member MemberName="SendActivityAsync">
@@ -410,6 +422,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -429,11 +442,11 @@
         <remarks>If the activity is successfully sent, the task result contains
             a <see cref="T:Microsoft.Bot.Schema.ResourceResponse" /> object containing the ID that the receiving
             channel assigned to the activity.</remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnSendActivities(Microsoft.Bot.Builder.SendActivitiesHandler)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivityAsync(System.String,System.String,System.String,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivitiesAsync(Microsoft.Bot.Schema.IActivity[],System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.UpdateActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.DeleteActivityAsync(Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnSendActivities(Microsoft.Bot.Builder.SendActivitiesHandler)" />
       </Docs>
     </Member>
     <Member MemberName="SendActivityAsync">
@@ -450,6 +463,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -481,11 +495,11 @@
             <paramref name="textReplyToSend" />.</para><para>To control various characteristics of your bot's speech such as voice,
             rate, volume, pronunciation, and pitch, specify <paramref name="speak" /> in
             Speech Synthesis Markup Language (SSML) format.</para></remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnSendActivities(Microsoft.Bot.Builder.SendActivitiesHandler)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivitiesAsync(Microsoft.Bot.Schema.IActivity[],System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.UpdateActivityAsync(Microsoft.Bot.Schema.IActivity,System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.DeleteActivityAsync(Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnSendActivities(Microsoft.Bot.Builder.SendActivitiesHandler)" />
       </Docs>
     </Member>
     <Member MemberName="TurnState">
@@ -502,6 +516,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Builder.TurnContextStateCollection</ReturnType>
@@ -528,6 +543,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.ResourceResponse&gt;</ReturnType>
@@ -549,9 +565,9 @@
             channel assigned to the activity.
             <para>Before calling this, set the ID of the replacement activity to the ID
             of the activity to replace.</para><para>Not all channels support this operation. For channels that don't, this call may throw an exception.</para></remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnUpdateActivity(Microsoft.Bot.Builder.UpdateActivityHandler)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.SendActivitiesAsync(Microsoft.Bot.Schema.IActivity[],System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.DeleteActivityAsync(Microsoft.Bot.Schema.ConversationReference,System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Bot.Builder.DelegatingTurnContext`1.OnUpdateActivity(Microsoft.Bot.Builder.UpdateActivityHandler)" />
       </Docs>
     </Member>
   </Members>

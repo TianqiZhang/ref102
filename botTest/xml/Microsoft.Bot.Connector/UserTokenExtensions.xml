@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -31,6 +32,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Object&gt;</ReturnType>
@@ -47,15 +49,13 @@
         <param name="operations">
             The operations group for this extension method.
             </param>
-        <param name="userId" />
-        <param name="connectionName" />
-        <param name="channelId" />
-        <param name="exchangeRequest" />
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="userId"> User ID. </param>
+        <param name="connectionName"> Connection name. </param>
+        <param name="channelId"> Channel ID. </param>
+        <param name="exchangeRequest"> Exchange request. </param>
+        <param name="cancellationToken"> The cancellation token. </param>
+        <summary> Exchange. </summary>
+        <returns> A task that represents the work queued to execute. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -70,6 +70,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Bot.Schema.TokenResponse&gt;&gt;</ReturnType>
@@ -83,18 +84,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="operations">
-            The operations group for this extension method.
-            </param>
-        <param name="userId" />
-        <param name="connectionName" />
-        <param name="aadResourceUrls" />
-        <param name="channelId" />
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="operations"> The operations group for this extension method. </param>
+        <param name="userId"> User ID. </param>
+        <param name="connectionName"> Connection name. </param>
+        <param name="aadResourceUrls"> AAD Resource URLs. </param>
+        <param name="channelId"> Channel ID. </param>
+        <param name="cancellationToken"> The cancellation token. </param>
+        <summary> Get AAD Token. </summary>
+        <returns> A task representing an IDictionary of TokenResponses. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -109,6 +106,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.TokenResponse&gt;</ReturnType>
@@ -125,15 +123,13 @@
         <param name="operations">
             The operations group for this extension method.
             </param>
-        <param name="userId" />
-        <param name="connectionName" />
-        <param name="channelId" />
-        <param name="code" />
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="userId"> User ID. </param>
+        <param name="connectionName"> Connection name. </param>
+        <param name="channelId"> Channel ID. </param>
+        <param name="code"> Code. </param>
+        <param name="cancellationToken"> The cancellation token. </param>
+        <summary> Get Token. </summary>
+        <returns> A task representing the token response. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -148,6 +144,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.TokenStatus&gt;&gt;</ReturnType>
@@ -163,14 +160,12 @@
         <param name="operations">
             The operations group for this extension method.
             </param>
-        <param name="userId" />
-        <param name="channelId" />
-        <param name="include" />
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="userId"> User ID. </param>
+        <param name="channelId"> Channel ID. </param>
+        <param name="include"> Include. </param>
+        <param name="cancellationToken"> The cancellation token. </param>
+        <summary> Get Token Status. </summary>
+        <returns> A task representing the token status. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -185,6 +180,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Object&gt;</ReturnType>
@@ -197,17 +193,13 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="operations">
-            The operations group for this extension method.
-            </param>
-        <param name="userId" />
-        <param name="connectionName" />
-        <param name="channelId" />
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="operations"> The operations group for this extension method. </param>
+        <param name="userId"> User ID. </param>
+        <param name="connectionName"> Connection name. </param>
+        <param name="channelId"> Channel ID. </param>
+        <param name="cancellationToken"> The cancellation token. </param>
+        <summary> Sign out. </summary>
+        <returns> A task representing the work to be done. </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

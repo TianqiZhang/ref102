@@ -1,0 +1,96 @@
+<Type Name="BotFrameworkAuthenticationFactory" FullName="Microsoft.Bot.Connector.Authentication.BotFrameworkAuthenticationFactory">
+  <TypeSignature Language="C#" Value="public static class BotFrameworkAuthenticationFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit BotFrameworkAuthenticationFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthenticationFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Class BotFrameworkAuthenticationFactory" />
+  <TypeSignature Language="F#" Value="type BotFrameworkAuthenticationFactory = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A factory for <see cref="T:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication" /> which encapsulate the environment specific Bot Framework Protocol auth code.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthenticationFactory.Create" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create () As BotFrameworkAuthentication" />
+      <MemberSignature Language="F#" Value="static member Create : unit -&gt; Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication" Usage="Microsoft.Bot.Connector.Authentication.BotFrameworkAuthenticationFactory.Create " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates the a <see cref="T:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication" /> instance for anonymous testing scenarios.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication" /> instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication Create (string channelService, bool validateAuthority, string toChannelFromBotLoginUrl, string toChannelFromBotOAuthScope, string toBotFromChannelTokenIssuer, string oAuthUrl, string toBotFromChannelOpenIdMetadataUrl, string toBotFromEmulatorOpenIdMetadataUrl, string callerId, Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory credentialFactory, Microsoft.Bot.Connector.Authentication.AuthenticationConfiguration authConfiguration, System.Net.Http.IHttpClientFactory httpClientFactory, Microsoft.Extensions.Logging.ILogger logger);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication Create(string channelService, bool validateAuthority, string toChannelFromBotLoginUrl, string toChannelFromBotOAuthScope, string toBotFromChannelTokenIssuer, string oAuthUrl, string toBotFromChannelOpenIdMetadataUrl, string toBotFromEmulatorOpenIdMetadataUrl, string callerId, class Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory credentialFactory, class Microsoft.Bot.Connector.Authentication.AuthenticationConfiguration authConfiguration, class System.Net.Http.IHttpClientFactory httpClientFactory, class Microsoft.Extensions.Logging.ILogger logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthenticationFactory.Create(System.String,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory,Microsoft.Bot.Connector.Authentication.AuthenticationConfiguration,System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (channelService As String, validateAuthority As Boolean, toChannelFromBotLoginUrl As String, toChannelFromBotOAuthScope As String, toBotFromChannelTokenIssuer As String, oAuthUrl As String, toBotFromChannelOpenIdMetadataUrl As String, toBotFromEmulatorOpenIdMetadataUrl As String, callerId As String, credentialFactory As ServiceClientCredentialsFactory, authConfiguration As AuthenticationConfiguration, httpClientFactory As IHttpClientFactory, logger As ILogger) As BotFrameworkAuthentication" />
+      <MemberSignature Language="F#" Value="static member Create : string * bool * string * string * string * string * string * string * string * Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory * Microsoft.Bot.Connector.Authentication.AuthenticationConfiguration * System.Net.Http.IHttpClientFactory * Microsoft.Extensions.Logging.ILogger -&gt; Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication" Usage="Microsoft.Bot.Connector.Authentication.BotFrameworkAuthenticationFactory.Create (channelService, validateAuthority, toChannelFromBotLoginUrl, toChannelFromBotOAuthScope, toBotFromChannelTokenIssuer, oAuthUrl, toBotFromChannelOpenIdMetadataUrl, toBotFromEmulatorOpenIdMetadataUrl, callerId, credentialFactory, authConfiguration, httpClientFactory, logger)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelService" Type="System.String" />
+        <Parameter Name="validateAuthority" Type="System.Boolean" />
+        <Parameter Name="toChannelFromBotLoginUrl" Type="System.String" />
+        <Parameter Name="toChannelFromBotOAuthScope" Type="System.String" />
+        <Parameter Name="toBotFromChannelTokenIssuer" Type="System.String" />
+        <Parameter Name="oAuthUrl" Type="System.String" />
+        <Parameter Name="toBotFromChannelOpenIdMetadataUrl" Type="System.String" />
+        <Parameter Name="toBotFromEmulatorOpenIdMetadataUrl" Type="System.String" />
+        <Parameter Name="callerId" Type="System.String" />
+        <Parameter Name="credentialFactory" Type="Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory" />
+        <Parameter Name="authConfiguration" Type="Microsoft.Bot.Connector.Authentication.AuthenticationConfiguration" />
+        <Parameter Name="httpClientFactory" Type="System.Net.Http.IHttpClientFactory" />
+        <Parameter Name="logger" Type="Microsoft.Extensions.Logging.ILogger" />
+      </Parameters>
+      <Docs>
+        <param name="channelService">The Channel Service.</param>
+        <param name="validateAuthority">The validate authority value to use.</param>
+        <param name="toChannelFromBotLoginUrl">The to Channel from bot login url.</param>
+        <param name="toChannelFromBotOAuthScope">The to Channel from bot oauth scope.</param>
+        <param name="toBotFromChannelTokenIssuer">The to bot from Channel Token Issuer.</param>
+        <param name="oAuthUrl">The oAuth url.</param>
+        <param name="toBotFromChannelOpenIdMetadataUrl">The to bot from Channel Open Id Metadata url.</param>
+        <param name="toBotFromEmulatorOpenIdMetadataUrl">The to bot from Emulator Open Id Metadata url.</param>
+        <param name="callerId">The Microsoft app password.</param>
+        <param name="credentialFactory">The <see cref="T:Microsoft.Bot.Connector.Authentication.ServiceClientCredentialsFactory" /> to use to create credentials.</param>
+        <param name="authConfiguration">The <see cref="T:Microsoft.Bot.Connector.Authentication.AuthenticationConfiguration" /> to use.</param>
+        <param name="httpClientFactory">The <see cref="T:System.Net.Http.IHttpClientFactory" /> to use.</param>
+        <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger" /> to use.</param>
+        <summary>
+            Creates the appropriate <see cref="T:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication" /> instance.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.Bot.Connector.Authentication.BotFrameworkAuthentication" /> instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

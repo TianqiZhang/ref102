@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Bot.Builder.ActivityHandler</BaseTypeName>
@@ -31,6 +32,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -49,6 +51,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -72,6 +75,38 @@
             </remarks>
       </Docs>
     </Member>
+    <Member MemberName="OnEventActivityAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task OnEventActivityAsync (Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IEventActivity&gt; turnContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Threading.Tasks.Task OnEventActivityAsync(class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IEventActivity&gt; turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsActivityHandler.OnEventActivityAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function OnEventActivityAsync (turnContext As ITurnContext(Of IEventActivity), cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="override this.OnEventActivityAsync : Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IEventActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsActivityHandler.OnEventActivityAsync (turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IEventActivity&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when an event activity is received from the channel.
+            Event activities can be used to communicate many different things.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>
+            In a derived class, override this method to add logic that applies to all event activities.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="OnInvokeActivityAsync">
       <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt; OnInvokeActivityAsync (Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IInvokeActivity&gt; turnContext, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Builder.InvokeResponse&gt; OnInvokeActivityAsync(class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IInvokeActivity&gt; turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -83,6 +118,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -118,6 +154,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -148,6 +185,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionResponse&gt;</ReturnType>
@@ -180,6 +218,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -210,6 +249,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -245,6 +285,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -280,6 +321,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -314,6 +356,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -349,6 +392,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -382,6 +426,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -415,6 +460,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -437,6 +483,70 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="OnTeamsMeetingEndAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnTeamsMeetingEndAsync (Microsoft.Bot.Schema.Teams.MeetingEndEventDetails meeting, Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IEventActivity&gt; turnContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnTeamsMeetingEndAsync(class Microsoft.Bot.Schema.Teams.MeetingEndEventDetails meeting, class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IEventActivity&gt; turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsActivityHandler.OnTeamsMeetingEndAsync(Microsoft.Bot.Schema.Teams.MeetingEndEventDetails,Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnTeamsMeetingEndAsync (meeting As MeetingEndEventDetails, turnContext As ITurnContext(Of IEventActivity), cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnTeamsMeetingEndAsync : Microsoft.Bot.Schema.Teams.MeetingEndEventDetails * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IEventActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.OnTeamsMeetingEndAsync : Microsoft.Bot.Schema.Teams.MeetingEndEventDetails * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IEventActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsActivityHandler.OnTeamsMeetingEndAsync (meeting, turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="meeting" Type="Microsoft.Bot.Schema.Teams.MeetingEndEventDetails" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IEventActivity&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="meeting">The details of the meeting.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Teams Meeting End event activity is received from the connector.
+            Override this in a derived class to provide logic for when a meeting is ended.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTeamsMeetingStartAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnTeamsMeetingStartAsync (Microsoft.Bot.Schema.Teams.MeetingStartEventDetails meeting, Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IEventActivity&gt; turnContext, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnTeamsMeetingStartAsync(class Microsoft.Bot.Schema.Teams.MeetingStartEventDetails meeting, class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IEventActivity&gt; turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsActivityHandler.OnTeamsMeetingStartAsync(Microsoft.Bot.Schema.Teams.MeetingStartEventDetails,Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IEventActivity},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnTeamsMeetingStartAsync (meeting As MeetingStartEventDetails, turnContext As ITurnContext(Of IEventActivity), cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnTeamsMeetingStartAsync : Microsoft.Bot.Schema.Teams.MeetingStartEventDetails * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IEventActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.OnTeamsMeetingStartAsync : Microsoft.Bot.Schema.Teams.MeetingStartEventDetails * Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IEventActivity&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsActivityHandler.OnTeamsMeetingStartAsync (meeting, turnContext, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="meeting" Type="Microsoft.Bot.Schema.Teams.MeetingStartEventDetails" />
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IEventActivity&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="meeting">The details of the meeting.</param>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Invoked when a Teams Meeting Start event activity is received from the connector.
+            Override this in a derived class to provide logic for when a meeting is started.
+            </summary>
+        <returns>A task that represents the work queued to execute.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="OnTeamsMembersAddedAsync">
       <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task OnTeamsMembersAddedAsync (System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.Teams.TeamsChannelAccount&gt; teamsMembersAdded, Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task OnTeamsMembersAddedAsync(class System.Collections.Generic.IList`1&lt;class Microsoft.Bot.Schema.Teams.TeamsChannelAccount&gt; teamsMembersAdded, class Microsoft.Bot.Schema.Teams.TeamInfo teamInfo, class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IConversationUpdateActivity&gt; turnContext, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -448,6 +558,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -484,6 +595,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -521,6 +633,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -557,6 +670,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -594,6 +708,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionActionResponse&gt;</ReturnType>
@@ -626,6 +741,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionActionResponse&gt;</ReturnType>
@@ -658,6 +774,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -690,6 +807,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionResponse&gt;</ReturnType>
@@ -722,6 +840,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -754,6 +873,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionActionResponse&gt;</ReturnType>
@@ -786,6 +906,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionResponse&gt;</ReturnType>
@@ -818,6 +939,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionResponse&gt;</ReturnType>
@@ -850,6 +972,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionActionResponse&gt;</ReturnType>
@@ -882,6 +1005,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.MessagingExtensionActionResponse&gt;</ReturnType>
@@ -914,6 +1038,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -946,6 +1071,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -965,6 +1091,68 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="OnTeamsTabFetchAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TabResponse&gt; OnTeamsTabFetchAsync (Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IInvokeActivity&gt; turnContext, Microsoft.Bot.Schema.Teams.TabRequest tabRequest, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Schema.Teams.TabResponse&gt; OnTeamsTabFetchAsync(class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IInvokeActivity&gt; turnContext, class Microsoft.Bot.Schema.Teams.TabRequest tabRequest, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsActivityHandler.OnTeamsTabFetchAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IInvokeActivity},Microsoft.Bot.Schema.Teams.TabRequest,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnTeamsTabFetchAsync (turnContext As ITurnContext(Of IInvokeActivity), tabRequest As TabRequest, cancellationToken As CancellationToken) As Task(Of TabResponse)" />
+      <MemberSignature Language="F#" Value="abstract member OnTeamsTabFetchAsync : Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IInvokeActivity&gt; * Microsoft.Bot.Schema.Teams.TabRequest * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TabResponse&gt;&#xA;override this.OnTeamsTabFetchAsync : Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IInvokeActivity&gt; * Microsoft.Bot.Schema.Teams.TabRequest * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TabResponse&gt;" Usage="teamsActivityHandler.OnTeamsTabFetchAsync (turnContext, tabRequest, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TabResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IInvokeActivity&gt;" />
+        <Parameter Name="tabRequest" Type="Microsoft.Bot.Schema.Teams.TabRequest" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="tabRequest">The tab invoke request value payload.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Override this in a derived class to provide logic for when a tab is fetched.
+            </summary>
+        <returns>A Tab Response for the request.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTeamsTabSubmitAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TabResponse&gt; OnTeamsTabSubmitAsync (Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IInvokeActivity&gt; turnContext, Microsoft.Bot.Schema.Teams.TabSubmit tabSubmit, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Schema.Teams.TabResponse&gt; OnTeamsTabSubmitAsync(class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IInvokeActivity&gt; turnContext, class Microsoft.Bot.Schema.Teams.TabSubmit tabSubmit, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsActivityHandler.OnTeamsTabSubmitAsync(Microsoft.Bot.Builder.ITurnContext{Microsoft.Bot.Schema.IInvokeActivity},Microsoft.Bot.Schema.Teams.TabSubmit,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function OnTeamsTabSubmitAsync (turnContext As ITurnContext(Of IInvokeActivity), tabSubmit As TabSubmit, cancellationToken As CancellationToken) As Task(Of TabResponse)" />
+      <MemberSignature Language="F#" Value="abstract member OnTeamsTabSubmitAsync : Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IInvokeActivity&gt; * Microsoft.Bot.Schema.Teams.TabSubmit * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TabResponse&gt;&#xA;override this.OnTeamsTabSubmitAsync : Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IInvokeActivity&gt; * Microsoft.Bot.Schema.Teams.TabSubmit * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TabResponse&gt;" Usage="teamsActivityHandler.OnTeamsTabSubmitAsync (turnContext, tabSubmit, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TabResponse&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IInvokeActivity&gt;" />
+        <Parameter Name="tabSubmit" Type="Microsoft.Bot.Schema.Teams.TabSubmit" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">A strongly-typed context object for this turn.</param>
+        <param name="tabSubmit">The tab submit invoke request value payload.</param>
+        <param name="cancellationToken">A cancellation token that can be used by other objects
+            or threads to receive notice of cancellation.</param>
+        <summary>
+            Override this in a derived class to provide logic for when a tab is submitted.
+            </summary>
+        <returns>A Tab Response for the request.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="OnTeamsTaskModuleFetchAsync">
       <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TaskModuleResponse&gt; OnTeamsTaskModuleFetchAsync (Microsoft.Bot.Builder.ITurnContext&lt;Microsoft.Bot.Schema.IInvokeActivity&gt; turnContext, Microsoft.Bot.Schema.Teams.TaskModuleRequest taskModuleRequest, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Schema.Teams.TaskModuleResponse&gt; OnTeamsTaskModuleFetchAsync(class Microsoft.Bot.Builder.ITurnContext`1&lt;class Microsoft.Bot.Schema.IInvokeActivity&gt; turnContext, class Microsoft.Bot.Schema.Teams.TaskModuleRequest taskModuleRequest, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
@@ -976,6 +1164,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TaskModuleResponse&gt;</ReturnType>
@@ -1008,6 +1197,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.Teams.TaskModuleResponse&gt;</ReturnType>
@@ -1039,6 +1229,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1071,6 +1262,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1103,6 +1295,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1136,6 +1329,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1168,6 +1362,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -1200,6 +1395,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>

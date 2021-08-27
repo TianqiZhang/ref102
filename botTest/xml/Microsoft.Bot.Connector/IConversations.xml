@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -28,6 +29,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ConversationResourceResponse&gt;&gt;</ReturnType>
@@ -39,7 +41,7 @@
       </Parameters>
       <Docs>
         <param name="parameters">
-             Parameters to create the conversation from
+             Parameters to create the conversation from.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -48,9 +50,9 @@
              The cancellation token.
              </param>
         <summary>
-             CreateConversation
+             CreateConversation.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              Create a new Conversation.
             
@@ -75,16 +77,16 @@
              await connect.Conversations.SendToConversationAsync(resource.Id,
              new Activity() ... ) ;
             
-             ```
+             ``` .
              </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-             Thrown when unable to deserialize the response
+             Thrown when unable to deserialize the response.
              </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-             Thrown when a required parameter is null
+             Thrown when a required parameter is null.
              </exception>
       </Docs>
     </Member>
@@ -99,6 +101,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&gt;</ReturnType>
@@ -111,10 +114,10 @@
       </Parameters>
       <Docs>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="activityId">
-             activityId to delete
+             activityId to delete.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -123,9 +126,9 @@
              The cancellation token.
              </param>
         <summary>
-             DeleteActivity
+             DeleteActivity.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              Delete an existing activity.
             
@@ -133,10 +136,10 @@
              successful this method will remove the specified activity.
              </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-             Thrown when a required parameter is null
+             Thrown when a required parameter is null.
              </exception>
       </Docs>
     </Member>
@@ -151,6 +154,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&gt;</ReturnType>
@@ -163,10 +167,10 @@
       </Parameters>
       <Docs>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="memberId">
-             ID of the member to delete from this conversation
+             ID of the member to delete from this conversation.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -175,9 +179,9 @@
              The cancellation token.
              </param>
         <summary>
-             DeleteConversationMember
+             DeleteConversationMember.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              Deletes a member from a conversation.
             
@@ -187,10 +191,10 @@
              of the conversation, the conversation will also be deleted.
              </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-             Thrown when a required parameter is null
+             Thrown when a required parameter is null.
              </exception>
       </Docs>
     </Member>
@@ -205,6 +209,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.ChannelAccount&gt;&gt;&gt;</ReturnType>
@@ -217,10 +222,10 @@
       </Parameters>
       <Docs>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="activityId">
-             Activity ID
+             Activity ID.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -229,9 +234,9 @@
              The cancellation token.
              </param>
         <summary>
-             GetActivityMembers
+             GetActivityMembers.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              Enumerate the members of an activity.
             
@@ -240,13 +245,13 @@
              particular activity in the conversation.
              </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-             Thrown when unable to deserialize the response
+             Thrown when unable to deserialize the response.
              </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-             Thrown when a required parameter is null
+             Thrown when a required parameter is null.
              </exception>
       </Docs>
     </Member>
@@ -261,6 +266,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.ChannelAccount&gt;&gt;&gt;</ReturnType>
@@ -272,7 +278,7 @@
       </Parameters>
       <Docs>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -281,9 +287,9 @@
              The cancellation token.
              </param>
         <summary>
-             GetConversationMembers
+             GetConversationMembers.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              Enumerate the members of a conversation.
             
@@ -292,13 +298,13 @@
              conversation.
              </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-             Thrown when unable to deserialize the response
+             Thrown when unable to deserialize the response.
              </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-             Thrown when a required parameter is null
+             Thrown when a required parameter is null.
              </exception>
       </Docs>
     </Member>
@@ -313,6 +319,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.PagedMembersResult&gt;&gt;</ReturnType>
@@ -326,13 +333,13 @@
       </Parameters>
       <Docs>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="pageSize">
-             Suggested page size
+             Suggested page size.
              </param>
         <param name="continuationToken">
-             Continuation Token
+             Continuation Token.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -341,9 +348,9 @@
              The cancellation token.
              </param>
         <summary>
-             GetConversationPagedMembers
+             GetConversationPagedMembers.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              Enumerate the members of a conversation one page at a time.
             
@@ -365,13 +372,13 @@
              request may rarely return members from a previous request.
              </remarks>
         <exception cref="T:Microsoft.Rest.HttpOperationException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-             Thrown when unable to deserialize the response
+             Thrown when unable to deserialize the response.
              </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-             Thrown when a required parameter is null
+             Thrown when a required parameter is null.
              </exception>
       </Docs>
     </Member>
@@ -386,6 +393,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ConversationsResult&gt;&gt;</ReturnType>
@@ -397,7 +405,7 @@
       </Parameters>
       <Docs>
         <param name="continuationToken">
-             skip or continuation token
+             skip or continuation token.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -406,9 +414,9 @@
              The cancellation token.
              </param>
         <summary>
-             GetConversations
+             GetConversations.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              List the Conversations in which this bot has participated.
             
@@ -425,10 +433,10 @@
              conversation.
              </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-             Thrown when unable to deserialize the response
+             Thrown when unable to deserialize the response.
              </exception>
       </Docs>
     </Member>
@@ -443,6 +451,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ResourceResponse&gt;&gt;</ReturnType>
@@ -456,13 +465,13 @@
       </Parameters>
       <Docs>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="activityId">
-             activityId the reply is to (OPTIONAL)
+             activityId the reply is to (OPTIONAL).
              </param>
         <param name="activity">
-             Activity to send
+             Activity to send.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -471,9 +480,9 @@
              The cancellation token.
              </param>
         <summary>
-             ReplyToActivity
+             ReplyToActivity.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              This method allows you to reply to an activity.
             
@@ -492,13 +501,13 @@
              Use SendToConversation in all other cases.
              </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-             Thrown when unable to deserialize the response
+             Thrown when unable to deserialize the response.
              </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-             Thrown when a required parameter is null
+             Thrown when a required parameter is null.
              </exception>
       </Docs>
     </Member>
@@ -513,6 +522,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ResourceResponse&gt;&gt;</ReturnType>
@@ -525,10 +535,10 @@
       </Parameters>
       <Docs>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="transcript">
-             Transcript of activities
+             Transcript of activities.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -537,9 +547,9 @@
              The cancellation token.
              </param>
         <summary>
-             SendConversationHistory
+             SendConversationHistory.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              This method allows you to upload the historic activities to the
              conversation.
@@ -550,13 +560,13 @@
              render the activities in the right order.
              </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-             Thrown when unable to deserialize the response
+             Thrown when unable to deserialize the response.
              </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-             Thrown when a required parameter is null
+             Thrown when a required parameter is null.
              </exception>
       </Docs>
     </Member>
@@ -571,6 +581,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ResourceResponse&gt;&gt;</ReturnType>
@@ -583,10 +594,10 @@
       </Parameters>
       <Docs>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="activity">
-             Activity to send
+             Activity to send.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -595,9 +606,9 @@
              The cancellation token.
              </param>
         <summary>
-             SendToConversation
+             SendToConversation.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              This method allows you to send an activity to the end of a
              conversation.
@@ -617,13 +628,13 @@
              Use SendToConversation in all other cases.
              </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-             Thrown when unable to deserialize the response
+             Thrown when unable to deserialize the response.
              </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-             Thrown when a required parameter is null
+             Thrown when a required parameter is null.
              </exception>
       </Docs>
     </Member>
@@ -638,6 +649,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ResourceResponse&gt;&gt;</ReturnType>
@@ -651,13 +663,13 @@
       </Parameters>
       <Docs>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="activityId">
-             activityId to update
+             activityId to update.
              </param>
         <param name="activity">
-             replacement Activity
+             replacement Activity.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -666,9 +678,9 @@
              The cancellation token.
              </param>
         <summary>
-             UpdateActivity
+             UpdateActivity.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              Edit an existing activity.
             
@@ -679,13 +691,13 @@
              "Approve" button.
              </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-             Thrown when unable to deserialize the response
+             Thrown when unable to deserialize the response.
              </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-             Thrown when a required parameter is null
+             Thrown when a required parameter is null.
              </exception>
       </Docs>
     </Member>
@@ -700,6 +712,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.ResourceResponse&gt;&gt;</ReturnType>
@@ -712,10 +725,10 @@
       </Parameters>
       <Docs>
         <param name="conversationId">
-             Conversation ID
+             Conversation ID.
              </param>
         <param name="attachmentUpload">
-             Attachment data
+             Attachment data.
              </param>
         <param name="customHeaders">
              The headers that will be added to request.
@@ -724,9 +737,9 @@
              The cancellation token.
              </param>
         <summary>
-             UploadAttachment
+             UploadAttachment.
              </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>
              Upload an attachment directly into a channel's blob storage.
             
@@ -737,13 +750,13 @@
              which is suitable for using with the attachments API.
              </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-             Thrown when the operation returned an invalid status code
+             Thrown when the operation returned an invalid status code.
              </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-             Thrown when unable to deserialize the response
+             Thrown when unable to deserialize the response.
              </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-             Thrown when a required parameter is null
+             Thrown when a required parameter is null.
              </exception>
       </Docs>
     </Member>

@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -44,6 +45,7 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="cosmosDbStorageOptions" Type="Microsoft.Bot.Builder.Azure.CosmosDbStorageOptions" />
@@ -68,6 +70,7 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="documentClient" Type="Microsoft.Azure.Documents.IDocumentClient" />
@@ -95,6 +98,7 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="cosmosDbStorageOptions" Type="Microsoft.Bot.Builder.Azure.CosmosDbStorageOptions" />
@@ -125,6 +129,7 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -142,8 +147,8 @@
             </summary>
         <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.Azure.CosmosDbStorage.ReadAsync(System.String[],System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.Azure.CosmosDbStorage.WriteAsync(System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Bot.Builder.Azure.CosmosDbStorage.ReadAsync(System.String[],System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="Dispose">
@@ -159,6 +164,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -181,6 +187,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -213,6 +220,7 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;&gt;</ReturnType>
@@ -231,8 +239,8 @@
         <returns>A task that represents the work queued to execute.</returns>
         <remarks>If the activities are successfully sent, the task result contains
             the items read, indexed by key.</remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.Azure.CosmosDbStorage.DeleteAsync(System.String[],System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.Azure.CosmosDbStorage.WriteAsync(System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Bot.Builder.Azure.CosmosDbStorage.DeleteAsync(System.String[],System.Threading.CancellationToken)" />
       </Docs>
     </Member>
     <Member MemberName="SanitizeKey">
@@ -246,6 +254,7 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -282,6 +291,7 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -299,8 +309,8 @@
             </summary>
         <returns>A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.Azure.CosmosDbStorage.DeleteAsync(System.String[],System.Threading.CancellationToken)" />
         <altmember cref="M:Microsoft.Bot.Builder.Azure.CosmosDbStorage.ReadAsync(System.String[],System.Threading.CancellationToken)" />
+        <altmember cref="M:Microsoft.Bot.Builder.Azure.CosmosDbStorage.DeleteAsync(System.String[],System.Threading.CancellationToken)" />
       </Docs>
     </Member>
   </Members>

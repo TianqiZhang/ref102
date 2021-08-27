@@ -1,0 +1,133 @@
+<Type Name="SkillConversationIdFactory" FullName="Microsoft.Bot.Builder.Skills.SkillConversationIdFactory">
+  <TypeSignature Language="C#" Value="public class SkillConversationIdFactory : Microsoft.Bot.Builder.Skills.SkillConversationIdFactoryBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SkillConversationIdFactory extends Microsoft.Bot.Builder.Skills.SkillConversationIdFactoryBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Bot.Builder.Skills.SkillConversationIdFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Class SkillConversationIdFactory&#xA;Inherits SkillConversationIdFactoryBase" />
+  <TypeSignature Language="F#" Value="type SkillConversationIdFactory = class&#xA;    inherit SkillConversationIdFactoryBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Bot.Builder.Skills.SkillConversationIdFactoryBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationIdFactory" /> that uses <see cref="T:Microsoft.Bot.Builder.IStorage" /> to store
+            and retrieve <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationReference" /> instances.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SkillConversationIdFactory (Microsoft.Bot.Builder.IStorage storage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Bot.Builder.IStorage storage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Skills.SkillConversationIdFactory.#ctor(Microsoft.Bot.Builder.IStorage)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (storage As IStorage)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Bot.Builder.Skills.SkillConversationIdFactory : Microsoft.Bot.Builder.IStorage -&gt; Microsoft.Bot.Builder.Skills.SkillConversationIdFactory" Usage="new Microsoft.Bot.Builder.Skills.SkillConversationIdFactory storage" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="storage" Type="Microsoft.Bot.Builder.IStorage" />
+      </Parameters>
+      <Docs>
+        <param name="storage">
+          <see cref="T:Microsoft.Bot.Builder.IStorage" /> instance to write and read <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationReference" />s from and to.
+            </param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationIdFactory" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSkillConversationIdAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;string&gt; CreateSkillConversationIdAsync (Microsoft.Bot.Builder.Skills.SkillConversationIdFactoryOptions options, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;string&gt; CreateSkillConversationIdAsync(class Microsoft.Bot.Builder.Skills.SkillConversationIdFactoryOptions options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Skills.SkillConversationIdFactory.CreateSkillConversationIdAsync(Microsoft.Bot.Builder.Skills.SkillConversationIdFactoryOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CreateSkillConversationIdAsync (options As SkillConversationIdFactoryOptions, cancellationToken As CancellationToken) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="override this.CreateSkillConversationIdAsync : Microsoft.Bot.Builder.Skills.SkillConversationIdFactoryOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="skillConversationIdFactory.CreateSkillConversationIdAsync (options, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Bot.Builder.Skills.SkillConversationIdFactoryOptions" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="options">Creation options to use when creating the <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationReference" />.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Creates a new <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationReference" />.
+            </summary>
+        <returns>ID of the created <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationReference" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteConversationReferenceAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task DeleteConversationReferenceAsync (string skillConversationId, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task DeleteConversationReferenceAsync(string skillConversationId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Skills.SkillConversationIdFactory.DeleteConversationReferenceAsync(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function DeleteConversationReferenceAsync (skillConversationId As String, cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="override this.DeleteConversationReferenceAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="skillConversationIdFactory.DeleteConversationReferenceAsync (skillConversationId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="skillConversationId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="skillConversationId">The ID of the <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationReference" /> to be deleted.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Deletes the <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationReference" /> with the specified ID.
+            </summary>
+        <returns>Task to complete the deletion operation asynchronously.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSkillConversationReferenceAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.Skills.SkillConversationReference&gt; GetSkillConversationReferenceAsync (string skillConversationId, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Builder.Skills.SkillConversationReference&gt; GetSkillConversationReferenceAsync(string skillConversationId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Skills.SkillConversationIdFactory.GetSkillConversationReferenceAsync(System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetSkillConversationReferenceAsync (skillConversationId As String, cancellationToken As CancellationToken) As Task(Of SkillConversationReference)" />
+      <MemberSignature Language="F#" Value="override this.GetSkillConversationReferenceAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.Skills.SkillConversationReference&gt;" Usage="skillConversationIdFactory.GetSkillConversationReferenceAsync (skillConversationId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.Skills.SkillConversationReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="skillConversationId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="skillConversationId">The ID of the <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationReference" /> to retrieve.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Retrieve a <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationReference" /> with the specified ID.
+            </summary>
+        <returns>
+          <see cref="T:Microsoft.Bot.Builder.Skills.SkillConversationReference" /> for the specified ID; null if not found.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

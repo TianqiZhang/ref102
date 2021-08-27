@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,25 +22,26 @@
   </Docs>
   <Members>
     <Member MemberName="NormalizePath">
-      <MemberSignature Language="C#" Value="public static string NormalizePath (string ambigiousPath);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string NormalizePath(string ambigiousPath) cil managed" />
+      <MemberSignature Language="C#" Value="public static string NormalizePath (string ambiguousPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string NormalizePath(string ambiguousPath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.PathUtils.NormalizePath(System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function NormalizePath (ambigiousPath As String) As String" />
-      <MemberSignature Language="F#" Value="static member NormalizePath : string -&gt; string" Usage="Microsoft.Bot.Builder.PathUtils.NormalizePath ambigiousPath" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function NormalizePath (ambiguousPath As String) As String" />
+      <MemberSignature Language="F#" Value="static member NormalizePath : string -&gt; string" Usage="Microsoft.Bot.Builder.PathUtils.NormalizePath ambiguousPath" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="ambigiousPath" Type="System.String" />
+        <Parameter Name="ambiguousPath" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="ambigiousPath">authoredPath.</param>
+        <param name="ambiguousPath">authoredPath.</param>
         <summary>
             Normalizes authored path to OS-compatible path.
             </summary>

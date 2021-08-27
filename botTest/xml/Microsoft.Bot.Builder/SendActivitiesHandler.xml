@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -35,9 +36,9 @@
             <para>If the activities are successfully sent, the <paramref name="next" /> delegate returns
             an array of <see cref="T:Microsoft.Bot.Schema.ResourceResponse" /> objects containing the IDs that
             the receiving channel assigned to the activities. Use this array as the return value of this handler.</para></remarks>
-    <altmember cref="T:Microsoft.Bot.Builder.BotAdapter" />
     <altmember cref="T:Microsoft.Bot.Builder.UpdateActivityHandler" />
     <altmember cref="T:Microsoft.Bot.Builder.DeleteActivityHandler" />
     <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.OnSendActivities(Microsoft.Bot.Builder.SendActivitiesHandler)" />
+    <altmember cref="T:Microsoft.Bot.Builder.BotAdapter" />
   </Docs>
 </Type>

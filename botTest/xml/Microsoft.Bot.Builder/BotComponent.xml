@@ -1,0 +1,67 @@
+<Type Name="BotComponent" FullName="Microsoft.Bot.Builder.BotComponent">
+  <TypeSignature Language="C#" Value="public abstract class BotComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BotComponent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Bot.Builder.BotComponent" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BotComponent" />
+  <TypeSignature Language="F#" Value="type BotComponent = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Definition of a <see cref="T:Microsoft.Bot.Builder.BotComponent" /> that allows registration of services, custom actions, memory scopes and adapters.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BotComponent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.BotComponent.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureServices">
+      <MemberSignature Language="C#" Value="public abstract void ConfigureServices (Microsoft.Extensions.DependencyInjection.IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ConfigureServices(class Microsoft.Extensions.DependencyInjection.IServiceCollection services, class Microsoft.Extensions.Configuration.IConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.BotComponent.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ConfigureServices (services As IServiceCollection, configuration As IConfiguration)" />
+      <MemberSignature Language="F#" Value="abstract member ConfigureServices : Microsoft.Extensions.DependencyInjection.IServiceCollection * Microsoft.Extensions.Configuration.IConfiguration -&gt; unit" Usage="botComponent.ConfigureServices (services, configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" />
+        <Parameter Name="configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="services">Services collection to register dependency injection.</param>
+        <param name="configuration">Configuration for the bot component.</param>
+        <summary>
+            Entry point for bot components to register types in resource explorer, consume configuration and register services in the 
+            services collection.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

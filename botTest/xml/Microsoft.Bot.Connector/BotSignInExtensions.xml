@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -31,6 +32,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Schema.SignInResource&gt;</ReturnType>
@@ -44,18 +46,14 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="operations">
-            The operations group for this extension method.
-            </param>
-        <param name="state" />
-        <param name="codeChallenge" />
-        <param name="emulatorUrl" />
-        <param name="finalRedirect" />
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="operations">The operations group for this extension method.</param>
+        <param name="state">State.</param>
+        <param name="codeChallenge">Code challenge.</param>
+        <param name="emulatorUrl">Emulator URL.</param>
+        <param name="finalRedirect">Final redirect.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>Get sign-in resource with HTTP message.</summary>
+        <returns>The <see cref="T:Microsoft.Bot.Schema.SignInResource" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -70,6 +68,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
@@ -86,15 +85,13 @@
         <param name="operations">
             The operations group for this extension method.
             </param>
-        <param name="state" />
-        <param name="codeChallenge" />
-        <param name="emulatorUrl" />
-        <param name="finalRedirect" />
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="state">State.</param>
+        <param name="codeChallenge">Code challenge.</param>
+        <param name="emulatorUrl">Emulator URL.</param>
+        <param name="finalRedirect">Final redirect.</param>
+        <param name="cancellationToken">The cancellation token.</param>
+        <summary>Get sign-in URL.</summary>
+        <returns>The sign-in URL.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -41,7 +42,7 @@
              * Generate your own from the [Connector API Swagger
              file](https://raw.githubusercontent.com/Microsoft/BotBuilder/master/CSharp/Library/Microsoft.Bot.Connector.Shared/Swagger/ConnectorAPI.json)
             
-             © 2016 Microsoft
+             © 2016 Microsoft.
              </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -57,15 +58,15 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.IAttachments</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the IAttachments.
-            </summary>
-        <value>To be added.</value>
+            Gets the IAttachments.</summary>
+        <value>See <see cref="T:Microsoft.Bot.Connector.IAttachments" /> class.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -80,15 +81,15 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The base URI of the service.
-            </summary>
-        <value>To be added.</value>
+            Gets or sets the base URI of the service.</summary>
+        <value>See <see cref="T:System.Uri" /> class.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -103,15 +104,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.IConversations</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets the IConversations.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets the IConversations.</summary>
+        <value>See <see cref="T:Microsoft.Bot.Connector.IConversations" /> class.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -126,16 +126,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.ServiceClientCredentials</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Subscription credentials which uniquely identify client
-            subscription.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets subscription credentials, which uniquely identify client subscription.</summary>
+        <value>See <see cref="T:Microsoft.Rest.ServiceClientCredentials" /> class.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -150,15 +148,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets or sets json deserialization settings.
-            </summary>
-        <value>To be added.</value>
+        <summary>Gets json deserialization settings.</summary>
+        <value>See <see cref="T:Newtonsoft.Json.JsonSerializerSettings" /> class.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -173,15 +170,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets or sets json serialization settings.
-            </summary>
-        <value>To be added.</value>
+        <summary>Gets json serialization settings. </summary>
+        <value>See <see cref="T:Newtonsoft.Json.JsonSerializerSettings" /> class.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

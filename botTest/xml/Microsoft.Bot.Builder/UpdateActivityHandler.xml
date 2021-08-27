@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -36,9 +37,9 @@
             conversation to replace.</para><para>If the activity is successfully sent, the <paramref name="next" /> delegate returns
             a <see cref="T:Microsoft.Bot.Schema.ResourceResponse" /> object containing the ID that the receiving
             channel assigned to the activity. Use this response object as the return value of this handler.</para></remarks>
-    <altmember cref="T:Microsoft.Bot.Builder.BotAdapter" />
     <altmember cref="T:Microsoft.Bot.Builder.SendActivitiesHandler" />
     <altmember cref="T:Microsoft.Bot.Builder.DeleteActivityHandler" />
     <altmember cref="M:Microsoft.Bot.Builder.ITurnContext.OnUpdateActivity(Microsoft.Bot.Builder.UpdateActivityHandler)" />
+    <altmember cref="T:Microsoft.Bot.Builder.BotAdapter" />
   </Docs>
 </Type>

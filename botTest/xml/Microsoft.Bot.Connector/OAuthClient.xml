@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Rest.ServiceClient&lt;Microsoft.Bot.Connector.OAuthClient&gt;</BaseTypeName>
@@ -24,9 +25,7 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>
-            An OAuth client class that implements <see cref="T:Microsoft.Bot.Connector.IOAuthClient" />.
-            </summary>
+    <summary> An OAuth client class that implements <see cref="T:Microsoft.Bot.Connector.IOAuthClient" />. </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -41,6 +40,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="handlers" Type="System.Net.Http.DelegatingHandler[]">
@@ -57,7 +57,7 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the OAuthClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.OAuthClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -73,6 +73,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentials" Type="Microsoft.Rest.ServiceClientCredentials" />
@@ -93,11 +94,11 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the OAuthClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.OAuthClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -112,20 +113,16 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="httpClient" Type="System.Net.Http.HttpClient" />
         <Parameter Name="disposeHttpClient" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="httpClient">
-            HttpClient to be used
-            </param>
-        <param name="disposeHttpClient">
-            True: will dispose the provided httpClient on calling OAuthClient.Dispose(). False: will not dispose provided httpClient</param>
-        <summary>
-            Initializes a new instance of the OAuthClient class.
-            </summary>
+        <param name="httpClient"> HttpClient to be used. </param>
+        <param name="disposeHttpClient"> True: will dispose the provided httpClient on calling OAuthClient.Dispose(). False: will not dispose provided httpClient. </param>
+        <summary> Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.OAuthClient" /> class. </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -140,6 +137,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="rootHandler" Type="System.Net.Http.HttpClientHandler" />
@@ -160,7 +158,7 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the OAuthClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.OAuthClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -176,6 +174,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -196,11 +195,11 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the OAuthClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.OAuthClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -215,6 +214,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentials" Type="Microsoft.Rest.ServiceClientCredentials" />
@@ -226,16 +226,16 @@
             Required. Subscription credentials which uniquely identify client subscription.
             </param>
         <param name="httpClient">
-            HttpClient to be used
+            HttpClient to be used.
             </param>
         <param name="disposeHttpClient">
-            True: will dispose the provided httpClient on calling OAuthClient.Dispose(). False: will not dispose provided httpClient</param>
+            True: will dispose the provided httpClient on calling OAuthClient.Dispose(). False: will not dispose provided httpClient.</param>
         <summary>
-            Initializes a new instance of the OAuthClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.OAuthClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -250,6 +250,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="credentials" Type="Microsoft.Rest.ServiceClientCredentials" />
@@ -274,11 +275,11 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the OAuthClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.OAuthClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -293,6 +294,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -317,11 +319,11 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the OAuthClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.OAuthClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -336,6 +338,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -360,11 +363,11 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the OAuthClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.OAuthClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -379,6 +382,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="baseUri" Type="System.Uri" />
@@ -407,11 +411,11 @@
             Optional. The delegating handlers to add to the http client pipeline.
             </param>
         <summary>
-            Initializes a new instance of the OAuthClient class.
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Connector.OAuthClient" /> class.
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -429,15 +433,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            The base URI of the service.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets or sets the base URI of the service. </summary>
+        <value> The base URI. </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -452,15 +455,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.IBotSignIn</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets the IBotSignIn.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets the IBotSignIn. </summary>
+        <value> A class that performs bot sign-in operations. </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -475,15 +477,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Rest.ServiceClientCredentials</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Subscription credentials which uniquely identify client subscription.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets subscription credentials which uniquely identify client subscription. </summary>
+        <value>The client credentials. </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -498,15 +499,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets or sets json deserialization settings.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets json deserialization settings. </summary>
+        <value> The deserialization settings. </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -521,6 +521,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;System.Object&gt;&gt;</ReturnType>
@@ -534,34 +535,20 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="userId" />
-        <param name="connectionName" />
-        <param name="channelId" />
-        <param name="exchangeRequest" />
-        <param name="customHeaders">
-            Headers that will be added to request.
-            </param>
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="userId"> User ID. </param>
+        <param name="connectionName"> Connection name. </param>
+        <param name="channelId"> Channel ID. </param>
+        <param name="exchangeRequest"> Exechange request. </param>
+        <param name="customHeaders"> Headers that will be added to request.</param>
+        <param name="cancellationToken"> The cancellation token. </param>
+        <summary>Exchange with HTTP message.</summary>
+        <returns> A task that represents the work queued to execute.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-            Thrown when the operation returned an invalid status code
-            </exception>
-        <exception cref="T:Microsoft.Rest.SerializationException">
-            Thrown when unable to deserialize the response
-            </exception>
-        <exception cref="T:Microsoft.Rest.ValidationException">
-            Thrown when a required parameter is null
-            </exception>
-        <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
-            </exception>
-        <return>
-            A response object containing the response body and response headers.
-            </return>
+        <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException"> Thrown when the operation returned an invalid status code. </exception>
+        <exception cref="T:Microsoft.Rest.SerializationException"> Thrown when unable to deserialize the response. </exception>
+        <exception cref="T:Microsoft.Rest.ValidationException"> Thrown when an input value does not match the expected data type, range or pattern. </exception>
+        <exception cref="T:System.ArgumentNullException"> Thrown when a required parameter is null. </exception>
+        <return> A response object containing the response body and response headers. </return>
       </Docs>
     </Member>
     <Member MemberName="GetSignInResourceWithHttpMessagesAsync">
@@ -575,6 +562,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.SignInResource&gt;&gt;</ReturnType>
@@ -588,34 +576,22 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="state" />
-        <param name="codeChallenge" />
-        <param name="emulatorUrl" />
-        <param name="finalRedirect" />
-        <param name="customHeaders">
-            Headers that will be added to request.
-            </param>
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="state"> State. </param>
+        <param name="codeChallenge"> Code challenge. </param>
+        <param name="emulatorUrl"> Emulator URL. </param>
+        <param name="finalRedirect"> Final redirect. </param>
+        <param name="customHeaders"> Headers that will be added to request. </param>
+        <param name="cancellationToken"> The cancellation token. </param>
+        <summary> Get sign-in resource with HTTP message. </summary>
+        <returns> A response object containing the response body and response headers. </returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Microsoft.Rest.HttpOperationException">
-            Thrown when the operation returned an invalid status code
-            </exception>
-        <exception cref="T:Microsoft.Rest.SerializationException">
-            Thrown when unable to deserialize the response
-            </exception>
-        <exception cref="T:Microsoft.Rest.ValidationException">
-            Thrown when a required parameter is null
-            </exception>
-        <exception cref="T:System.ArgumentNullException">
-            Thrown when a required parameter is null
-            </exception>
         <return>
             A response object containing the response body and response headers.
             </return>
+        <exception cref="T:Microsoft.Rest.HttpOperationException"> Thrown when the operation returned an invalid status code. </exception>
+        <exception cref="T:Microsoft.Rest.SerializationException"> Thrown when unable to deserialize the response. </exception>
+        <exception cref="T:Microsoft.Rest.ValidationException"> Thrown when an input value does not match the expected data type, range or pattern. </exception>
+        <exception cref="T:System.ArgumentNullException"> Thrown when a required parameter is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="SerializationSettings">
@@ -629,15 +605,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Newtonsoft.Json.JsonSerializerSettings</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets or sets json serialization settings.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets json serialization settings. </summary>
+        <value>The serialization settings.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -652,15 +627,14 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Connector.IUserToken</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-            Gets the IUserToken.
-            </summary>
-        <value>To be added.</value>
+        <summary> Gets the IUserToken. </summary>
+        <value> The <see cref="P:Microsoft.Bot.Connector.OAuthClient.UserToken" />. </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

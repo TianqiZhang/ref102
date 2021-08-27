@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -30,6 +31,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -47,8 +49,8 @@
         <returns>A task that represents the work queued to execute.</returns>
         <remarks>The <paramref name="turnContext" /> provides information about the
             incoming activity, and other data needed to process the activity.</remarks>
-        <altmember cref="T:Microsoft.Bot.Builder.ITurnContext" />
         <altmember cref="T:Microsoft.Bot.Schema.IActivity" />
+        <altmember cref="T:Microsoft.Bot.Builder.ITurnContext" />
       </Docs>
     </Member>
   </Members>

@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -49,6 +50,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.IMessageActivity</ReturnType>
@@ -73,10 +75,10 @@
             </summary>
         <returns>A message activity containing the attachment.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.Attachment(System.Collections.Generic.IEnumerable{Microsoft.Bot.Schema.Attachment},System.String,System.String,System.String)" />
         <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.Carousel(System.Collections.Generic.IEnumerable{Microsoft.Bot.Schema.Attachment},System.String,System.String,System.String)" />
         <exception cref="T:System.ArgumentNullException">
           <paramref name="attachment" /> is <c>null</c>.</exception>
+        <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.Attachment(System.Collections.Generic.IEnumerable{Microsoft.Bot.Schema.Attachment},System.String,System.String,System.String)" />
       </Docs>
     </Member>
     <Member MemberName="Attachment">
@@ -90,6 +92,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.IMessageActivity</ReturnType>
@@ -114,10 +117,10 @@
             </summary>
         <returns>A message activity containing the attachment.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.Carousel(System.Collections.Generic.IEnumerable{Microsoft.Bot.Schema.Attachment},System.String,System.String,System.String)" />
         <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.Attachment(Microsoft.Bot.Schema.Attachment,System.String,System.String,System.String)" />
         <exception cref="T:System.ArgumentNullException">
           <paramref name="attachments" /> is <c>null</c>.</exception>
+        <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.Carousel(System.Collections.Generic.IEnumerable{Microsoft.Bot.Schema.Attachment},System.String,System.String,System.String)" />
       </Docs>
     </Member>
     <Member MemberName="Carousel">
@@ -131,6 +134,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.IMessageActivity</ReturnType>
@@ -155,7 +159,6 @@
              </summary>
         <returns>A message activity containing the attachment.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.Attachment(System.Collections.Generic.IEnumerable{Microsoft.Bot.Schema.Attachment},System.String,System.String,System.String)" />
         <exception cref="T:System.ArgumentNullException">
           <paramref name="attachments" /> is <c>null</c>.</exception>
         <example>This code creates and sends a carousel of HeroCards.
@@ -193,6 +196,7 @@
              // Send the activity as a reply to the user.
              await context.SendActivity(activity);
              </code></example>
+        <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.Attachment(System.Collections.Generic.IEnumerable{Microsoft.Bot.Schema.Attachment},System.String,System.String,System.String)" />
       </Docs>
     </Member>
     <Member MemberName="ContentUrl">
@@ -206,6 +210,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.IMessageActivity</ReturnType>
@@ -255,6 +260,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.IMessageActivity</ReturnType>
@@ -281,7 +287,6 @@
              </summary>
         <returns>A message activity that contains the suggested actions.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.SuggestedActions(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)" />
         <example>
           <code>
              // Create the activity and add suggested actions.
@@ -299,6 +304,7 @@
         </example>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="cardActions" /> is <c>null</c>.</exception>
+        <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.SuggestedActions(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)" />
       </Docs>
     </Member>
     <Member MemberName="SuggestedActions">
@@ -312,6 +318,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.IMessageActivity</ReturnType>
@@ -342,7 +349,6 @@
              <see cref="P:Microsoft.Bot.Schema.CardAction.Title" /> and sets the <see cref="P:Microsoft.Bot.Schema.CardAction.Type" /> to
              <see cref="F:Microsoft.Bot.Schema.ActionTypes.ImBack" />.
              </remarks>
-        <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.SuggestedActions(System.Collections.Generic.IEnumerable{Microsoft.Bot.Schema.CardAction},System.String,System.String,System.String)" />
         <example>
           <code>
              // Create the activity and add suggested actions.
@@ -356,6 +362,7 @@
         </example>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="actions" /> is <c>null</c>.</exception>
+        <altmember cref="M:Microsoft.Bot.Builder.MessageFactory.SuggestedActions(System.Collections.Generic.IEnumerable{Microsoft.Bot.Schema.CardAction},System.String,System.String,System.String)" />
       </Docs>
     </Member>
     <Member MemberName="Text">
@@ -369,6 +376,7 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Bot.Schema.Activity</ReturnType>

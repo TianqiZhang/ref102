@@ -1,0 +1,135 @@
+<Type Name="AuthenticateRequestResult" FullName="Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult">
+  <TypeSignature Language="C#" Value="public class AuthenticateRequestResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthenticateRequestResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult" />
+  <TypeSignature Language="VB.NET" Value="Public Class AuthenticateRequestResult" />
+  <TypeSignature Language="F#" Value="type AuthenticateRequestResult = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The result from a call to authenticate a Bot Framework Protocol request.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthenticateRequestResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Audience">
+      <MemberSignature Language="C#" Value="public string Audience { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Audience" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult.Audience" />
+      <MemberSignature Language="VB.NET" Value="Public Property Audience As String" />
+      <MemberSignature Language="F#" Value="member this.Audience : string with get, set" Usage="Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult.Audience" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value for the Audience.
+            </summary>
+        <value>
+            A value for the Audience.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallerId">
+      <MemberSignature Language="C#" Value="public string CallerId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CallerId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult.CallerId" />
+      <MemberSignature Language="VB.NET" Value="Public Property CallerId As String" />
+      <MemberSignature Language="F#" Value="member this.CallerId : string with get, set" Usage="Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult.CallerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value for the CallerId.
+            </summary>
+        <value>
+            A value for the CallerId.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimsIdentity">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsIdentity ClaimsIdentity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsIdentity ClaimsIdentity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult.ClaimsIdentity" />
+      <MemberSignature Language="VB.NET" Value="Public Property ClaimsIdentity As ClaimsIdentity" />
+      <MemberSignature Language="F#" Value="member this.ClaimsIdentity : System.Security.Claims.ClaimsIdentity with get, set" Usage="Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult.ClaimsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value for the ClaimsIdentity.
+            </summary>
+        <value>
+            A value for the ClaimsIdentity.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectorFactory">
+      <MemberSignature Language="C#" Value="public Microsoft.Bot.Connector.Authentication.ConnectorFactory ConnectorFactory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Bot.Connector.Authentication.ConnectorFactory ConnectorFactory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult.ConnectorFactory" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectorFactory As ConnectorFactory" />
+      <MemberSignature Language="F#" Value="member this.ConnectorFactory : Microsoft.Bot.Connector.Authentication.ConnectorFactory with get, set" Usage="Microsoft.Bot.Connector.Authentication.AuthenticateRequestResult.ConnectorFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Bot.Connector.Authentication.ConnectorFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a value for the ConnectorFactory.
+            </summary>
+        <value>
+            A value for the ConnectorFactory.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -28,6 +29,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Bot.Schema.TokenResponse&gt;&gt;&gt;</ReturnType>
@@ -41,28 +43,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="userId" />
-        <param name="connectionName" />
-        <param name="aadResourceUrls" />
-        <param name="channelId" />
-        <param name="customHeaders">
-            The headers that will be added to request.
-            </param>
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="userId"> User ID.</param>
+        <param name="connectionName"> Connection name.</param>
+        <param name="aadResourceUrls">AAD resource URLs. </param>
+        <param name="channelId">The channel ID. </param>
+        <param name="customHeaders"> The headers that will be added to request. </param>
+        <param name="cancellationToken"> The cancellation token.</param>
+        <summary>Get AAD token with HTTP message.</summary>
+        <returns>A Task representing the <see cref="T:Microsoft.Bot.Schema.TokenResponse" /> of the HTTP operation.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-            Thrown when the operation returned an invalid status code
-            </exception>
-        <exception cref="T:Microsoft.Rest.SerializationException">
-            Thrown when unable to deserialize the response
-            </exception>
-        <exception cref="T:Microsoft.Rest.ValidationException">
-            Thrown when a required parameter is null
-            </exception>
+        <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException"> Thrown when the operation returned an invalid status code.</exception>
+        <exception cref="T:Microsoft.Rest.SerializationException"> Thrown when unable to deserialize the response. </exception>
+        <exception cref="T:Microsoft.Rest.ValidationException"> Thrown when a required parameter is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="GetTokenStatusWithHttpMessagesAsync">
@@ -76,6 +68,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;System.Collections.Generic.IList&lt;Microsoft.Bot.Schema.TokenStatus&gt;&gt;&gt;</ReturnType>
@@ -88,27 +81,17 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="userId" />
-        <param name="channelId" />
-        <param name="include" />
-        <param name="customHeaders">
-            The headers that will be added to request.
-            </param>
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="userId"> User ID.</param>
+        <param name="channelId"> Channel ID.</param>
+        <param name="include"> Include.</param>
+        <param name="customHeaders"> The headers that will be added to request. </param>
+        <param name="cancellationToken"> The cancellation token. </param>
+        <summary>Get the token status with HTTP message. </summary>
+        <returns>A task representing an IList of <see cref="T:Microsoft.Bot.Schema.TokenStatus" /> from the HTTP operation.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-            Thrown when the operation returned an invalid status code
-            </exception>
-        <exception cref="T:Microsoft.Rest.SerializationException">
-            Thrown when unable to deserialize the response
-            </exception>
-        <exception cref="T:Microsoft.Rest.ValidationException">
-            Thrown when a required parameter is null
-            </exception>
+        <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException"> Thrown when the operation returned an invalid status code. </exception>
+        <exception cref="T:Microsoft.Rest.SerializationException"> Thrown when unable to deserialize the response. </exception>
+        <exception cref="T:Microsoft.Rest.ValidationException"> Thrown when a required parameter is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="GetTokenWithHttpMessagesAsync">
@@ -122,6 +105,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.TokenResponse&gt;&gt;</ReturnType>
@@ -135,28 +119,18 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="userId" />
-        <param name="connectionName" />
-        <param name="channelId" />
-        <param name="code" />
-        <param name="customHeaders">
-            The headers that will be added to request.
-            </param>
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="userId"> User ID.</param>
+        <param name="connectionName"> Connection name.</param>
+        <param name="channelId"> Channel ID.</param>
+        <param name="code"> Code.</param>
+        <param name="customHeaders"> The headers that will be added to request.</param>
+        <param name="cancellationToken"> The cancellation token.</param>
+        <summary> Get token with HTTP message.</summary>
+        <returns>A Task representing the <see cref="T:Microsoft.Bot.Schema.TokenResponse" /> of the HTTP operation.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-            Thrown when the operation returned an invalid status code
-            </exception>
-        <exception cref="T:Microsoft.Rest.SerializationException">
-            Thrown when unable to deserialize the response
-            </exception>
-        <exception cref="T:Microsoft.Rest.ValidationException">
-            Thrown when a required parameter is null
-            </exception>
+        <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException"> Thrown when the operation returned an invalid status code.</exception>
+        <exception cref="T:Microsoft.Rest.SerializationException"> Thrown when unable to deserialize the response. </exception>
+        <exception cref="T:Microsoft.Rest.ValidationException"> Thrown when a required parameter is null. </exception>
       </Docs>
     </Member>
     <Member MemberName="SignOutWithHttpMessagesAsync">
@@ -170,6 +144,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;System.Object&gt;&gt;</ReturnType>
@@ -182,27 +157,17 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
-        <param name="userId" />
-        <param name="connectionName" />
-        <param name="channelId" />
-        <param name="customHeaders">
-            The headers that will be added to request.
-            </param>
-        <param name="cancellationToken">
-            The cancellation token.
-            </param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="userId"> User ID.</param>
+        <param name="connectionName">Connection name. </param>
+        <param name="channelId"> Channel ID. </param>
+        <param name="customHeaders"> The headers that will be added to request. </param>
+        <param name="cancellationToken"> The cancellation token. </param>
+        <summary>Sign out with HTTP message.</summary>
+        <returns>A Task representing the <see cref="T:Microsoft.Rest.HttpOperationResponse" />.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-            Thrown when the operation returned an invalid status code
-            </exception>
-        <exception cref="T:Microsoft.Rest.SerializationException">
-            Thrown when unable to deserialize the response
-            </exception>
-        <exception cref="T:Microsoft.Rest.ValidationException">
-            Thrown when a required parameter is null
-            </exception>
+        <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException"> Thrown when the operation returned an invalid status code. </exception>
+        <exception cref="T:Microsoft.Rest.SerializationException"> Thrown when unable to deserialize the response. </exception>
+        <exception cref="T:Microsoft.Rest.ValidationException"> Thrown when a required parameter is null. </exception>
       </Docs>
     </Member>
   </Members>

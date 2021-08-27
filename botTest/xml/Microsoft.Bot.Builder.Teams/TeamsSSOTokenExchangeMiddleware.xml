@@ -1,0 +1,98 @@
+<Type Name="TeamsSSOTokenExchangeMiddleware" FullName="Microsoft.Bot.Builder.Teams.TeamsSSOTokenExchangeMiddleware">
+  <TypeSignature Language="C#" Value="public class TeamsSSOTokenExchangeMiddleware : Microsoft.Bot.Builder.IMiddleware" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TeamsSSOTokenExchangeMiddleware extends System.Object implements class Microsoft.Bot.Builder.IMiddleware" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Bot.Builder.Teams.TeamsSSOTokenExchangeMiddleware" />
+  <TypeSignature Language="VB.NET" Value="Public Class TeamsSSOTokenExchangeMiddleware&#xA;Implements IMiddleware" />
+  <TypeSignature Language="F#" Value="type TeamsSSOTokenExchangeMiddleware = class&#xA;    interface IMiddleware" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Bot.Builder.IMiddleware</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            If the activity name is signin/tokenExchange, this middleware will attempt to
+            exchange the token, and deduplicate the incoming call, ensuring only one
+            exchange request is processed.
+            </summary>
+    <remarks>
+            If a user is signed into multiple Teams clients, the Bot could receive a
+            "signin/tokenExchange" from each client. Each token exchange request for a
+            specific user login will have an identical Activity.Value.Id.
+            
+            Only one of these token exchange requests should be processed by the bot.
+            The others return <see cref="F:System.Net.HttpStatusCode.PreconditionFailed" />.
+            For a distributed bot in production, this requires a distributed storage
+            ensuring only one token exchange is processed. This middleware supports
+            CosmosDb storage found in Microsoft.Bot.Builder.Azure, or MemoryStorage for
+            local development. IStorage's ETag implementation for token exchange activity
+            deduplication.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TeamsSSOTokenExchangeMiddleware (Microsoft.Bot.Builder.IStorage storage, string connectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Bot.Builder.IStorage storage, string connectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsSSOTokenExchangeMiddleware.#ctor(Microsoft.Bot.Builder.IStorage,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (storage As IStorage, connectionName As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Bot.Builder.Teams.TeamsSSOTokenExchangeMiddleware : Microsoft.Bot.Builder.IStorage * string -&gt; Microsoft.Bot.Builder.Teams.TeamsSSOTokenExchangeMiddleware" Usage="new Microsoft.Bot.Builder.Teams.TeamsSSOTokenExchangeMiddleware (storage, connectionName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="storage" Type="Microsoft.Bot.Builder.IStorage" />
+        <Parameter Name="connectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="storage">The <see cref="T:Microsoft.Bot.Builder.IStorage" /> to use for deduplication.</param>
+        <param name="connectionName">The connection name to use for the single
+            sign on token exchange.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Bot.Builder.Teams.TeamsSSOTokenExchangeMiddleware" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTurnAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task OnTurnAsync (Microsoft.Bot.Builder.ITurnContext turnContext, Microsoft.Bot.Builder.NextDelegate next, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task OnTurnAsync(class Microsoft.Bot.Builder.ITurnContext turnContext, class Microsoft.Bot.Builder.NextDelegate next, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Teams.TeamsSSOTokenExchangeMiddleware.OnTurnAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Bot.Builder.NextDelegate,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function OnTurnAsync (turnContext As ITurnContext, next As NextDelegate, Optional cancellationToken As CancellationToken = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="abstract member OnTurnAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Bot.Builder.NextDelegate * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.OnTurnAsync : Microsoft.Bot.Builder.ITurnContext * Microsoft.Bot.Builder.NextDelegate * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="teamsSSOTokenExchangeMiddleware.OnTurnAsync (turnContext, next, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Bot.Builder.IMiddleware.OnTurnAsync(Microsoft.Bot.Builder.ITurnContext,Microsoft.Bot.Builder.NextDelegate,System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="turnContext" Type="Microsoft.Bot.Builder.ITurnContext" />
+        <Parameter Name="next" Type="Microsoft.Bot.Builder.NextDelegate" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="turnContext">To be added.</param>
+        <param name="next">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

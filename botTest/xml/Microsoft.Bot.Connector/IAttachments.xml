@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -28,6 +29,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;Microsoft.Bot.Schema.AttachmentInfo&gt;&gt;</ReturnType>
@@ -39,7 +41,7 @@
       </Parameters>
       <Docs>
         <param name="attachmentId">
-            attachment id
+            attachment id.
             </param>
         <param name="customHeaders">
             The headers that will be added to request.
@@ -48,20 +50,20 @@
             The cancellation token.
             </param>
         <summary>
-            GetAttachmentInfo
+            GetAttachmentInfo.
             </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>
-            Get AttachmentInfo structure describing the attachment views
+            Get AttachmentInfo structure describing the attachment views.
             </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-            Thrown when the operation returned an invalid status code
+            Thrown when the operation returned an invalid status code.
             </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-            Thrown when unable to deserialize the response
+            Thrown when unable to deserialize the response.
             </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>
@@ -76,6 +78,7 @@
         <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Rest.HttpOperationResponse&lt;System.IO.Stream&gt;&gt;</ReturnType>
@@ -88,10 +91,10 @@
       </Parameters>
       <Docs>
         <param name="attachmentId">
-            attachment id
+            attachment id.
             </param>
         <param name="viewId">
-            View id from attachmentInfo
+            View id from attachmentInfo.
             </param>
         <param name="customHeaders">
             The headers that will be added to request.
@@ -100,20 +103,20 @@
             The cancellation token.
             </param>
         <summary>
-            GetAttachment
+            GetAttachment.
             </summary>
-        <returns>To be added.</returns>
+        <returns>A task that represents the work queued to execute.</returns>
         <remarks>
-            Get the named view as binary content
+            Get the named view as binary content.
             </remarks>
         <exception cref="T:Microsoft.Bot.Schema.ErrorResponseException">
-            Thrown when the operation returned an invalid status code
+            Thrown when the operation returned an invalid status code.
             </exception>
         <exception cref="T:Microsoft.Rest.SerializationException">
-            Thrown when unable to deserialize the response
+            Thrown when unable to deserialize the response.
             </exception>
         <exception cref="T:Microsoft.Rest.ValidationException">
-            Thrown when a required parameter is null
+            Thrown when a required parameter is null.
             </exception>
       </Docs>
     </Member>

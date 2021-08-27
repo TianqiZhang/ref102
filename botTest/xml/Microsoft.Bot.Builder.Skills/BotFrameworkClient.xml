@@ -1,18 +1,29 @@
 <Type Name="BotFrameworkClient" FullName="Microsoft.Bot.Builder.Skills.BotFrameworkClient">
-  <TypeSignature Language="C#" Value="public abstract class BotFrameworkClient" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BotFrameworkClient extends System.Object" />
+  <TypeSignature Language="C#" Value="public abstract class BotFrameworkClient : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BotFrameworkClient extends System.Object implements class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Bot.Builder.Skills.BotFrameworkClient" />
-  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BotFrameworkClient" />
-  <TypeSignature Language="F#" Value="type BotFrameworkClient = class" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BotFrameworkClient&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type BotFrameworkClient = class&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="Microsoft.Bot.Builder" FromVersion="4.14.1.0" To="Microsoft.Bot.Connector" ToVersion="4.14.1.0" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
             A Bot Framework client.
@@ -31,23 +42,86 @@
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Skills.BotFrameworkClient.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="botFrameworkClient.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Skills.BotFrameworkClient.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="botFrameworkClient.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Indicates where this method is called from.</param>
+        <summary>
+            Protected implementation of dispose pattern.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="PostActivityAsync">
-      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt; PostActivityAsync (string fromBotId, string toBotId, Uri toUrl, Uri serviceUrl, string conversationId, Microsoft.Bot.Schema.Activity activity, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt; PostActivityAsync (string fromBotId, string toBotId, Uri toUrl, Uri serviceUrl, string conversationId, Microsoft.Bot.Schema.Activity activity, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.Bot.Builder.InvokeResponse&gt; PostActivityAsync(string fromBotId, string toBotId, class System.Uri toUrl, class System.Uri serviceUrl, string conversationId, class Microsoft.Bot.Schema.Activity activity, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Bot.Builder.Skills.BotFrameworkClient.PostActivityAsync(System.String,System.String,System.Uri,System.Uri,System.String,Microsoft.Bot.Schema.Activity,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public MustOverride Function PostActivityAsync (fromBotId As String, toBotId As String, toUrl As Uri, serviceUrl As Uri, conversationId As String, activity As Activity, Optional cancellationToken As CancellationToken = Nothing) As Task(Of InvokeResponse)" />
-      <MemberSignature Language="F#" Value="abstract member PostActivityAsync : string * string * Uri * Uri * string * Microsoft.Bot.Schema.Activity * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;" Usage="botFrameworkClient.PostActivityAsync (fromBotId, toBotId, toUrl, serviceUrl, conversationId, activity, cancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function PostActivityAsync (fromBotId As String, toBotId As String, toUrl As Uri, serviceUrl As Uri, conversationId As String, activity As Activity, Optional cancellationToken As CancellationToken = Nothing) As Task(Of InvokeResponse)" />
+      <MemberSignature Language="F#" Value="abstract member PostActivityAsync : string * string * Uri * Uri * string * Microsoft.Bot.Schema.Activity * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;&#xA;override this.PostActivityAsync : string * string * Uri * Uri * string * Microsoft.Bot.Schema.Activity * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;" Usage="botFrameworkClient.PostActivityAsync (fromBotId, toBotId, toUrl, serviceUrl, conversationId, activity, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&gt;</ReturnType>
@@ -87,6 +161,10 @@
         <AssemblyName>Microsoft.Bot.Builder</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bot.Connector</AssemblyName>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.Bot.Builder.InvokeResponse&lt;T&gt;&gt;</ReturnType>

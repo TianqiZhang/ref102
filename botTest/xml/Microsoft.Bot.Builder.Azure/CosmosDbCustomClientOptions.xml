@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
     <AssemblyVersion>4.9.4.0</AssemblyVersion>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
+    <AssemblyVersion>4.14.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -30,6 +31,7 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,6 +50,7 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -73,18 +76,19 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Documents.Client.RequestOptions</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the CosmosDB <see cref="T:Microsoft.Azure.Documents.Client.RequestOptions" />
+            Gets or sets the CosmosDB <see href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.documents.client.requestoptions?view=azure-dotnet" />
             that are passed when the database is created. Null is the default.
             </summary>
         <value>
             The set of options passed into
-            <see cref="M:Microsoft.Azure.Documents.Client.DocumentClient.CreateDatabaseIfNotExistsAsync(Microsoft.Azure.Documents.Database,Microsoft.Azure.Documents.Client.RequestOptions)" />.
+            <see href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.documents.client.documentclient.createdatabaseifnotexistsasync?view=azure-dotnet" />.
             </value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -100,6 +104,7 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -125,18 +130,19 @@
         <AssemblyName>Microsoft.Bot.Builder.Azure</AssemblyName>
         <AssemblyVersion>4.9.4.0</AssemblyVersion>
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
+        <AssemblyVersion>4.14.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Azure.Documents.Client.RequestOptions</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets or sets the CosmosDB <see cref="T:Microsoft.Azure.Documents.Client.RequestOptions" /> that
+            Gets or sets the CosmosDB <see href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.documents.client.requestoptions?view=azure-dotnet" /> that
             are passed when the document collection is created. Null is the default.
             </summary>
         <value>
             The set of options passed into
-            <see cref="M:Microsoft.Azure.Documents.Client.DocumentClient.CreateDocumentCollectionIfNotExistsAsync(System.String,Microsoft.Azure.Documents.DocumentCollection,Microsoft.Azure.Documents.Client.RequestOptions)" />.
+            <see href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.documents.idocumentclient.createdocumentcollectionifnotexistsasync?view=azure-dotnet" />.
             </value>
         <remarks>To be added.</remarks>
       </Docs>
