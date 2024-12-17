@@ -1,58 +1,8 @@
 {
-  "docsets_to_publish": [
-    {
-      "docset_name": "ref102",
-      "build_source_folder": "ref102",
-      "build_output_subfolder": "ref102",
-      "xref_query_tags": ["/dotnet"],
-      "locale": "en-us",
-      "monikers": [],
-      "xref_query_tags": ["/dotnet"],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "NetEnum": "Content",
-        "NetDelegate": "Content",
-        "NetNamespace": "Content",
-        "NetMember": "Content",
-        "NetType": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
-          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
-          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
-        ],
-        "docset_postbuild": [
-          "_dependentPackages/ECMA2Yaml/tools/PostBuild.ps1"
-        ]
-      },
-      "ECMA2Yaml": {
-        "SourceXmlFolder": "ref102/xml",
-        "OutputYamlFolder": "ref102/api",
-        "SourceMetadataFolder": "add/metadata",
-        "Flatten": true,
-        "id": "ref102",
-        "SDPMode": true,
-        "UWPMode": true
-      },
-      "SplitTOC": [
-        "ref102/api/ref102/toc.yml"
-      ],
-      "DiffFolder": [
-        "ref102/api"
-      ]
-    }
-  ],
+  "docsets_to_publish": [],
   "notification_subscribers": [],
   "branches_to_filter": [],
-  "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
-  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -62,6 +12,8 @@
     }
   ],
   "branch_target_mapping": {},
+  "skip_source_output_uploading": false,
+  "contribution_branch_mappings": {},
   "need_generate_pdf_url_template": false,
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
